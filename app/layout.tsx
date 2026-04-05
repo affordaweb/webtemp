@@ -7,28 +7,43 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "WebTemp — Custom Website Templates, Delivered Fast",
+  title: {
+    default: "AffordaWeb Solutions — Affordable Website Design by Filipino Experts",
+    template: "%s | AffordaWeb Solutions",
+  },
   description:
-    "Tell us about your business and get a custom website template delivered to your inbox. No drag-and-drop builders, no subscriptions — just a clean, professional site you own.",
+    "Get a professionally hand-coded website at an affordable price. AffordaWeb Solutions is run by top-rated Filipino web designers on Upwork. Custom, mobile-ready, SEO-optimised — no subscriptions.",
+  keywords: [
+    "affordable website design",
+    "affordable web design",
+    "affordable website design for small business",
+    "Filipino web designer",
+    "hire Filipino web designer",
+    "professional website design",
+    "custom website affordable",
+    "cheap website design",
+    "web design services",
+    "affordable website",
+  ],
   metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://webtemp-iota.vercel.app").trim()),
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "WebTemp — Custom Website Templates, Delivered Fast",
+    title: "AffordaWeb Solutions — Affordable Website Design by Filipino Experts",
     description:
-      "Tell us about your business and get a custom website template delivered to your inbox.",
+      "Professionally hand-coded websites at affordable prices. Top-rated Filipino web designers. No subscriptions — you own the code.",
     url: "/",
-    siteName: "WebTemp",
+    siteName: "AffordaWeb Solutions",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WebTemp — Custom Website Templates, Delivered Fast",
+    title: "AffordaWeb Solutions — Affordable Website Design",
     description:
-      "Tell us about your business and get a custom website template delivered to your inbox.",
+      "Professionally hand-coded websites at affordable prices. Top-rated Filipino web designers. No subscriptions.",
   },
 };
 

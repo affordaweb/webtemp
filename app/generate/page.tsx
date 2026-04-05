@@ -125,6 +125,7 @@ export default function GeneratePage() {
           <h1 className="heading-section" style={{ marginTop: "1rem" }}>
             {STEPS[step]}
           </h1>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginTop: "0.5rem" }}>AffordaWeb Solutions — Affordable Website Design</p>
         </div>
 
         {/* Step indicators */}

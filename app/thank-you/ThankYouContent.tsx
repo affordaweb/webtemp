@@ -15,13 +15,13 @@ export default function ThankYouContent() {
           Request Received!
         </h1>
         <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-          Thanks for submitting your website request. We will review it and send you a <strong style={{ color: "var(--text)" }}>PayPal invoice</strong> within 1 business day. Once paid, your template will be built and delivered to your inbox.
+          Thanks for submitting your website request. Our Filipino web design team will review it and send you a <strong style={{ color: "var(--text)" }}>PayPal invoice</strong> within 1 business day. Once paid, your affordable website will be built and delivered to your inbox.
         </p>
 
         {id && (
-          <div className="card card-pastel-purple" style={{ marginBottom: "2rem", padding: "1.25rem" }}>
+          <div className="card" style={{ marginBottom: "2rem", padding: "1.25rem" }}>
             <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "0.4rem" }}>Your Request ID</p>
-            <p style={{ fontFamily: "monospace", fontSize: "1.05rem", fontWeight: 700, letterSpacing: "0.05em", color: "#A78BFA", wordBreak: "break-all" }}>
+            <p style={{ fontFamily: "monospace", fontSize: "1.05rem", fontWeight: 700, letterSpacing: "0.05em", color: "#111111", wordBreak: "break-all" }}>
               {id}
             </p>
             <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0.5rem" }}>
