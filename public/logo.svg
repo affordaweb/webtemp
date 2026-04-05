@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <!-- W mark -->
+  <path d="M4 8L13 32L22 14L31 32L40 8" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- WebTemp wordmark -->
+  <text x="52" y="28" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.04em" fill="#111111">WebTemp</text>
+</svg>

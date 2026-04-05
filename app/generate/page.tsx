@@ -135,7 +135,7 @@ export default function GeneratePage() {
                 {i < step ? "✓" : i + 1}
               </div>
               {i < STEPS.length - 1 && (
-                <div style={{ width: "3rem", height: "2px", background: i < step ? "#16A34A" : "var(--border)" }} />
+                <div style={{ width: "3rem", height: "2px", background: i < step ? "#111111" : "var(--border)" }} />
               )}
             </div>
           ))}
@@ -197,8 +197,8 @@ export default function GeneratePage() {
                       style={{
                         padding: "0.7rem 1rem",
                         borderRadius: "0.65rem",
-                        border: active ? "2px solid var(--brand-light)" : "1.5px solid var(--border)",
-                        background: active ? "rgba(86,54,209,0.18)" : "var(--surface-2)",
+                        border: active ? "2px solid #111111" : "1.5px solid var(--border)",
+                        background: active ? "#111111" : "var(--surface-2)",
                         color: active ? "#fff" : "var(--text-muted)",
                         fontWeight: 600,
                         fontSize: "0.9rem",
@@ -210,7 +210,7 @@ export default function GeneratePage() {
                         gap: "0.5rem",
                       }}
                     >
-                      <span style={{ color: active ? "#A78BFA" : "transparent" }}>✓</span>
+                      <span style={{ color: active ? "#ffffff" : "transparent" }}>✓</span>
                       {page}
                     </button>
                   );
@@ -260,8 +260,8 @@ export default function GeneratePage() {
                       style={{
                         padding: "0.75rem 1rem",
                         borderRadius: "0.65rem",
-                        border: form.style === s.value ? "2px solid var(--brand-light)" : "1.5px solid var(--border)",
-                        background: form.style === s.value ? "rgba(86,54,209,0.18)" : "var(--surface-2)",
+                        border: form.style === s.value ? "2px solid #111111" : "1.5px solid var(--border)",
+                        background: form.style === s.value ? "#111111" : "var(--surface-2)",
                         color: form.style === s.value ? "#fff" : "var(--text-muted)",
                         fontWeight: 600,
                         fontSize: "0.92rem",
@@ -307,8 +307,8 @@ export default function GeneratePage() {
                   marginTop: "0.5rem",
                   padding: "1rem",
                   borderRadius: "0.65rem",
-                  background: "rgba(86,54,209,0.1)",
-                  border: "1.5px solid rgba(86,54,209,0.25)",
+                  background: "var(--surface)",
+                  border: "1.5px solid var(--border)",
                   fontSize: "0.88rem",
                   color: "var(--text-muted)",
                   lineHeight: 1.65,
@@ -318,7 +318,7 @@ export default function GeneratePage() {
               </div>
 
               {error && (
-                <p style={{ color: "#F87171", fontSize: "0.9rem", padding: "0.75rem", background: "rgba(248,113,113,0.1)", borderRadius: "0.5rem" }}>
+                <p style={{ color: "#DC2626", fontSize: "0.9rem", padding: "0.75rem", background: "rgba(220,38,38,0.08)", borderRadius: "0.5rem" }}>
                   {error}
                 </p>
               )}

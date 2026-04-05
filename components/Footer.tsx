@@ -23,20 +23,12 @@ export default function Footer() {
         >
           {/* Brand */}
           <div>
-            <span
-              style={{
-                fontSize: "1.25rem",
-                fontWeight: 900,
-                letterSpacing: "-0.04em",
-                background: "linear-gradient(135deg, #A78BFA, #E2498A)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                display: "block",
-                marginBottom: "0.75rem",
-              }}
-            >
-              WebTemp
-            </span>
+            <Link href="/" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+              <svg width="22" height="18" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 2L7.5 20L13 10L18.5 20L25 2" stroke="#111111" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span style={{ fontSize: "1.1rem", fontWeight: 900, letterSpacing: "-0.04em", color: "#111111" }}>WebTemp</span>
+            </Link>
             <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.6, maxWidth: 220 }}>
               Custom website templates delivered to your inbox. You own the code — no subscriptions.
             </p>
@@ -81,7 +73,7 @@ export default function Footer() {
           </p>
           <p style={{ color: "var(--text-muted)", fontSize: "0.83rem", margin: 0 }}>
             Powered by{" "}
-            <a href="https://affordawebsolutions.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--brand-light)", textDecoration: "none" }}>
+            <a href="https://affordawebsolutions.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "none", fontWeight: 600 }}>
               AffordaWeb Solutions
             </a>
           </p>

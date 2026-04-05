@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 
+function Logo() {
+  return (
+    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M1 2L7.5 20L13 10L18.5 20L25 2" stroke="#111111" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -13,14 +21,15 @@ export default function Navbar() {
         top: 0,
         zIndex: 50,
         backdropFilter: "blur(16px)",
-        background: "rgba(15,15,26,0.75)",
+        background: "rgba(255,255,255,0.88)",
         borderBottom: "1.5px solid var(--border)",
       }}
     >
       <div className="container-tight" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "3.75rem" }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <span style={{ fontSize: "1.35rem", fontWeight: 900, letterSpacing: "-0.04em", background: "linear-gradient(135deg, #A78BFA, #E2498A)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.55rem" }}>
+          <Logo />
+          <span style={{ fontSize: "1.2rem", fontWeight: 900, letterSpacing: "-0.04em", color: "#111111" }}>
             WebTemp
           </span>
         </Link>
@@ -53,7 +62,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div style={{ background: "var(--surface)", borderBottom: "1.5px solid var(--border)", padding: "1rem 1.25rem" }}>
+        <div style={{ background: "#FFFFFF", borderBottom: "1.5px solid var(--border)", padding: "1rem 1.25rem" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
             <NavLink href="/#how-it-works" onClick={() => setOpen(false)}>How It Works</NavLink>
             <NavLink href="/#pricing" onClick={() => setOpen(false)}>Pricing</NavLink>
@@ -73,7 +82,7 @@ function NavLink({ href, children, onClick }: { href: string; children: React.Re
       href={href}
       onClick={onClick}
       style={{ color: "var(--text-muted)", textDecoration: "none", fontWeight: 600, fontSize: "0.92rem", transition: "color 0.2s" }}
-      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
+      onMouseEnter={(e) => (e.currentTarget.style.color = "#111111")}
       onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
     >
       {children}

@@ -147,7 +147,7 @@ export default function AdminPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem", marginBottom: "2.5rem" }}>
           <StatCard label="Pending" count={pending.length} color="var(--brand)" />
           <StatCard label="Paid" count={paid.length} color="#16A34A" />
-          <StatCard label="Delivered" count={delivered.length} color="#A78BFA" />
+          <StatCard label="Delivered" count={delivered.length} color="#555555" />
         </div>
 
         {loading ? (

@@ -44,15 +44,17 @@ export default function Home() {
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
+          borderBottom: "1.5px solid var(--border)",
         }}
       >
-        {/* Decorative blobs */}
+        {/* Subtle background grid */}
         <div
           aria-hidden
           style={{
             position: "absolute",
             inset: 0,
-            background: "radial-gradient(ellipse 70% 60% at 50% -10%, rgba(86,54,209,0.35) 0%, transparent 70%)",
+            backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
             pointerEvents: "none",
           }}
         />
@@ -64,13 +66,13 @@ export default function Home() {
             className="heading-hero anim-fade-up anim-delay-1"
             style={{
               marginTop: "1.5rem",
-              color: "#fff",
+              color: "#111111",
               maxWidth: 760,
               marginInline: "auto",
             }}
           >
             Your custom website,{" "}
-            <span style={{ color: "#E2498A" }}>ready to launch.</span>
+            <span style={{ color: "#555555", fontStyle: "italic", fontWeight: 900 }}>ready to launch.</span>
           </h1>
 
           <p
@@ -78,7 +80,7 @@ export default function Home() {
             style={{
               marginTop: "1.25rem",
               fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-              color: "rgba(255,255,255,0.75)",
+              color: "var(--text-muted)",
               maxWidth: 560,
               marginInline: "auto",
               lineHeight: 1.65,
@@ -104,7 +106,7 @@ export default function Home() {
       {/* ── Trust marquee ── */}
       <div
         style={{
-          background: "var(--surface)",
+          background: "var(--surface-2)",
           borderTop: "1.5px solid var(--border)",
           borderBottom: "1.5px solid var(--border)",
           padding: "0.9rem 0",
@@ -120,7 +122,7 @@ export default function Home() {
                 alignItems: "center",
                 gap: "0.5rem",
                 paddingInline: "2rem",
-                color: "var(--text-muted)",
+                color: "#888888",
                 fontSize: "0.88rem",
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -128,7 +130,7 @@ export default function Home() {
                 whiteSpace: "nowrap",
               }}
             >
-              <span style={{ color: "var(--brand-light)", fontSize: "1.1rem" }}>✦</span>
+              <span style={{ color: "#111111", fontSize: "0.7rem" }}>◆</span>
               {item}
             </span>
           ))}
@@ -166,12 +168,12 @@ export default function Home() {
                     fontSize: "3rem",
                     fontWeight: 900,
                     letterSpacing: "-0.04em",
-                    opacity: 0.15,
+                    opacity: 0.08,
                     position: "absolute",
                     top: "1rem",
                     right: "1.25rem",
                     lineHeight: 1,
-                    color: "#fff",
+                    color: "#111111",
                   }}
                 >
                   {step.num}
@@ -242,8 +244,8 @@ export default function Home() {
             className="card"
             style={{
               textAlign: "center",
-              border: "2px solid rgba(86,54,209,0.45)",
-              background: "rgba(86,54,209,0.1)",
+              border: "2px solid #111111",
+              background: "#FAFAFA",
               padding: "2.5rem 2rem",
             }}
           >
@@ -254,9 +256,7 @@ export default function Home() {
                 fontWeight: 900,
                 letterSpacing: "-0.04em",
                 lineHeight: 1,
-                background: "linear-gradient(135deg, #A78BFA, #E2498A)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
+                color: "#111111",
               }}
             >
               $49
@@ -285,7 +285,7 @@ export default function Home() {
                 "+$25 optional live setup add-on",
               ].map((item) => (
                 <li key={item} style={{ display: "flex", gap: "0.65rem", alignItems: "flex-start", color: "var(--text)", fontSize: "0.95rem" }}>
-                  <span style={{ color: "#4ADE80", marginTop: "0.1em", flexShrink: 0 }}>✓</span>
+                  <span style={{ color: "#111111", marginTop: "0.1em", flexShrink: 0, fontWeight: 900 }}>✓</span>
                   {item}
                 </li>
               ))}
@@ -301,7 +301,7 @@ export default function Home() {
       {/* ── CTA Banner ── */}
       <section
         style={{
-          background: "var(--hero-gradient)",
+          background: "#111111",
           padding: "5rem 0",
           textAlign: "center",
         }}
@@ -309,14 +309,14 @@ export default function Home() {
         <div className="container-tight">
           <h2
             className="heading-section"
-            style={{ color: "#fff", marginBottom: "1rem" }}
+            style={{ color: "#FFFFFF", marginBottom: "1rem" }}
           >
             Ready to get your website?
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 440, marginInline: "auto" }}>
+          <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 440, marginInline: "auto" }}>
             Fill out the form in minutes and we will take it from there.
           </p>
-          <Link href="/generate" className="btn-primary anim-pulse" style={{ fontSize: "1.1rem", padding: "1rem 2.5rem" }}>
+          <Link href="/generate" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FFFFFF", color: "#111111", fontWeight: 700, fontSize: "1.1rem", padding: "1rem 2.5rem", borderRadius: "999px", textDecoration: "none", transition: "opacity 0.2s" }}>
             Start Now — It&apos;s Free to Request →
           </Link>
         </div>

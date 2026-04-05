@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --brand: #5636D1;
-  --brand-light: #7B5CFA;
-  --accent: #E2498A;
-  --bg: #0F0F1A;
-  --surface: #1A1A2E;
-  --surface-2: #22223B;
-  --text: #F0F0FF;
-  --text-muted: #9090B0;
-  --border: rgba(255,255,255,0.08);
-  --radius-card: 1.25rem;
-  --hero-gradient: linear-gradient(135deg, #0F0F1A 0%, #5636D1 60%, #E2498A 100%);
+  --brand: #111111;
+  --brand-light: #333333;
+  --accent: #555555;
+  --bg: #FFFFFF;
+  --surface: #F8F9FA;
+  --surface-2: #F1F3F5;
+  --text: #111111;
+  --text-muted: #6B7280;
+  --border: rgba(0,0,0,0.1);
+  --radius-card: 1rem;
+  --hero-gradient: linear-gradient(160deg, #FFFFFF 0%, #F5F5F5 100%);
 }
 
 @theme inline {
@@ -65,16 +65,16 @@ body {
 }
 
 .card-pastel-purple {
-  background: rgba(86, 54, 209, 0.12);
-  border-color: rgba(86, 54, 209, 0.25);
+  background: #F8F9FA;
+  border-color: rgba(0,0,0,0.12);
 }
 .card-pastel-pink {
-  background: rgba(226, 73, 138, 0.12);
-  border-color: rgba(226, 73, 138, 0.25);
+  background: #F8F9FA;
+  border-color: rgba(0,0,0,0.12);
 }
 .card-pastel-blue {
-  background: rgba(37, 99, 235, 0.12);
-  border-color: rgba(37, 99, 235, 0.25);
+  background: #F8F9FA;
+  border-color: rgba(0,0,0,0.12);
 }
 
 /* Buttons */
@@ -82,7 +82,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
+  background: #111111;
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -90,12 +90,13 @@ body {
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
   text-decoration: none;
 }
 .btn-primary:hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 32px rgba(86, 54, 209, 0.45);
+  transform: scale(1.03);
+  background: #333333;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
 .btn-outline {
@@ -108,14 +109,14 @@ body {
   font-size: 1rem;
   padding: 0.83rem 1.9rem;
   border-radius: 999px;
-  border: 1.5px solid var(--border);
+  border: 1.5px solid rgba(0,0,0,0.18);
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
   text-decoration: none;
 }
 .btn-outline:hover {
-  border-color: var(--brand-light);
-  background: rgba(86, 54, 209, 0.12);
+  border-color: #111111;
+  background: rgba(0,0,0,0.04);
 }
 
 /* Pill badge */
@@ -129,17 +130,14 @@ body {
   text-transform: uppercase;
   padding: 0.3rem 0.85rem;
   border-radius: 999px;
-  background: rgba(86, 54, 209, 0.18);
-  color: #A78BFA;
-  border: 1px solid rgba(86, 54, 209, 0.3);
+  background: #F1F3F5;
+  color: #555555;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
-/* Gradient text */
+/* Gradient text — now just bold black */
 .gradient-text {
-  background: var(--hero-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text);
 }
 
 /* Animations */
@@ -207,8 +205,8 @@ body {
   font-weight: 700;
   flex-shrink: 0;
 }
-.step-dot-active   { background: var(--brand); color: #fff; }
-.step-dot-done     { background: #16A34A; color: #fff; }
+.step-dot-active   { background: #111111; color: #fff; }
+.step-dot-done     { background: #111111; color: #fff; }
 .step-dot-inactive { background: var(--surface-2); color: var(--text-muted); border: 1.5px solid var(--border); }
 
 /* Divider */
@@ -219,6 +217,6 @@ body {
 }
 
 /* Status chips */
-.status-pending   { background: rgba(234,179,8,0.15); color: #FDE047; border: 1px solid rgba(234,179,8,0.3); }
-.status-paid      { background: rgba(22,163,74,0.15); color: #4ADE80; border: 1px solid rgba(22,163,74,0.3); }
-.status-delivered { background: rgba(86,54,209,0.15); color: #A78BFA; border: 1px solid rgba(86,54,209,0.3); }
+.status-pending   { background: rgba(234,179,8,0.12); color: #B45309; border: 1px solid rgba(234,179,8,0.35); }
+.status-paid      { background: rgba(22,163,74,0.12); color: #166534; border: 1px solid rgba(22,163,74,0.35); }
+.status-delivered { background: rgba(0,0,0,0.06); color: #374151; border: 1px solid rgba(0,0,0,0.15); }
