@@ -47,7 +47,9 @@ export async function POST(req: NextRequest) {
     sendAdminNotification(request).catch(() => {});
 
     return NextResponse.json({ id }, { status: 201 });
-  } catch {
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Internal server error";
+    console.error("[submit-request]", message);
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
