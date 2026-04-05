@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "WebTemp — Custom Website Templates, Delivered Fast",
   description:
     "Tell us about your business and get a custom website template delivered to your inbox. No drag-and-drop builders, no subscriptions — just a clean, professional site you own.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://webtemp.vercel.app"),
+  metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://webtemp-iota.vercel.app").trim()),
   openGraph: {
     title: "WebTemp — Custom Website Templates, Delivered Fast",
     description:
