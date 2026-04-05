@@ -16,10 +16,12 @@ export async function sendAdminNotification(req: TemplateRequest): Promise<void>
   if (!adminEmail) return
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://webtemp.vercel.app'
 
+  const from = process.env.FROM_EMAIL ?? 'WebTemp <hello@affordawebsolutions.com>'
   await getResend().emails.send({
-    from: 'WebTemp <noreply@affordawebsolutions.com>',
+    from,
     to: adminEmail,
     subject: `New Template Request — ${req.businessName}`,
+    replyTo: req.email,
     html: `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto">
         <h2 style="color:#5636D1">New Template Request</h2>
@@ -45,8 +47,9 @@ export async function sendDownloadReady(req: TemplateRequest): Promise<void> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://webtemp.vercel.app'
   const downloadUrl = `${siteUrl}/download/${req.downloadToken}`
 
+  const from = process.env.FROM_EMAIL ?? 'WebTemp <hello@affordawebsolutions.com>'
   await getResend().emails.send({
-    from: 'WebTemp <noreply@affordawebsolutions.com>',
+    from,
     to: req.email,
     subject: `Your Website Template is Ready — ${req.businessName}`,
     html: `
