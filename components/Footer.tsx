@@ -167,7 +167,7 @@ export default function Footer() {
           </p>
           <p style={{ color: "var(--text-muted)", fontSize: "0.83rem", margin: 0 }}>
             Powered by{" "}
-            <a href="https://affordawebsolutions.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "none", fontWeight: 600 }}>
+            <a href="https://affordawebsolutions.net" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "none", fontWeight: 600 }}>
               AffordaWeb Solutions
             </a>
           </p>
