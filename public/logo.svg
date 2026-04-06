@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
-  <!-- W mark -->
-  <path d="M4 8L13 32L22 14L31 32L40 8" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- WebTemp wordmark -->
-  <text x="52" y="28" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.04em" fill="#111111">WebTemp</text>
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="40" height="40" rx="10" fill="#111111"/>
+  <text x="20" y="27" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" letter-spacing="-1">AW</text>
+  <text x="50" y="15" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="900" fill="#111111" letter-spacing="-0.5">AffordaWeb</text>
+  <text x="50" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#6B7280" letter-spacing="1">SOLUTIONS</text>
 </svg>
