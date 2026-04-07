@@ -228,11 +228,11 @@ export default function Home() {
           style={{ position: "relative" }}
         >
           {/* Left: text + buttons */}
-          <div className="anim-fade-up">
-            <span className="badge">DIY Website Templates · Starting at $29 · You Own It Forever</span>
+          <div>
+            <span className="badge anim-fade-up">DIY Website Templates · Starting at $29 · You Own It Forever</span>
 
             <h1
-              className="heading-hero anim-fade-up anim-delay-1"
+              className="heading-hero"
               style={{ marginTop: "1.5rem", color: "#111111" }}
             >
               Build Your Website —{" "}

@@ -4,9 +4,9 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingWidgets from "@/components/FloatingWidgets";
+import FloatingWidgetsLoader from "@/components/FloatingWidgetsLoader";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: {
@@ -201,7 +201,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <FloatingWidgets />
+        <FloatingWidgetsLoader />
       </body>
     </html>
   );
