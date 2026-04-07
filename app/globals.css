@@ -101,53 +101,6 @@ body {
   box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
-/* ── Redis-style nav button: rotating border arc + pulsing icon ── */
-@property --border-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes border-spin {
-  to { --border-angle: 360deg; }
-}
-
-@keyframes icon-pulse {
-  0%, 100% { transform: scale(1);   opacity: 1; }
-  50%       { transform: scale(1.4); opacity: 0.75; }
-}
-
-.btn-nav-shimmer {
-  position: relative;
-  background: #1a1a1a;
-  border: 1px solid transparent;
-  background-clip: padding-box;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
-}
-.btn-nav-shimmer::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: 999px;
-  background: conic-gradient(
-    from var(--border-angle),
-    #b45309 0%,
-    #f59e0b 5%,
-    #fcd34d 9%,
-    transparent 14%,
-    transparent 86%,
-    #b45309 100%
-  );
-  animation: border-spin 2.4s linear infinite;
-  z-index: -1;
-}
-.btn-nav-shimmer:hover {
-  transform: scale(1.04);
-}
-.btn-nav-shimmer .nav-icon {
-  animation: icon-pulse 1.8s ease-in-out infinite;
-}
-
 .btn-outline {
   display: inline-flex;
   align-items: center;
