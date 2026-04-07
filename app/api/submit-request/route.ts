@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const { name, email, businessName, industry, pages, primaryColor, style, notes, requestedLiveSetup } = body;
+    const { name, email, businessName, industry, tagline, targetAudience, pages, primaryColor, style, fontStyle, features, inspirationUrl, socialFacebook, socialInstagram, socialOther, notes, designFeedback, requestedLiveSetup } = body;
 
     // Basic validation
     if (!name || !email || !businessName || !industry || !Array.isArray(pages) || pages.length === 0) {
@@ -27,10 +27,19 @@ export async function POST(req: NextRequest) {
       email: String(email).slice(0, 254),
       businessName: String(businessName).slice(0, 200),
       industry: String(industry).slice(0, 100),
-      pages: pages.slice(0, 20).map((p: unknown) => String(p).slice(0, 60)),
-      primaryColor: String(primaryColor ?? "purple").slice(0, 30),
+      tagline: tagline ? String(tagline).slice(0, 200) : undefined,
+      targetAudience: targetAudience ? String(targetAudience).slice(0, 300) : undefined,
+      pages: pages.slice(0, 10).map((p: unknown) => String(p).slice(0, 60)),
+      primaryColor: String(primaryColor ?? "black").slice(0, 30),
       style: String(style ?? "modern").slice(0, 60),
+      fontStyle: fontStyle ? String(fontStyle).slice(0, 30) : undefined,
+      features: Array.isArray(features) ? features.slice(0, 20).map((f: unknown) => String(f).slice(0, 80)) : undefined,
+      inspirationUrl: inspirationUrl ? String(inspirationUrl).slice(0, 500) : undefined,
+      socialFacebook: socialFacebook ? String(socialFacebook).slice(0, 300) : undefined,
+      socialInstagram: socialInstagram ? String(socialInstagram).slice(0, 300) : undefined,
+      socialOther: socialOther ? String(socialOther).slice(0, 300) : undefined,
       notes: String(notes ?? "").slice(0, 1000),
+      designFeedback: designFeedback ? String(designFeedback).slice(0, 1000) : undefined,
       requestedLiveSetup: Boolean(requestedLiveSetup),
       status: "pending",
       createdAt: new Date().toISOString(),

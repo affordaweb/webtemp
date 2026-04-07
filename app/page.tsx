@@ -2,78 +2,128 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AffordaWeb Solutions — Affordable Website Design for Small Business",
+  title: "DIY Website Templates for Small Business — Starting at $29 | AffordaWeb Solutions",
   description:
-    "Affordable website design by top-rated Filipino web designers. Get a professional, hand-coded, mobile-ready website delivered to your inbox. Starting from $49. No subscriptions.",
+    "Build your own website with a custom-designed template. Tell us your pages, style, and features — we design it, you own it forever. DIY website templates starting at $29. No coding, no subscriptions.",
   alternates: { canonical: "/" },
 };
 
-const STEPS = [
+const PROCESS_STEPS = [
   {
     num: "01",
-    title: "Fill Out the Form",
-    desc: "Tell us your business name, industry, pages you need, and your preferred look and feel. Takes about 3 minutes.",
+    title: "Tell Us About Your Business",
+    desc: "Fill out our smart design form — pages, colours, style, features, and target audience. Takes about 4 minutes.",
   },
   {
     num: "02",
-    title: "We Send a PayPal Invoice",
-    desc: "After reviewing your request, we send a PayPal invoice. One flat payment — no subscription, no surprises.",
+    title: "We Design Your Template",
+    desc: "Our designers craft a clean, professional website template custom-built for your brand and goals. No generic themes.",
   },
   {
     num: "03",
-    title: "Receive Your Website",
-    desc: "Once paid, we build and email you a download link within 2–4 business days. Clean HTML, CSS, and assets — yours to keep.",
+    title: "Review, Edit & Chat",
+    desc: "Unhappy with a detail? Use the chat-style feedback box to request changes — or rebuild from scratch at no extra cost.",
+  },
+  {
+    num: "04",
+    title: "Download & Go Live",
+    desc: "Get your complete website files (HTML, CSS, assets) in a ZIP. Host anywhere you like. Yours to keep forever.",
   },
 ];
 
 const TRUST_ITEMS = [
-  "Affordable Website Design",
+  "DIY Website Templates",
+  "Build Your Own Website",
   "No Subscriptions",
   "You Own the Code",
-  "Fast Turnaround",
+  "48-Hour Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
-  "Top-Rated on Upwork",
-  "Filipino Web Designers",
-  "Affordable Website Design",
+  "Starting at $29",
+  "DIY Website Templates",
+  "Build Your Own Website",
   "No Subscriptions",
   "You Own the Code",
-  "Fast Turnaround",
+  "48-Hour Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
-  "Top-Rated on Upwork",
-  "Filipino Web Designers",
+  "Starting at $29",
 ];
 
-const DELIVERABLES = [
-  { icon: "file", label: "Complete HTML/CSS files", sub: "Clean, hand-coded, no dependencies" },
-  { icon: "phone", label: "Mobile-responsive layout", sub: "Looks great on every device" },
-  { icon: "search", label: "SEO-optimised structure", sub: "Semantic HTML, proper meta tags" },
-  { icon: "download", label: "ZIP download link", sub: "One click — host anywhere you like" },
-  { icon: "book", label: "Setup instructions", sub: "Step-by-step guide included" },
-  { icon: "rocket", label: "Optional live setup add-on", sub: "We deploy it for you on request" },
+const PACKAGES = [
+  {
+    name: "Starter",
+    price: "$29",
+    pageRange: "Up to 5 pages",
+    desc: "Perfect for a simple, professional online presence.",
+    features: ["Up to 5 pages", "Mobile-responsive", "SEO meta tags", "Contact form", "ZIP download"],
+    cta: "Build Starter →",
+    popular: false,
+    href: "/generate",
+  },
+  {
+    name: "Growth",
+    price: "$99",
+    pageRange: "6–10 pages",
+    desc: "Ideal for service businesses and content-rich sites.",
+    features: ["6–10 pages", "Everything in Starter", "Gallery or blog layout", "Social media links", "Google Maps", "2 revision rounds"],
+    cta: "Build Growth →",
+    popular: true,
+    href: "/generate",
+  },
+  {
+    name: "Ecommerce",
+    price: "$149",
+    pageRange: "Up to 10 products",
+    desc: "Sell products with a clean, conversion-ready store.",
+    features: ["Product pages (up to 10)", "Shopping cart layout", "Checkout page", "Everything in Growth", "Priority delivery"],
+    cta: "Build My Store →",
+    popular: false,
+    href: "/generate",
+  },
+  {
+    name: "Custom",
+    price: "Let'"'"'s Talk",
+    pageRange: "Unlimited scope",
+    desc: "Complex projects, unique requirements, or bespoke builds.",
+    features: ["Unlimited pages", "Custom integrations", "Dedicated designer", "Priority support", "Full handoff"],
+    cta: "Contact Us →",
+    popular: false,
+    href: "/contact",
+  },
 ];
 
-function MinimalIcon({ name }: { name: string }) {
-  const paths: Record<string, string> = {
-    file: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8",
-    phone: "M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z",
-    search: "M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z",
-    download: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3",
-    book: "M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z",
-    rocket: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2zM9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M15 12v5s3.03-.55 4-2c1.08-1.62 0-5 0-5",
-  };
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d={paths[name]} />
-    </svg>
-  );
-}
+const WHY_US = [
+  {
+    title: "Cheaper than any builder subscription",
+    desc: "Wix, Squarespace, and Shopify cost $16–$40/month. Pay once with us — $29 flat, forever.",
+  },
+  {
+    title: "Professional quality, not a generic theme",
+    desc: "Every template is designed to your brand, audience, and goals — not a drag-and-drop template anyone can duplicate.",
+  },
+  {
+    title: "You own every file",
+    desc: "No lock-in, no licensing, no monthly platform fees. Host wherever you like — we hand you the keys.",
+  },
+  {
+    title: "Ready in 48 hours",
+    desc: "Most templates are delivered within 2 business days of payment. Fast without cutting corners.",
+  },
+  {
+    title: "Rebuild until you love it",
+    desc: "Not happy with the first draft? Describe your changes in plain language. We fine-tune or rebuild at no extra charge.",
+  },
+  {
+    title: "SEO-ready from day one",
+    desc: "Semantic HTML, fast load times, proper meta tags, and mobile-first structure — built in by default on every template.",
+  },
+];
 
 export default function Home() {
   return (
     <>
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section
         style={{
           background: "var(--hero-gradient)",
@@ -95,14 +145,14 @@ export default function Home() {
           }}
         />
         <div className="container-tight" style={{ position: "relative" }}>
-          <span className="badge anim-fade-up">Top-Rated Filipino Web Designers · Starting at $49</span>
+          <span className="badge anim-fade-up">DIY Website Templates · Starting at $29 · You Own It Forever</span>
 
           <h1
             className="heading-hero anim-fade-up anim-delay-1"
-            style={{ marginTop: "1.5rem", color: "#111111", maxWidth: 800, marginInline: "auto" }}
+            style={{ marginTop: "1.5rem", color: "#111111", maxWidth: 840, marginInline: "auto" }}
           >
-            Affordable Website Design{" "}
-            <span style={{ color: "#555555", fontStyle: "italic" }}>for your business.</span>
+            Build Your Website —{" "}
+            <span style={{ color: "#555555", fontStyle: "italic" }}>without the subscription.</span>
           </h1>
 
           <p
@@ -111,29 +161,28 @@ export default function Home() {
               marginTop: "1.25rem",
               fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
               color: "var(--text-muted)",
-              maxWidth: 580,
+              maxWidth: 620,
               marginInline: "auto",
               lineHeight: 1.7,
             }}
           >
-            Professional, hand-coded websites at prices small businesses can actually afford. No page builders, no subscriptions. You own every file.
+            Tell us your pages, style, colours, and features. We design a clean, professional website template — custom to your brand. Download the files, host anywhere, own it forever.
           </p>
 
           <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.25rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/generate" className="btn-primary" style={{ fontSize: "1.05rem", padding: "0.95rem 2.25rem" }}>
-              Get Your Website →
+              Build My Website →
             </Link>
-            <Link href="#how-it-works" className="btn-outline">
-              How It Works
+            <Link href="#pricing" className="btn-outline">
+              See Pricing
             </Link>
           </div>
 
-          {/* Social proof */}
           <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap" }}>
             {[
-              { label: "Starting at", value: "$49" },
-              { label: "Delivered in", value: "2–4 days" },
-              { label: "Rated", value: "Top on Upwork" },
+              { label: "Starting at", value: "$29" },
+              { label: "Delivered in", value: "48 hours" },
+              { label: "No monthly", value: "Fees. Ever." },
             ].map((s) => (
               <div key={s.label} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "1.5rem", fontWeight: 900, letterSpacing: "-0.03em", color: "#111111" }}>{s.value}</div>
@@ -144,7 +193,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Trust marquee ── */}
+      {/* Trust marquee */}
       <div style={{ background: "var(--surface-2)", borderTop: "1.5px solid var(--border)", borderBottom: "1.5px solid var(--border)", padding: "0.9rem 0", overflow: "hidden" }}>
         <div className="marquee-track">
           {TRUST_ITEMS.map((item, i) => (
@@ -159,27 +208,27 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── How It Works ── */}
+      {/* How It Works */}
       <section id="how-it-works" style={{ padding: "6rem 0" }}>
         <div className="container-tight">
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <span className="badge">Simple Process</span>
+            <span className="badge">The Process</span>
             <h2 className="heading-section" style={{ marginTop: "1rem" }}>
-              How Affordable Website Design Works
+              How DIY Website Building Works
             </h2>
-            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 500, marginInline: "auto" }}>
-              From form to finished website in days — no back-and-forth, no confusion.
+            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 520, marginInline: "auto" }}>
+              You fill out the form. We handle the design. You walk away with a professional website you own.
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            {STEPS.map((step, i) => (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
+            {PROCESS_STEPS.map((step, i) => (
               <div key={i} className="card" style={{ position: "relative" }}>
-                <span style={{ fontSize: "3rem", fontWeight: 900, letterSpacing: "-0.04em", opacity: 0.08, position: "absolute", top: "1rem", right: "1.25rem", lineHeight: 1, color: "#111111" }}>
+                <span style={{ fontSize: "3rem", fontWeight: 900, letterSpacing: "-0.04em", opacity: 0.07, position: "absolute", top: "1rem", right: "1.25rem", lineHeight: 1, color: "#111111" }}>
                   {step.num}
                 </span>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "0.65rem" }}>{step.title}</h3>
-                <p style={{ color: "var(--text-muted)", lineHeight: 1.65, fontSize: "0.95rem" }}>{step.desc}</p>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 800, marginBottom: "0.65rem" }}>{step.title}</h3>
+                <p style={{ color: "var(--text-muted)", lineHeight: 1.65, fontSize: "0.93rem" }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -188,28 +237,102 @@ export default function Home() {
 
       <hr className="section-divider" />
 
-      {/* ── What You Get ── */}
-      <section style={{ padding: "4rem 0 6rem" }}>
+      {/* Pricing */}
+      <section id="pricing" style={{ padding: "6rem 0" }}>
         <div className="container-tight">
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <span className="badge">Deliverables</span>
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <span className="badge">Flat-Rate Pricing</span>
             <h2 className="heading-section" style={{ marginTop: "1rem" }}>
-              What Your Affordable Website Includes
+              Simple Pricing. No Surprises.
             </h2>
-            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 480, marginInline: "auto" }}>
-              Everything you need to go live — no extra purchases required.
+            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 520, marginInline: "auto" }}>
+              One flat payment. No monthly fees, no renewals, no hidden costs. Pick your tier and get your custom template.
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem" }}>
-            {DELIVERABLES.map((item) => (
-              <div key={item.label} className="card" style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                <span style={{ flexShrink: 0, color: "#111111", marginTop: "0.1rem" }}>
-                  <MinimalIcon name={item.icon} />
-                </span>
-                <div>
-                  <p style={{ fontWeight: 700, fontSize: "0.97rem", marginBottom: "0.2rem" }}>{item.label}</p>
-                  <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", lineHeight: 1.5 }}>{item.sub}</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: "1.25rem", alignItems: "start" }}>
+            {PACKAGES.map((pkg) => (
+              <div
+                key={pkg.name}
+                className="card"
+                style={{
+                  position: "relative",
+                  border: pkg.popular ? "2px solid #111111" : undefined,
+                  paddingTop: pkg.popular ? "2.5rem" : undefined,
+                }}
+              >
+                {pkg.popular && (
+                  <div style={{
+                    position: "absolute",
+                    top: 0,
+                    left: "50%",
+                    transform: "translateX(-50%) translateY(-50%)",
+                    background: "#111111",
+                    color: "#fff",
+                    fontSize: "0.7rem",
+                    fontWeight: 800,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    padding: "0.3rem 1rem",
+                    borderRadius: "999px",
+                    whiteSpace: "nowrap",
+                  }}>
+                    Most Popular
+                  </div>
+                )}
+                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
+                  {pkg.name}
+                </div>
+                <div style={{ fontSize: "2.25rem", fontWeight: 900, letterSpacing: "-0.04em", color: "#111111", marginBottom: "0.15rem" }}>
+                  {pkg.price}
+                </div>
+                <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--text-muted)", marginBottom: "0.5rem" }}>{pkg.pageRange}</div>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.87rem", marginBottom: "1.25rem", lineHeight: 1.55 }}>{pkg.desc}</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.75rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                  {pkg.features.map((f) => (
+                    <li key={f} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", fontSize: "0.88rem", color: "var(--text)" }}>
+                      <span style={{ fontWeight: 900, flexShrink: 0 }}>✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={pkg.href}
+                  className="btn-primary"
+                  style={{ display: "block", textAlign: "center", fontSize: "0.9rem" }}
+                >
+                  {pkg.cta}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
+      {/* Why DIY with Us */}
+      <section style={{ padding: "5rem 0 6rem" }}>
+        <div className="container-tight">
+          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+            <span className="badge">Why Choose Us</span>
+            <h2 className="heading-section" style={{ marginTop: "1rem" }}>
+              The smarter way to build your website
+            </h2>
+            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 520, marginInline: "auto" }}>
+              Skip overpriced subscriptions and generic templates. Get a custom website you actually own.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
+            {WHY_US.map((item, i) => (
+              <div key={i} className="card">
+                <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
+                  <span style={{ fontSize: "1rem", flexShrink: 0, marginTop: "0.15rem", color: "#111111" }}>✦</span>
+                  <div>
+                    <h3 style={{ fontSize: "1rem", fontWeight: 800, marginBottom: "0.5rem" }}>{item.title}</h3>
+                    <p style={{ color: "var(--text-muted)", lineHeight: 1.65, fontSize: "0.92rem" }}>{item.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -217,98 +340,20 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="section-divider" />
-
-      {/* ── Why Us ── */}
-      <section style={{ padding: "4rem 0 6rem", background: "var(--surface)" }}>
-        <div className="container-tight">
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <span className="badge">Why AffordaWeb</span>
-            <h2 className="heading-section" style={{ marginTop: "1rem" }}>
-              Real Designers. Real Affordable Prices.
-            </h2>
-            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 520, marginInline: "auto" }}>
-              We are Filipino web design professionals rated among the top freelancers on Upwork — bringing world-class quality at a fraction of typical agency prices.
-            </p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.25rem" }}>
-            {[
-              { title: "Top-Rated on Upwork", desc: "Verified track record. Hundreds of satisfied clients across industries." },
-              { title: "Hand-Coded Quality", desc: "Every website is written by hand — no page builders, no bloated templates." },
-              { title: "Affordable for Everyone", desc: "We believe every small business deserves a great website, not just big brands." },
-              { title: "Fast Turnaround", desc: "Most projects are delivered in 2–4 business days from payment confirmation." },
-            ].map((item) => (
-              <div key={item.title} className="card">
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 800, marginBottom: "0.5rem" }}>{item.title}</h3>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.6 }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-            <Link href="/about" className="btn-outline">Meet the Team →</Link>
-          </div>
-        </div>
-      </section>
-
-      <hr className="section-divider" />
-
-      {/* ── Pricing ── */}
-      <section id="pricing" style={{ padding: "4rem 0 6rem" }}>
-        <div className="container-tight" style={{ maxWidth: 720, marginInline: "auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-            <span className="badge">Pricing</span>
-            <h2 className="heading-section" style={{ marginTop: "1rem" }}>
-              Transparent, Affordable Pricing
-            </h2>
-            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem" }}>
-              One flat fee. No hidden costs, no recurring charges. Pay once and own your website forever.
-            </p>
-          </div>
-
-          <div className="card" style={{ textAlign: "center", border: "2px solid #111111", background: "#FAFAFA", padding: "2.5rem 2rem" }}>
-            <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginBottom: "0.5rem" }}>Starting from</p>
-            <p style={{ fontSize: "clamp(3rem, 8vw, 5rem)", fontWeight: 900, letterSpacing: "-0.04em", lineHeight: 1, color: "#111111" }}>
-              $49
-            </p>
-            <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem" }}>per website — one-time payment</p>
-
-            <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2rem", display: "flex", flexDirection: "column", gap: "0.65rem", textAlign: "left", maxWidth: 340, marginInline: "auto" }}>
-              {[
-                "Custom-designed to match your brand",
-                "Up to 6 pages included",
-                "Mobile-first & SEO-optimised",
-                "Delivered within 2–4 business days",
-                "Pay securely via PayPal invoice",
-                "+$25 optional live hosting setup",
-              ].map((item) => (
-                <li key={item} style={{ display: "flex", gap: "0.65rem", alignItems: "flex-start", color: "var(--text)", fontSize: "0.95rem" }}>
-                  <span style={{ color: "#111111", marginTop: "0.1em", flexShrink: 0, fontWeight: 900 }}>✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <Link href="/generate" className="btn-primary" style={{ fontSize: "1.05rem", padding: "0.95rem 2.5rem" }}>
-              Order My Website →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Blog teaser ── */}
-      <section style={{ padding: "4rem 0 6rem", background: "var(--surface)" }}>
+      {/* Blog preview */}
+      <section style={{ padding: "3rem 0 6rem", background: "var(--surface)" }}>
         <div className="container-tight">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="badge">Blog</span>
             <h2 className="heading-section" style={{ marginTop: "1rem" }}>
-              Web Design Tips & Guides
+              DIY Website Tips &amp; Guides
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
             {[
-              { slug: "affordable-website-design-for-small-business", title: "Affordable Website Design for Small Business: The Complete Guide", date: "April 2025" },
-              { slug: "why-hire-a-filipino-web-designer", title: "Why Hire a Filipino Web Designer? Top Reasons in 2025", date: "April 2025" },
-              { slug: "how-much-does-a-website-cost", title: "How Much Does a Website Cost? (Honest Breakdown)", date: "April 2025" },
+              { slug: "diy-website-builder-vs-custom-template", title: "DIY Website Builder vs Custom Template: Which is Better in 2026?", date: "April 2026" },
+              { slug: "how-to-build-your-own-website-without-coding", title: "How to Build Your Own Website Without Coding (Step-by-Step Guide)", date: "April 2026" },
+              { slug: "cheap-website-templates-for-small-business", title: "Best Cheap Website Templates for Small Businesses — $29 Flat", date: "April 2026" },
             ].map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="card" style={{ height: "100%", transition: "border-color 0.2s" }}>
@@ -325,17 +370,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA Banner ── */}
+      {/* CTA Banner */}
       <section style={{ background: "#111111", padding: "5rem 0", textAlign: "center" }}>
         <div className="container-tight">
           <h2 className="heading-section" style={{ color: "#FFFFFF", marginBottom: "1rem" }}>
-            Ready for an affordable website?
+            Ready to build your website?
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 480, marginInline: "auto" }}>
-            Fill out our short form in minutes and get a professional website delivered to your inbox.
+          <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 500, marginInline: "auto" }}>
+            Fill out our 4-minute design form and get a professional, custom website template delivered to your inbox — starting at just $29.
           </p>
           <Link href="/generate" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FFFFFF", color: "#111111", fontWeight: 700, fontSize: "1.1rem", padding: "1rem 2.5rem", borderRadius: "999px", textDecoration: "none" }}>
-            Start Now — It&apos;s Free to Request →
+            Build My Website — Starting at $29 →
           </Link>
         </div>
       </section>

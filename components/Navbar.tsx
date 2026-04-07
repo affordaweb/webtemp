@@ -38,12 +38,13 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav style={{ display: "flex", alignItems: "center", gap: "1.5rem" }} className="hidden md:flex">
           <NavLink href="/services">Services</NavLink>
+          <NavLink href="/#pricing">Pricing</NavLink>
           <NavLink href="/portfolio">Portfolio</NavLink>
           <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/blog">Blog</NavLink>
           <Link href="/generate" className="btn-primary" style={{ fontSize: "0.88rem", padding: "0.6rem 1.4rem" }}>
-            Get Started →
+            Build My Website →
           </Link>
         </nav>
 
@@ -69,12 +70,13 @@ export default function Navbar() {
         <div style={{ background: "#FFFFFF", borderBottom: "1.5px solid var(--border)", padding: "1rem 1.25rem" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
             <NavLink href="/services" onClick={() => setOpen(false)}>Services</NavLink>
+            <NavLink href="/#pricing" onClick={() => setOpen(false)}>Pricing</NavLink>
             <NavLink href="/portfolio" onClick={() => setOpen(false)}>Portfolio</NavLink>
             <NavLink href="/faq" onClick={() => setOpen(false)}>FAQ</NavLink>
             <NavLink href="/about" onClick={() => setOpen(false)}>About</NavLink>
             <NavLink href="/blog" onClick={() => setOpen(false)}>Blog</NavLink>
             <Link href="/generate" className="btn-primary" style={{ textAlign: "center", fontSize: "0.9rem" }} onClick={() => setOpen(false)}>
-              Get Started →
+              Build My Website →
             </Link>
           </div>
         </div>

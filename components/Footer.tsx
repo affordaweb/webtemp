@@ -31,21 +31,21 @@ export default function Footer() {
               <span style={{ fontSize: "1rem", fontWeight: 900, letterSpacing: "-0.03em", color: "#111111" }}>AffordaWeb Solutions</span>
             </Link>
             <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.6, maxWidth: 240 }}>
-              Affordable website design by top-rated Filipino web designers. Professional quality, prices that make sense.
+              DIY website templates built to order. Tell us what you need — we design it, you own it forever. Starting at $29.
             </p>
           </div>
 
           {/* Services */}
           <div>
             <h3 style={{ fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)", marginBottom: "1rem" }}>
-              Services
+              Templates
             </h3>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+              <li><FooterLink href="/generate">Build My Website</FooterLink></li>
+              <li><FooterLink href="/services">Services & Pricing</FooterLink></li>
               <li><FooterLink href="/#how-it-works">How It Works</FooterLink></li>
               <li><FooterLink href="/#pricing">Pricing</FooterLink></li>
-              <li><FooterLink href="/services">Services</FooterLink></li>
               <li><FooterLink href="/portfolio">Portfolio</FooterLink></li>
-              <li><FooterLink href="/generate">Order a Website</FooterLink></li>
             </ul>
           </div>
 
@@ -78,7 +78,7 @@ export default function Footer() {
             © {year} AffordaWeb Solutions. All rights reserved.
           </p>
           <p style={{ color: "var(--text-muted)", fontSize: "0.83rem", margin: 0 }}>
-            Affordable website design · Based in the Philippines
+            DIY website templates · Starting at $29 · You own the files
           </p>
         </div>
       </div>
