@@ -229,7 +229,7 @@ export default function Home() {
         >
           {/* Left: text + buttons */}
           <div>
-            <span className="badge anim-fade-up">DIY Website Templates · Starting at $29 · You Own It Forever</span>
+            <span className="badge">DIY Website Templates · Starting at $29 · You Own It Forever</span>
 
             <h1
               className="heading-hero"
@@ -240,7 +240,6 @@ export default function Home() {
             </h1>
 
             <p
-              className="anim-fade-up anim-delay-2"
               style={{
                 marginTop: "1.25rem",
                 fontSize: "clamp(1rem, 2vw, 1.15rem)",
@@ -258,7 +257,7 @@ export default function Home() {
               , own it forever.
             </p>
 
-            <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.25rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <div style={{ marginTop: "2.25rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <Link href="/generate" className="btn-primary" style={{ fontSize: "1.05rem", padding: "0.95rem 2.25rem" }}>
                 Build My Website →
               </Link>
@@ -267,7 +266,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
+            <div style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
               {[
                 { label: "Starting price", value: "$29" },
                 { label: "Avg. delivery", value: "< 1 hr" },
@@ -282,7 +281,7 @@ export default function Home() {
           </div>
 
           {/* Right: hero illustration */}
-          <div className="hero-svg-col anim-fade-up anim-delay-2" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <div className="hero-svg-col" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <svg
               width="100%"
               viewBox="0 0 480 360"
