@@ -233,7 +233,7 @@ export default function GeneratePage() {
           {/* Step 0: Your Business */}
           {step === 0 && (
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+              <div className="form-grid-2">
                 <div>
                   <label className="form-label">Your Name *</label>
                   <input className="form-input" placeholder="Jane Smith" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
@@ -272,7 +272,7 @@ export default function GeneratePage() {
                   <span>🔍</span> SEO Information <span style={{ fontWeight: 400, color: "var(--text-muted)", fontSize: "0.82rem" }}>— helps us optimise your site for Google</span>
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                  <div className="form-grid-2">
                     <div>
                       <label className="form-label">Main Service Keyword <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
                       <input className="form-input" placeholder='e.g. "plumber in Dallas"' value={form.focusKeyword} onChange={(e) => setForm({ ...form, focusKeyword: e.target.value })} />
@@ -282,7 +282,7 @@ export default function GeneratePage() {
                       <input className="form-input" placeholder='e.g. "Tampa, FL"' value={form.targetCity} onChange={(e) => setForm({ ...form, targetCity: e.target.value })} />
                     </div>
                   </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                  <div className="form-grid-2">
                     <div>
                       <label className="form-label">Business Phone <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
                       <input className="form-input" type="tel" placeholder='e.g. "(813) 555-0100"' value={form.businessPhone} onChange={(e) => setForm({ ...form, businessPhone: e.target.value })} />
@@ -308,7 +308,7 @@ export default function GeneratePage() {
                   Est: {estimate.price}
                 </div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "0.65rem", marginBottom: "1.25rem" }}>
+              <div className="form-grid-features" style={{ marginBottom: "1.25rem" }}>
                 {PAGES_OPTIONS.map((page) => {
                   const active = form.pages.includes(page);
                   return (
@@ -465,7 +465,7 @@ export default function GeneratePage() {
                 <label className="form-label" style={{ marginBottom: "0.75rem" }}>
                   Site Features <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>— select all that apply</span>
                 </label>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "0.6rem" }}>
+                <div className="form-grid-features">
                   {FEATURES_OPTIONS.map((feat) => {
                     const active = form.features.includes(feat);
                     return (

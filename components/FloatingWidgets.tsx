@@ -57,6 +57,7 @@ export default function FloatingWidgets() {
       {/* ── Left: Social Proof Toast ── */}
       {!proofClosed && (
         <div
+          className="social-proof-widget"
           style={{
             position: "fixed",
             bottom: "1.5rem",

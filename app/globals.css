@@ -162,6 +162,42 @@ body {
 .anim-delay-3   { animation-delay: 0.3s; }
 .anim-pulse     { animation: pulse-scale 2.4s ease-in-out infinite; }
 
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up, .anim-pulse { animation: none; opacity: 1; }
+  .marquee-track { animation: none; }
+}
+
+/* Responsive 2-column form grid → stacks to 1 on mobile */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Feature toggle grid */
+.form-grid-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+@media (max-width: 480px) {
+  .form-grid-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hide social proof toast on small screens to prevent overlap with CTA */
+@media (max-width: 600px) {
+  .social-proof-widget {
+    display: none;
+  }
+}
+
 .marquee-track {
   display: flex;
   width: max-content;
