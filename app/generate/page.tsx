@@ -130,7 +130,8 @@ const STEPS = ["Your Business", "Site Pages", "Design", "Features", "Preview & C
 
 function getEstimate(pages: string[], features: string[]): { price: string; label: string } {
   if (features.includes("E-commerce (up to 10 products)")) return { price: "$129", label: "Premium tier" };
-  if (pages.length > 3) return { price: "$79", label: "Standard tier (4–6 pages)" };
+  if (pages.length >= 7) return { price: "$129", label: "Premium tier (7–8 pages)" };
+  if (pages.length >= 4) return { price: "$79", label: "Standard tier (4–6 pages)" };
   return { price: "$29", label: "Starter tier (1–3 pages)" };
 }
 
@@ -338,9 +339,24 @@ export default function GeneratePage() {
               </div>
               <div style={{ padding: "0.9rem 1.1rem", borderRadius: "0.65rem", background: "var(--surface-2)", border: "1.5px solid var(--border)", fontSize: "0.83rem" }}>
                 <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
-                  <span style={{ color: "var(--text-muted)" }}>📄 <strong style={{ color: "var(--text)" }}>1–3 pages</strong> → $29</span>
-                  <span style={{ color: "var(--text-muted)" }}>📄 <strong style={{ color: "var(--text)" }}>4–6 pages</strong> → $79</span>
-                  <span style={{ color: "var(--text-muted)" }}>📄 <strong style={{ color: "var(--text)" }}>7–8 pages</strong> → $129</span>
+                  {[
+                    { range: "1–3 pages", price: "$29", active: form.pages.length <= 3 },
+                    { range: "4–6 pages", price: "$79", active: form.pages.length >= 4 && form.pages.length <= 6 },
+                    { range: "7–10 pages", price: "$129", active: form.pages.length >= 7 },
+                  ].map((tier) => (
+                    <span
+                      key={tier.range}
+                      style={{
+                        color: tier.active ? "#111111" : "var(--text-muted)",
+                        fontWeight: tier.active ? 700 : 400,
+                        background: tier.active ? "#e5e7eb" : "transparent",
+                        padding: tier.active ? "0.2rem 0.6rem" : undefined,
+                        borderRadius: tier.active ? "999px" : undefined,
+                      }}
+                    >
+                      📄 <strong style={{ color: tier.active ? "#111111" : "var(--text)" }}>{tier.range}</strong> → {tier.price}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

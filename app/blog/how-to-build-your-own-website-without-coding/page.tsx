@@ -2,17 +2,41 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Build Your Own Website Without Coding (2026 Guide)",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06",
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  url: `${SITE_URL}/blog/how-to-build-your-own-website-without-coding`,
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    { "@type": "ListItem", position: 3, name: "How to Build Your Own Website Without Coding", item: `${SITE_URL}/blog/how-to-build-your-own-website-without-coding` },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "How to Build Your Own Website Without Coding (2025 Guide)",
+  title: "How to Build Your Own Website Without Coding (2026 Guide)",
   description:
-    "Learn exactly how to build your own website without any coding knowledge in 2025. Compare your options — DIY builders, templates, and no-code tools — and find the best fit for your budget.",
+    "Learn exactly how to build your own website without any coding knowledge in 2026. Compare your options — DIY builders, templates, and no-code tools — and find the best fit for your budget.",
   alternates: { canonical: "/blog/how-to-build-your-own-website-without-coding" },
 };
 
 export default function Post() {
   return (
-    <div style={{ padding: "5rem 0 6rem" }}>
-      <div className="container-tight">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div style={{ padding: "5rem 0 6rem" }}>
+        <div className="container-tight">
         <div className="blog-layout" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "2.5rem", alignItems: "start" }}>
           {/* Article */}
           <article>
@@ -26,7 +50,7 @@ export default function Post() {
             </div>
 
             <h1 className="heading-section" style={{ marginBottom: "1.5rem", lineHeight: 1.2 }}>
-              How to Build Your Own Website Without Coding (2025 Guide)
+              How to Build Your Own Website Without Coding (2026 Guide)
             </h1>
 
             <div style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8, display: "flex", flexDirection: "column", gap: "1.25rem" }}>
@@ -156,5 +180,6 @@ export default function Post() {
         </div>
       </div>
     </div>
+    </>
   );
 }

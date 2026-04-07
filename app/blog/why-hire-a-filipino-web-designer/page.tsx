@@ -2,8 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Why Hire a Filipino Web Designer? Top Reasons in 2026",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06",
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  url: `${SITE_URL}/blog/why-hire-a-filipino-web-designer`,
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    { "@type": "ListItem", position: 3, name: "Why Hire a Filipino Web Designer?", item: `${SITE_URL}/blog/why-hire-a-filipino-web-designer` },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Why Hire a Filipino Web Designer? Top Reasons in 2025",
+  title: "Why Hire a Filipino Web Designer? Top Reasons in 2026",
   description:
     "Filipino web designers are rated as some of the best on Upwork. Discover why businesses worldwide choose Filipino web design professionals for quality, communication, and value.",
   alternates: { canonical: "/blog/why-hire-a-filipino-web-designer" },
@@ -11,8 +32,11 @@ export const metadata: Metadata = {
 
 export default function Post() {
   return (
-    <div style={{ padding: "5rem 0 6rem" }}>
-      <div className="container-tight">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div style={{ padding: "5rem 0 6rem" }}>
+        <div className="container-tight">
         <div className="blog-layout" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "2.5rem", alignItems: "start" }}>
           {/* Article */}
           <article>
@@ -22,11 +46,11 @@ export default function Post() {
 
         <div style={{ marginBottom: "2rem" }}>
           <span className="badge">Hiring</span>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", marginTop: "0.75rem" }}>April 2025 · 5 min read</p>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", marginTop: "0.75rem" }}>April 2026 · 5 min read</p>
         </div>
 
         <h1 className="heading-section" style={{ marginBottom: "1.5rem", lineHeight: 1.2 }}>
-          Why Hire a Filipino Web Designer? Top Reasons in 2025
+          Why Hire a Filipino Web Designer? Top Reasons in 2026
         </h1>
 
         <div style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8, display: "flex", flexDirection: "column", gap: "1.25rem" }}>
@@ -92,5 +116,6 @@ export default function Post() {
         </div>
       </div>
     </div>
+    </>
   );
 }

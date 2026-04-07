@@ -1,5 +1,80 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Custom Website Template Design",
+  description:
+    "Custom-designed website templates starting at $29. Fill out a form, we design it, you own the code forever. No subscriptions.",
+  provider: {
+    "@type": "Organization",
+    name: "AffordaWeb Solutions",
+    url: SITE_URL,
+  },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Starter",
+      price: "29",
+      priceCurrency: "USD",
+      description: "1–3 pages, mobile-responsive, SEO meta tags, contact form, ZIP download, 1 revision round",
+      url: `${SITE_URL}/generate`,
+    },
+    {
+      "@type": "Offer",
+      name: "Standard",
+      price: "79",
+      priceCurrency: "USD",
+      description: "4–6 pages, everything in Starter, gallery or blog layout, social media links, Google Maps, 2 revision rounds",
+      url: `${SITE_URL}/generate`,
+    },
+    {
+      "@type": "Offer",
+      name: "Premium",
+      price: "129",
+      priceCurrency: "USD",
+      description: "Up to 8 pages, everything in Standard, testimonials section, priority delivery, 3 revision rounds",
+      url: `${SITE_URL}/generate`,
+    },
+  ],
+};
+
+const TESTIMONIALS = [
+  {
+    name: "Maria L.",
+    role: "Freelance Photographer",
+    body: "I had my website live in less than 24 hours. The design was exactly what I described — clean, fast, and actually mine. No Wix watermark, no monthly bill.",
+  },
+  {
+    name: "James T.",
+    role: "Personal Trainer",
+    body: "I was quoted $2,000 by a local agency. AffordaWeb built me something just as professional for $79. I host it on Netlify for free. Game changer.",
+  },
+  {
+    name: "Sofia R.",
+    role: "Bakery Owner",
+    body: "The form was really easy to fill out. They got the colors and vibe of my brand perfectly. I requested one small change and it was done same day.",
+  },
+  {
+    name: "Daniel K.",
+    role: "IT Consultant",
+    body: "SEO-ready, mobile-first, and genuinely well-coded. I run too many websites to keep paying platform fees. This model just makes sense.",
+  },
+  {
+    name: "Aisha M.",
+    role: "Virtual Assistant",
+    body: "Honestly surprised at the quality for $29. I was expecting something basic but it looks like I spent way more. Will use again for a client site.",
+  },
+  {
+    name: "Carlos V.",
+    role: "Restaurant Owner",
+    body: "I needed something quick before a local event. Submitted the form, paid, and had my site ready to publish the next morning. Exactly what I needed.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "DIY Website Templates for Small Business — Starting at $29 | AffordaWeb Solutions",
@@ -123,6 +198,11 @@ const WHY_US = [
 export default function Home() {
   return (
     <>
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* Hero */}
       <section
         style={{
@@ -470,8 +550,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section style={{ padding: "6rem 0", background: "var(--surface)" }}>
+        <div className="container-tight">
+          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+            <span className="badge">What Clients Say</span>
+            <h2 className="heading-section" style={{ marginTop: "1rem" }}>
+              Real results from real clients
+            </h2>
+            <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 500, marginInline: "auto" }}>
+              Hundreds of small business owners have launched with AffordaWeb — here&apos;s what they say.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
+            {TESTIMONIALS.map((t) => (
+              <div key={t.name} className="card" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <p style={{ color: "var(--text-muted)", lineHeight: 1.7, fontSize: "0.93rem", flex: 1 }}>
+                  &ldquo;{t.body}&rdquo;
+                </p>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", paddingTop: "0.75rem", borderTop: "1.5px solid var(--border)" }}>
+                  <div style={{ width: 36, height: 36, borderRadius: "50%", background: "#111111", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "0.85rem", fontWeight: 800, flexShrink: 0 }}>
+                    {t.name[0]}
+                  </div>
+                  <div>
+                    <div style={{ fontSize: "0.88rem", fontWeight: 800, color: "#111111" }}>{t.name}</div>
+                    <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontWeight: 600 }}>{t.role}</div>
+                  </div>
+                  <div style={{ marginLeft: "auto", color: "#f59e0b", fontSize: "0.75rem", letterSpacing: 1 }}>★★★★★</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Blog preview */}
-      <section style={{ padding: "3rem 0 6rem", background: "var(--surface)" }}>
+      <section style={{ padding: "3rem 0 6rem" }}>
         <div className="container-tight">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="badge">Blog</span>

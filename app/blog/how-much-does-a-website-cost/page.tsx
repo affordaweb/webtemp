@@ -2,10 +2,31 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How Much Does a Website Cost? (Honest Breakdown for 2026)",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06",
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  url: `${SITE_URL}/blog/how-much-does-a-website-cost`,
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    { "@type": "ListItem", position: 3, name: "How Much Does a Website Cost?", item: `${SITE_URL}/blog/how-much-does-a-website-cost` },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "How Much Does a Website Cost? (Honest Breakdown for 2025)",
+  title: "How Much Does a Website Cost? (Honest Breakdown for 2026)",
   description:
-    "A transparent, no-nonsense breakdown of website costs in 2025 — from $29 templates to $50,000 agency projects. Find out what you actually need and what you can skip.",
+    "A transparent, no-nonsense breakdown of website costs in 2026 — from $29 templates to $50,000 agency projects. Find out what you actually need and what you can skip.",
   alternates: { canonical: "/blog/how-much-does-a-website-cost" },
 };
 
@@ -50,8 +71,11 @@ const TIERS = [
 
 export default function Post() {
   return (
-    <div style={{ padding: "5rem 0 6rem" }}>
-      <div className="container-tight">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div style={{ padding: "5rem 0 6rem" }}>
+        <div className="container-tight">
         <div className="blog-layout" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "2.5rem", alignItems: "start" }}>
           {/* Article */}
           <article>
@@ -61,11 +85,11 @@ export default function Post() {
 
         <div style={{ marginBottom: "2rem" }}>
           <span className="badge">Pricing</span>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", marginTop: "0.75rem" }}>April 2025 · 7 min read</p>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", marginTop: "0.75rem" }}>April 2026 · 7 min read</p>
         </div>
 
         <h1 className="heading-section" style={{ marginBottom: "1.5rem", lineHeight: 1.2 }}>
-          How Much Does a Website Cost? (Honest Breakdown for 2025)
+          How Much Does a Website Cost? (Honest Breakdown for 2026)
         </h1>
 
         <div style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8, display: "flex", flexDirection: "column", gap: "1.25rem" }}>
@@ -163,5 +187,6 @@ export default function Post() {
         </div>
       </div>
     </div>
+    </>
   );
 }

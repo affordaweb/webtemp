@@ -91,6 +91,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     title: "AffordaWeb Solutions — DIY Website Templates Starting at $29",

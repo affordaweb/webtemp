@@ -19,5 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/best-website-templates-for-small-business`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/blog/website-design-without-a-developer`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/blog/what-is-a-hand-coded-website`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE}/terms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
 }

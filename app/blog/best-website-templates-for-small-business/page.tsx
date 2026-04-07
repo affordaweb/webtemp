@@ -2,6 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Best Website Templates for Small Business in 2026 (Free & Paid)",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06",
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  url: `${SITE_URL}/blog/best-website-templates-for-small-business`,
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    { "@type": "ListItem", position: 3, name: "Best Website Templates for Small Business in 2026", item: `${SITE_URL}/blog/best-website-templates-for-small-business` },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Best Website Templates for Small Business in 2026 (Free & Paid)",
   description:
@@ -11,8 +32,11 @@ export const metadata: Metadata = {
 
 export default function Post() {
   return (
-    <div style={{ padding: "5rem 0 6rem" }}>
-      <div className="container-tight">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div style={{ padding: "5rem 0 6rem" }}>
+        <div className="container-tight">
         <div className="blog-layout" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "2.5rem", alignItems: "start" }}>
           {/* Article */}
           <article>
@@ -172,5 +196,6 @@ export default function Post() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -2,6 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Affordable Website Design for Small Business: The Complete Guide",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06",
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  url: `${SITE_URL}/blog/affordable-website-design-for-small-business`,
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    { "@type": "ListItem", position: 3, name: "Affordable Website Design for Small Business", item: `${SITE_URL}/blog/affordable-website-design-for-small-business` },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Affordable Website Design for Small Business: The Complete Guide",
   description:
@@ -11,6 +32,9 @@ export const metadata: Metadata = {
 
 export default function Post() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div style={{ padding: "5rem 0 6rem" }}>
       <div className="container-tight">
         <div className="blog-layout" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "2.5rem", alignItems: "start" }}>
@@ -22,7 +46,7 @@ export default function Post() {
 
         <div style={{ marginBottom: "2rem" }}>
           <span className="badge">Web Design</span>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", marginTop: "0.75rem" }}>April 2025 · 6 min read</p>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", marginTop: "0.75rem" }}>April 2026 · 6 min read</p>
         </div>
 
         <h1 className="heading-section" style={{ marginBottom: "1.5rem", lineHeight: 1.2 }}>
@@ -115,5 +139,6 @@ export default function Post() {
         </div>
       </div>
     </div>
+    </>
   );
 }

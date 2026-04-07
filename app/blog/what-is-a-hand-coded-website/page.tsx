@@ -2,6 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "What Is a Hand-Coded Website? (And Why It Matters for Your Business)",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06",
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  url: `${SITE_URL}/blog/what-is-a-hand-coded-website`,
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    { "@type": "ListItem", position: 3, name: "What Is a Hand-Coded Website?", item: `${SITE_URL}/blog/what-is-a-hand-coded-website` },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "What Is a Hand-Coded Website? (And Why It Matters for Your Business)",
   description:
@@ -29,7 +50,10 @@ export const metadata: Metadata = {
 
 export default function WhatIsHandCodedWebsitePage() {
   return (
-    <div className="blog-layout" style={{ maxWidth: "1180px", margin: "0 auto", padding: "3.5rem 1.25rem 5rem" }}>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="blog-layout" style={{ maxWidth: "1180px", margin: "0 auto", padding: "3.5rem 1.25rem 5rem" }}>
       <article>
         {/* Header */}
         <div style={{ marginBottom: "2.5rem" }}>
@@ -364,5 +388,6 @@ export default function WhatIsHandCodedWebsitePage() {
 
       <BlogSidebar currentSlug="what-is-a-hand-coded-website" />
     </div>
+    </>
   );
 }
