@@ -1,6 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
+
+const SITE_KEY = "0x4AAAAAAC1lSHlu20YXRijk";
 
 interface FormState {
   name: string;
@@ -11,20 +14,47 @@ interface FormState {
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({ name: "", email: "", subject: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+  const turnstileRef = useRef<{ reset: () => void }>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const body = `Name: ${form.name}%0D%0AEmail: ${form.email}%0D%0ASubject: ${form.subject}%0D%0A%0D%0A${form.message}`;
-    window.location.href = `mailto:support@affordawebsolutions.net?subject=${encodeURIComponent(form.subject || "Website Enquiry")}&body=${body}`;
-    setSubmitted(true);
+    if (!turnstileToken) {
+      setErrorMsg("Please complete the verification.");
+      return;
+    }
+    setStatus("loading");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, turnstileToken, _honeypot: "" }),
+      });
+      const data = await res.json() as { ok?: boolean; error?: string };
+      if (res.ok && data.ok) {
+        setStatus("success");
+      } else {
+        setErrorMsg(data.error ?? "Something went wrong. Please try again.");
+        setStatus("error");
+        turnstileRef.current?.reset();
+        setTurnstileToken(null);
+      }
+    } catch {
+      setErrorMsg("Network error. Please try again.");
+      setStatus("error");
+      turnstileRef.current?.reset();
+      setTurnstileToken(null);
+    }
   }
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <div
         style={{
@@ -38,10 +68,7 @@ export default function ContactForm() {
         <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>✓</div>
         <h3 style={{ fontSize: "1.2rem", fontWeight: 800, marginBottom: "0.5rem" }}>Message Sent!</h3>
         <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
-          Your email client should have opened. If not, email us directly at{" "}
-          <a href="mailto:support@affordawebsolutions.net" style={{ color: "#111111", fontWeight: 600 }}>
-            support@affordawebsolutions.net
-          </a>
+          We&apos;ll get back to you within 24–48 hours. Check your inbox for a confirmation.
         </p>
       </div>
     );
@@ -59,53 +86,33 @@ export default function ContactForm() {
     boxSizing: "border-box",
   };
 
+  const labelStyle: React.CSSProperties = {
+    display: "block",
+    fontSize: "0.85rem",
+    fontWeight: 700,
+    marginBottom: "0.4rem",
+    color: "var(--text)",
+  };
+
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+      {/* Honeypot — hidden from real users */}
+      <input type="text" name="_honeypot" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
       <div>
-        <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
-          Your Name *
-        </label>
-        <input
-          type="text"
-          name="name"
-          required
-          placeholder="Jane Smith"
-          value={form.name}
-          onChange={handleChange}
-          style={inputStyle}
-        />
+        <label style={labelStyle}>Your Name *</label>
+        <input type="text" name="name" required placeholder="Jane Smith" value={form.name} onChange={handleChange} style={inputStyle} />
       </div>
       <div>
-        <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
-          Email Address *
-        </label>
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="jane@example.com"
-          value={form.email}
-          onChange={handleChange}
-          style={inputStyle}
-        />
+        <label style={labelStyle}>Email Address *</label>
+        <input type="email" name="email" required placeholder="jane@example.com" value={form.email} onChange={handleChange} style={inputStyle} />
       </div>
       <div>
-        <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
-          Subject
-        </label>
-        <input
-          type="text"
-          name="subject"
-          placeholder="Website enquiry"
-          value={form.subject}
-          onChange={handleChange}
-          style={inputStyle}
-        />
+        <label style={labelStyle}>Subject</label>
+        <input type="text" name="subject" placeholder="Website enquiry" value={form.subject} onChange={handleChange} style={inputStyle} />
       </div>
       <div>
-        <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
-          Message *
-        </label>
+        <label style={labelStyle}>Message *</label>
         <textarea
           name="message"
           required
@@ -116,12 +123,27 @@ export default function ContactForm() {
           style={{ ...inputStyle, resize: "vertical", fontFamily: "inherit" }}
         />
       </div>
+
+      {/* Cloudflare Turnstile */}
+      <Turnstile
+        ref={turnstileRef}
+        siteKey={SITE_KEY}
+        onSuccess={(token) => setTurnstileToken(token)}
+        onError={() => { setTurnstileToken(null); }}
+        onExpire={() => { setTurnstileToken(null); }}
+      />
+
+      {errorMsg && (
+        <p style={{ color: "#dc2626", fontSize: "0.88rem", margin: 0 }}>{errorMsg}</p>
+      )}
+
       <button
         type="submit"
         className="btn-primary"
-        style={{ alignSelf: "flex-start", cursor: "pointer", border: "none" }}
+        disabled={status === "loading" || !turnstileToken}
+        style={{ alignSelf: "flex-start", cursor: status === "loading" ? "wait" : "pointer", border: "none", opacity: !turnstileToken ? 0.6 : 1 }}
       >
-        Send Message →
+        {status === "loading" ? "Sending…" : "Send Message →"}
       </button>
     </form>
   );
