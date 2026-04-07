@@ -78,6 +78,7 @@ export default function Footer() {
               <li><FooterLink href="/about">About Us</FooterLink></li>
               <li><FooterLink href="/blog">Blog</FooterLink></li>
               <li><FooterLink href="/faq">FAQ</FooterLink></li>
+              <li><FooterLink href="/how-to-go-live">How to Go Live</FooterLink></li>
               <li><FooterLink href="/contact">Contact</FooterLink></li>
               <li><FooterLink href="/privacy">Privacy Policy</FooterLink></li>
               <li><FooterLink href="/terms">Terms of Service</FooterLink></li>
