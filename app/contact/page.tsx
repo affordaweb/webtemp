@@ -54,7 +54,7 @@ export default function ContactPage() {
             pointerEvents: "none",
           }}
         />
-        <div className="container-tight" style={{ position: "relative", maxWidth: 720, marginInline: "auto" }}>
+        <div className="container-tight" style={{ position: "relative" }}>
           <span className="badge">Contact Us</span>
           <h1 className="heading-hero" style={{ marginTop: "1.25rem", color: "#111111" }}>
             Get in Touch —<br />We&apos;d Love to Help

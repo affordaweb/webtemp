@@ -191,7 +191,7 @@ export default function GeneratePage() {
 
   return (
     <div style={{ minHeight: "100vh", padding: "3rem 0 6rem" }}>
-      <div className="container-tight" style={{ maxWidth: 680, marginInline: "auto" }}>
+      <div className="container-tight">
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
           <span className="badge">Step {step + 1} of {STEPS.length}</span>

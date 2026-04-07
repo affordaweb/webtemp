@@ -70,7 +70,7 @@ export default function AboutPage() {
             pointerEvents: "none",
           }}
         />
-        <div className="container-tight" style={{ position: "relative", maxWidth: 720, marginInline: "auto" }}>
+        <div className="container-tight" style={{ position: "relative" }}>
           <span className="badge">Our Story</span>
           <h1 className="heading-hero" style={{ marginTop: "1.25rem", color: "#111111" }}>
             Affordable Website Design,<br />Built by Filipinos.
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
       {/* ── Our story ── */}
       <section style={{ padding: "5rem 0" }}>
-        <div className="container-tight" style={{ maxWidth: 760, marginInline: "auto" }}>
+        <div className="container-tight">
           <div style={{ marginBottom: "3rem" }}>
             <span className="badge">Who We Are</span>
             <h2 className="heading-section" style={{ marginTop: "1rem", marginBottom: "1.5rem" }}>
@@ -166,7 +166,7 @@ export default function AboutPage() {
 
       {/* ── Our approach ── */}
       <section style={{ padding: "4rem 0 6rem", background: "var(--surface)" }}>
-        <div className="container-tight" style={{ maxWidth: 760, marginInline: "auto" }}>
+        <div className="container-tight">
           <span className="badge">Our Approach</span>
           <h2 className="heading-section" style={{ marginTop: "1rem", marginBottom: "1.5rem" }}>
             Affordable Doesn&apos;t Mean Cheap

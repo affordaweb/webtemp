@@ -101,7 +101,7 @@ export default function PortfolioPage() {
             pointerEvents: "none",
           }}
         />
-        <div className="container-tight" style={{ position: "relative", maxWidth: 720, marginInline: "auto" }}>
+        <div className="container-tight" style={{ position: "relative" }}>
           <span className="badge">Our Work</span>
           <h1 className="heading-hero" style={{ marginTop: "1.25rem", color: "#111111" }}>
             Affordable Website Design —<br />See Our Work

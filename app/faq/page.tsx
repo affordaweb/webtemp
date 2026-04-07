@@ -111,7 +111,7 @@ export default function FAQPage() {
             pointerEvents: "none",
           }}
         />
-        <div className="container-tight" style={{ position: "relative", maxWidth: 720, marginInline: "auto" }}>
+        <div className="container-tight" style={{ position: "relative" }}>
           <span className="badge">FAQ</span>
           <h1 className="heading-hero" style={{ marginTop: "1.25rem", color: "#111111" }}>
             Frequently Asked Questions About<br />Affordable Website Design
@@ -133,7 +133,7 @@ export default function FAQPage() {
 
       {/* ── FAQ Content ── */}
       <section style={{ padding: "5rem 0" }}>
-        <div className="container-tight" style={{ maxWidth: 800, marginInline: "auto" }}>
+        <div className="container-tight">
           {FAQ_SECTIONS.map((section, si) => (
             <div key={section.title} style={{ marginBottom: si < FAQ_SECTIONS.length - 1 ? "4rem" : 0 }}>
               <h2 className="heading-section" style={{ marginBottom: "2rem", fontSize: "1.4rem" }}>
@@ -172,7 +172,7 @@ export default function FAQPage() {
 
       {/* ── Still have questions ── */}
       <section style={{ padding: "4rem 0 5rem", background: "var(--surface)", borderTop: "1.5px solid var(--border)" }}>
-        <div className="container-tight" style={{ textAlign: "center", maxWidth: 600, marginInline: "auto" }}>
+        <div className="container-tight" style={{ textAlign: "center" }}>
           <span className="badge">Still Have Questions?</span>
           <h2 className="heading-section" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
             We&apos;re Happy to Help

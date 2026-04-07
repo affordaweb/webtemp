@@ -73,7 +73,7 @@ export default function BlogPage() {
       </section>
 
       <section style={{ padding: "5rem 0 6rem" }}>
-        <div className="container-tight" style={{ maxWidth: 860, marginInline: "auto" }}>
+        <div className="container-tight">
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             {POSTS.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", color: "inherit" }}>

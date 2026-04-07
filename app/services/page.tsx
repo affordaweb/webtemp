@@ -133,7 +133,7 @@ export default function ServicesPage() {
             pointerEvents: "none",
           }}
         />
-        <div className="container-tight" style={{ position: "relative", maxWidth: 740, marginInline: "auto" }}>
+        <div className="container-tight" style={{ position: "relative" }}>
           <span className="badge">DIY Website Templates</span>
           <h1 className="heading-hero" style={{ marginTop: "1.25rem", color: "#111111" }}>
             Custom Website Templates<br />Built Around Your Brand
