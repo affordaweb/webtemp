@@ -51,7 +51,14 @@ export default function Post() {
             ))}
           </ul>
           <p>
-            At AffordaWeb Solutions, a complete, custom-designed small business website starts at <strong style={{ color: "#111111" }}>$49</strong>. That is not a template you customise yourself — it is a hand-coded website built to your specifications, delivered as files you own and can host anywhere.
+            At AffordaWeb Solutions, a complete, custom-designed small business website starts at <strong style={{ color: "#111111" }}>$49</strong>. That is not a template you customise yourself — it is a{" "}
+            <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              hand-coded website
+            </Link>{" "}
+            built to your specifications, delivered as files you own and can host anywhere. Curious about the full cost comparison?{" "}
+            <Link href="/blog/how-much-does-a-website-cost" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              See our website cost breakdown →
+            </Link>
           </p>
 
           <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>What Should an Affordable Small Business Website Include?</h2>
@@ -74,7 +81,15 @@ export default function Post() {
 
           <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>Why Filipino Web Designers Offer Outstanding Value</h2>
           <p>
-            One of the best-kept secrets in affordable website design is hiring from the Philippines. Filipino web designers are fluent in English, highly trained, and have built a strong reputation on global platforms like Upwork for delivering excellent quality at competitive prices. This is not about cutting corners — it is about smart economics.
+            One of the best-kept secrets in affordable website design is hiring from the Philippines.{" "}
+            <Link href="/blog/why-hire-a-filipino-web-designer" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              Filipino web designers
+            </Link>{" "}
+            are fluent in English, highly trained, and have built a strong reputation on global platforms like{" "}
+            <a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>
+              Upwork
+            </a>{" "}
+            for delivering excellent quality at competitive prices. This is not about cutting corners — it is about smart economics.
           </p>
           <p>
             Our team at AffordaWeb Solutions holds Top Rated status on Upwork — a recognition given only to the top tier of freelancers based on verified client satisfaction. You get agency-level quality at a fraction of agency prices.

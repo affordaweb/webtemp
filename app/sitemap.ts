@@ -15,5 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/affordable-website-design-for-small-business`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/blog/why-hire-a-filipino-web-designer`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/blog/how-much-does-a-website-cost`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/blog/how-to-build-your-own-website-without-coding`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/blog/best-website-templates-for-small-business`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/blog/website-design-without-a-developer`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/blog/what-is-a-hand-coded-website`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
   ];
 }

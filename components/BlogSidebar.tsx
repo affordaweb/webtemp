@@ -2,27 +2,53 @@ import Link from "next/link";
 
 const RECENT_POSTS = [
   {
+    slug: "what-is-a-hand-coded-website",
+    title: "What Is a Hand-Coded Website?",
+    date: "April 2026",
+    category: "Web Design",
+  },
+  {
+    slug: "website-design-without-a-developer",
+    title: "Website Design Without a Developer",
+    date: "April 2026",
+    category: "Web Design",
+  },
+  {
+    slug: "best-website-templates-for-small-business",
+    title: "Best Website Templates for Small Business",
+    date: "April 2026",
+    category: "Templates",
+  },
+  {
+    slug: "how-to-build-your-own-website-without-coding",
+    title: "How to Build Your Own Website Without Coding",
+    date: "April 2026",
+    category: "DIY Website",
+  },
+  {
     slug: "affordable-website-design-for-small-business",
-    title: "Affordable Website Design for Small Business: The Complete Guide",
+    title: "Affordable Website Design for Small Business",
     date: "April 2025",
     category: "Web Design",
   },
   {
     slug: "why-hire-a-filipino-web-designer",
-    title: "Why Hire a Filipino Web Designer? Top Reasons in 2025",
+    title: "Why Hire a Filipino Web Designer?",
     date: "April 2025",
     category: "Hiring",
   },
   {
     slug: "how-much-does-a-website-cost",
-    title: "How Much Does a Website Cost? (Honest Breakdown for 2025)",
+    title: "How Much Does a Website Cost?",
     date: "April 2025",
     category: "Pricing",
   },
 ];
 
 const CATEGORIES = [
-  { label: "Web Design", count: 1 },
+  { label: "Web Design", count: 3 },
+  { label: "DIY Website", count: 1 },
+  { label: "Templates", count: 1 },
   { label: "Hiring", count: 1 },
   { label: "Pricing", count: 1 },
 ];

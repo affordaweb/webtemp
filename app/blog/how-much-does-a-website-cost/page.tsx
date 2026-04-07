@@ -111,7 +111,22 @@ export default function Post() {
 
           <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>The Hidden Cost of "Free" or Cheap Builders</h2>
           <p>
-            A $16/month website builder seems cheap — until you do the maths. Over 5 years that is $960 minimum, and you still don&apos;t own the design. If you ever want to move platforms, you start from scratch. By contrast, a one-time $49 custom website costs you nothing ongoing and is yours forever.
+            A $16/month website builder seems cheap — until you do the maths. Over 5 years that is $960 minimum, and
+            you still don&apos;t own the design. If you ever want to move platforms, you start from scratch. By contrast, a
+            one-time $49{" "}
+            <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              custom hand-coded website
+            </Link>{" "}
+            costs you nothing ongoing and is yours forever.{" "}
+            <a
+              href="https://www.wix.com/upgrade/website"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#111111", textDecoration: "underline" }}
+            >
+              Compare Wix&apos;s current pricing
+            </a>
+            {" "}and you&apos;ll see the ongoing cost quickly adds up.
           </p>
 
           <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>What Our $49 Website Includes</h2>
@@ -124,7 +139,15 @@ export default function Post() {
 
           <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>What Should I Actually Pay for a Small Business Website?</h2>
           <p>
-            For most small businesses — a local shop, a service provider, a restaurant, a photographer — a custom hand-coded website in the $49–$299 range is more than sufficient and outperforms builder sites on speed and SEO. You do not need to pay thousands for a great result.
+            For most small businesses — a local shop, a service provider, a restaurant, a photographer — a{" "}
+            <Link href="/blog/affordable-website-design-for-small-business" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              custom hand-coded website
+            </Link>{" "}
+            in the $49–$299 range is more than sufficient and outperforms builder sites on speed and SEO. You do not
+            need to pay thousands for a great result. Want to explore your options further?{" "}
+            <Link href="/blog/website-design-without-a-developer" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              See all your website options compared →
+            </Link>
           </p>
 
           <div style={{ marginTop: "1rem", padding: "2rem", background: "var(--surface)", borderRadius: "1rem", border: "1.5px solid var(--border)", textAlign: "center" }}>

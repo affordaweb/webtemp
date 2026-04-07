@@ -46,7 +46,10 @@ export default function Post() {
 
           <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>3. Verified Track Record on Upwork</h2>
           <p>
-            Upwork publicly shows job success scores, client reviews, and completion rates. Filipino freelancers consistently hold Top Rated and Expert-Vetted badges — the platform&apos;s highest tiers. These badges are not purchased; they are earned through verified client satisfaction.
+            <a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>
+              Upwork
+            </a>{" "}
+            publicly shows job success scores, client reviews, and completion rates. Filipino freelancers consistently hold Top Rated and Expert-Vetted badges — the platform&apos;s highest tiers. These badges are not purchased; they are earned through verified client satisfaction.
           </p>
           <p>
             At AffordaWeb Solutions, our team holds Top Rated status — a recognition maintained through consistent 5-star project delivery.
@@ -64,7 +67,17 @@ export default function Post() {
 
           <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>Is Hiring a Filipino Web Designer Right for You?</h2>
           <p>
-            If you want professional quality, clear communication, and affordable website design — yes. The misconception that affordable means lower quality simply does not hold when you are working with Top Rated Filipino professionals who have built their reputation on verified client results.
+            If you want professional quality, clear communication, and{" "}
+            <Link href="/blog/affordable-website-design-for-small-business" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              affordable website design
+            </Link>{" "}
+            — yes. The misconception that affordable means lower quality simply does not hold when you are working with Top Rated Filipino professionals who have built their reputation on verified client results.
+          </p>
+          <p>
+            Want to understand the full cost picture?{" "}
+            <Link href="/blog/how-much-does-a-website-cost" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+              Read our no-hype website cost breakdown →
+            </Link>
           </p>
 
           <div style={{ marginTop: "1rem", padding: "2rem", background: "var(--surface)", borderRadius: "1rem", border: "1.5px solid var(--border)", textAlign: "center" }}>

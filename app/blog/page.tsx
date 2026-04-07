@@ -11,6 +11,42 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: "what-is-a-hand-coded-website",
+    title: "What Is a Hand-Coded Website? (And Why It Matters for Your Business)",
+    excerpt:
+      "A hand-coded website is written directly in HTML and CSS — no page builders, no bloat. Learn why hand-coded sites are faster, cleaner, and better for SEO.",
+    date: "April 2026",
+    readTime: "6 min read",
+    category: "Web Design",
+  },
+  {
+    slug: "website-design-without-a-developer",
+    title: "Website Design Without a Developer: Your 2026 Options Compared",
+    excerpt:
+      "You don't need a developer to get a professional website. Compare website builders, done-for-you templates, freelancers, and AI tools side by side.",
+    date: "April 2026",
+    readTime: "7 min read",
+    category: "Web Design",
+  },
+  {
+    slug: "best-website-templates-for-small-business",
+    title: "Best Website Templates for Small Business in 2026",
+    excerpt:
+      "A curated breakdown of the best website templates for small businesses — free HTML templates, WordPress themes, builder templates, and custom options compared.",
+    date: "April 2026",
+    readTime: "7 min read",
+    category: "Templates",
+  },
+  {
+    slug: "how-to-build-your-own-website-without-coding",
+    title: "How to Build Your Own Website Without Coding (2026 Guide)",
+    excerpt:
+      "A practical, step-by-step guide for small business owners who want to build or get a website without learning to code or hiring an expensive developer.",
+    date: "April 2026",
+    readTime: "8 min read",
+    category: "DIY Website",
+  },
+  {
     slug: "affordable-website-design-for-small-business",
     title: "Affordable Website Design for Small Business: The Complete Guide",
     excerpt:
