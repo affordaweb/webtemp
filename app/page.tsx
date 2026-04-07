@@ -365,7 +365,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: "1.25rem", alignItems: "start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: "1.25rem", alignItems: "stretch" }}>
             {PACKAGES.map((pkg) => (
               <div
                 key={pkg.name}
@@ -414,7 +414,7 @@ export default function Home() {
                 <Link
                   href={pkg.href}
                   className="btn-primary"
-                  style={{ display: "block", textAlign: "center", fontSize: "0.9rem" }}
+                  style={{ display: "block", textAlign: "center", fontSize: "0.9rem", marginTop: "auto" }}
                 >
                   {pkg.cta}
                 </Link>

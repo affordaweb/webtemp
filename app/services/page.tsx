@@ -170,7 +170,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem", alignItems: "start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem", alignItems: "stretch" }}>
             {PACKAGES.map((pkg) => (
               <div
                 key={pkg.name}
@@ -223,7 +223,7 @@ export default function ServicesPage() {
                 <Link
                   href={pkg.href}
                   className="btn-primary"
-                  style={{ display: "block", textAlign: "center" }}
+                  style={{ display: "block", textAlign: "center", marginTop: "auto" }}
                 >
                   {pkg.cta}
                 </Link>
