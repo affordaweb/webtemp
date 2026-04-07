@@ -35,7 +35,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "How long does it take to get my website?",
-        a: "Standard delivery is 2–4 business days. Premium orders receive priority delivery of 1–2 business days.",
+        a: "Templates are delivered instantly once payment is confirmed. You\'ll receive your download link by email right away.",
       },
       {
         q: "What do I need to provide?",

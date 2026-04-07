@@ -36,7 +36,7 @@ const TRUST_ITEMS = [
   "Build Your Own Website",
   "No Subscriptions",
   "You Own the Code",
-  "48-Hour Delivery",
+  "Instant Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
   "Starting at $29",
@@ -44,7 +44,7 @@ const TRUST_ITEMS = [
   "Build Your Own Website",
   "No Subscriptions",
   "You Own the Code",
-  "48-Hour Delivery",
+  "Instant Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
   "Starting at $29",
@@ -107,8 +107,8 @@ const WHY_US = [
     desc: "No lock-in, no licensing, no monthly platform fees. Host wherever you like — we hand you the keys.",
   },
   {
-    title: "Ready in 48 hours",
-    desc: "Most templates are delivered within 2 business days of payment. Fast without cutting corners.",
+    title: "Instant Delivery",
+    desc: "Templates are delivered instantly after payment is confirmed. No waiting, no delays.",
   },
   {
     title: "Rebuild until you love it",
@@ -184,7 +184,7 @@ export default function Home() {
             <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
               {[
                 { label: "Starting at", value: "$29" },
-                { label: "Delivered in", value: "48 hours" },
+                { label: "Delivered in", value: "Instant" },
                 { label: "No monthly", value: "Fees. Ever." },
               ].map((s) => (
                 <div key={s.label}>
@@ -217,7 +217,7 @@ export default function Home() {
               <polygon points="250,90 250,110 300,100" fill="#111111">
                 <animateTransform attributeName="transform" type="translate" values="0,0;20,0;0,0" dur="1.5s" repeatCount="indefinite"/>
               </polygon>
-              <text x="275" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">48-hr Delivery</text>
+              <text x="275" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">instant Delivery</text>
 
               {/* Ownership - file icon */}
               <rect x="400" y="60" width="60" height="80" rx="4" fill="#111111"/>
