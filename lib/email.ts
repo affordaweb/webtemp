@@ -16,7 +16,7 @@ export async function sendAdminNotification(req: TemplateRequest): Promise<void>
   if (!adminEmail) return
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://webtemp.vercel.app'
 
-  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <hello@affordawebsolutions.com>'
+  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <support@affordawebsolutions.net>'
   await getResend().emails.send({
     from,
     to: adminEmail,
@@ -47,7 +47,7 @@ export async function sendDownloadReady(req: TemplateRequest): Promise<void> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://webtemp.vercel.app'
   const downloadUrl = `${siteUrl}/download/${req.downloadToken}`
 
-  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <hello@affordawebsolutions.com>'
+  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <support@affordawebsolutions.net>'
   await getResend().emails.send({
     from,
     to: req.email,

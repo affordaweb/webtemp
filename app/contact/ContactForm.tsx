@@ -20,7 +20,7 @@ export default function ContactForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const body = `Name: ${form.name}%0D%0AEmail: ${form.email}%0D%0ASubject: ${form.subject}%0D%0A%0D%0A${form.message}`;
-    window.location.href = `mailto:hello@affordawebsolutions.com?subject=${encodeURIComponent(form.subject || "Website Enquiry")}&body=${body}`;
+    window.location.href = `mailto:support@affordawebsolutions.net?subject=${encodeURIComponent(form.subject || "Website Enquiry")}&body=${body}`;
     setSubmitted(true);
   }
 
@@ -39,8 +39,8 @@ export default function ContactForm() {
         <h3 style={{ fontSize: "1.2rem", fontWeight: 800, marginBottom: "0.5rem" }}>Message Sent!</h3>
         <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
           Your email client should have opened. If not, email us directly at{" "}
-          <a href="mailto:hello@affordawebsolutions.com" style={{ color: "#111111", fontWeight: 600 }}>
-            hello@affordawebsolutions.com
+          <a href="mailto:support@affordawebsolutions.net" style={{ color: "#111111", fontWeight: 600 }}>
+            support@affordawebsolutions.net
           </a>
         </p>
       </div>

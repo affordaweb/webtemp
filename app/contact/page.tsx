@@ -13,8 +13,8 @@ const CONTACT_INFO = [
   {
     icon: "✉",
     title: "Email Us",
-    value: "hello@affordawebsolutions.com",
-    href: "mailto:hello@affordawebsolutions.com",
+    value: "support@affordawebsolutions.net",
+    href: "mailto:support@affordawebsolutions.net",
   },
   {
     icon: "⏱",
