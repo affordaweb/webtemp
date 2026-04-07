@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "DIY Website Template Services & Pricing | AffordaWeb Solutions",
   description:
-    "Flat-rate DIY website templates for small businesses. Starter $49 (1-3 pages), Standard $79 (4-6 pages), Premium $129 (up to 8 pages), Custom projects welcome. No subscriptions.",
+    "Flat-rate DIY website templates for small businesses. Starter $29 (1-3 pages), Standard $79 (4-6 pages), Premium $129 (up to 8 pages), Custom projects welcome. No subscriptions.",
   alternates: { canonical: "/services" },
 };
 
 const PACKAGES = [
   {
     name: "Starter",
-    price: "$49",
+    price: "$29",
     pageRange: "1–3 pages",
     tagline: "Launch your professional presence fast",
     popular: false,
@@ -148,7 +148,7 @@ export default function ServicesPage() {
               marginInline: "auto",
             }}
           >
-            Tell us what you need in 4 minutes. We design your template. You get clean, professional website files you own forever — starting at $49. No subscriptions, no coding required.
+            Tell us what you need in 4 minutes. We design your template. You get clean, professional website files you own forever — starting at $29. No subscriptions, no coding required.
           </p>
           <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/generate" className="btn-primary">Build My Website →</Link>
@@ -308,10 +308,10 @@ export default function ServicesPage() {
             Ready to build your custom website?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 480, marginInline: "auto" }}>
-            Fill out our 4-minute form and get a clean, professional website template starting at $49. No subscriptions, no coding.
+            Fill out our 4-minute form and get a clean, professional website template starting at $29. No subscriptions, no coding.
           </p>
           <Link href="/generate" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FFFFFF", color: "#111111", fontWeight: 700, fontSize: "1.1rem", padding: "1rem 2.5rem", borderRadius: "999px", textDecoration: "none" }}>
-            Build My Website — Starting at $49 →
+            Build My Website — Starting at $29 →
           </Link>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.85rem", marginTop: "1.75rem" }}>
             Not sure yet? Compare{" "}

@@ -286,7 +286,7 @@ export default function WhatIsHandCodedWebsitePage() {
 
         {/* CTA */}
         <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#111", marginBottom: "0.75rem" }}>
-          Get a Hand-Coded Website for Your Business — Starting at $49
+          Get a Hand-Coded Website for Your Business — Starting at $29
         </h2>
         <p style={{ lineHeight: 1.8, color: "#333", marginBottom: "1.5rem" }}>
           AffordaWeb Solutions builds hand-coded, custom HTML/CSS websites designed specifically for your business. No

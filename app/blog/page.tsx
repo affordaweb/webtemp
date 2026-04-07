@@ -68,7 +68,7 @@ const POSTS = [
     slug: "how-much-does-a-website-cost",
     title: "How Much Does a Website Cost? (Honest Breakdown for 2025)",
     excerpt:
-      "From $49 templates to $50,000 agency projects — a transparent, no-hype breakdown of what websites actually cost.",
+      "From $29 templates to $50,000 agency projects — a transparent, no-hype breakdown of what websites actually cost.",
     date: "April 2025",
     readTime: "7 min read",
     category: "Pricing",

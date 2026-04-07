@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Affordable Website Design FAQ — Pricing, Ownership & Process",
   description:
-    "Got questions about affordable website design? Find answers on pricing, process, ownership, SEO, turnaround time, hosting, and more. Packages from $49.",
+    "Got questions about affordable website design? Find answers on pricing, process, ownership, SEO, turnaround time, hosting, and more. Packages from $29.",
   alternates: { canonical: "/faq" },
 };
 
@@ -15,7 +15,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "How much does an affordable website cost?",
-        a: "Our packages start at $49 for the Starter (1–3 pages), $79 for Standard (4–6 pages), and $129 for Premium (up to 8 pages). No hidden fees — what you see is what you pay.",
+        a: "Our packages start at $29 for the Starter (1–3 pages), $79 for Standard (4–6 pages), and $129 for Premium (up to 8 pages). No hidden fees — what you see is what you pay.",
       },
       {
         q: "Do you charge monthly fees or subscriptions?",
@@ -114,7 +114,7 @@ const faqSchema = {
 const FAQ_ENHANCED: Record<string, ReactNode> = {
   "How much does an affordable website cost?": (
     <>
-      Our packages start at $49 (Starter, 1–3 pages), $79 (Standard, 4–6 pages), and $129 (Premium, up to 8 pages).{" "}
+      Our packages start at $29 (Starter, 1–3 pages), $79 (Standard, 4–6 pages), and $129 (Premium, up to 8 pages).{" "}
       No hidden fees.{" "}
       <Link href="/blog/how-much-does-a-website-cost" style={{ color: "#111111", fontWeight: 600 }}>
         Read our full honest website cost breakdown →
@@ -322,7 +322,7 @@ export default function FAQPage() {
             Ready to get started?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.05rem", marginBottom: "2rem", maxWidth: 440, marginInline: "auto" }}>
-            Get a professionally hand-coded website starting from $49 with no subscriptions.
+            Get a professionally hand-coded website starting from $29 with no subscriptions.
           </p>
           <Link
             href="/generate"

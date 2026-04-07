@@ -265,7 +265,7 @@ export default function PortfolioPage() {
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.05rem", marginBottom: "2rem", maxWidth: 440, marginInline: "auto" }}>
             Get your own professionally designed,{" "}
             <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "rgba(255,255,255,0.85)", textDecoration: "underline" }}>hand-coded website</Link>{" "}
-            starting from just $49.
+            starting from just $29.
           </p>
           <Link
             href="/generate"

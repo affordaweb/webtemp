@@ -82,7 +82,7 @@ export default function Post() {
 
           <div style={{ marginTop: "1rem", padding: "2rem", background: "var(--surface)", borderRadius: "1rem", border: "1.5px solid var(--border)", textAlign: "center" }}>
             <p style={{ fontWeight: 800, fontSize: "1.1rem", color: "#111111", marginBottom: "0.85rem" }}>Work with our top-rated Filipino web design team</p>
-            <Link href="/generate" className="btn-primary">Get Your Website — from $49 →</Link>
+            <Link href="/generate" className="btn-primary">Get Your Website — from $29 →</Link>
           </div>
         </div>
       </article>

@@ -242,7 +242,7 @@ export default function WebsiteDesignWithoutDeveloperPage() {
           <ul style={{ margin: 0, paddingLeft: "1.2rem", lineHeight: 1.9, color: "rgba(255,255,255,0.8)", fontSize: "0.9rem" }}>
             <li>Professional design — not a template everyone else is using</li>
             <li>You own the HTML/CSS files outright</li>
-            <li>One-time flat fee, starting at $49</li>
+            <li>One-time flat fee, starting at $29</li>
             <li>No ongoing platform fees</li>
             <li>Mobile-optimized and SEO-ready out of the box</li>
           </ul>
@@ -287,7 +287,7 @@ export default function WebsiteDesignWithoutDeveloperPage() {
                 ["Website Builder (Wix)", "$17–$49/mo", "Hours", "❌ No", "❌ Generic"],
                 ["WordPress DIY", "$10–$30/mo + time", "Days–Weeks", "✅ Yes", "🟡 Depends"],
                 ["Freelance Marketplace", "$300–$1,200+", "1–4 weeks", "✅ Yes", "✅ Yes"],
-                ["Done-for-You Template", "$49 one-time", "24–48 hrs", "✅ Own files", "✅ Yes"],
+                ["Done-for-You Template", "$29 one-time", "24–48 hrs", "✅ Own files", "✅ Yes"],
               ].map(([method, cost, time, own, unique], i) => (
                 <tr
                   key={i}
@@ -341,7 +341,7 @@ export default function WebsiteDesignWithoutDeveloperPage() {
 
         {/* CTA */}
         <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#111", marginBottom: "0.75rem" }}>
-          Skip the Developer. Get a Real Website for $49.
+          Skip the Developer. Get a Real Website for $29.
         </h2>
         <p style={{ lineHeight: 1.8, color: "#333", marginBottom: "1.5rem" }}>
           AffordaWeb Solutions builds custom HTML/CSS websites for small businesses — no developer needed on your end,
@@ -391,7 +391,7 @@ export default function WebsiteDesignWithoutDeveloperPage() {
             },
             {
               q: "What's the cheapest way to get a website without a developer?",
-              a: "A done-for-you template service starting at $49 is typically the most affordable route to a real, owned website. Free website builders exist but come with platform lock-in and subscription costs that add up over time.",
+              a: "A done-for-you template service starting at $29 is typically the most affordable route to a real, owned website. Free website builders exist but come with platform lock-in and subscription costs that add up over time.",
             },
             {
               q: "Is it safe to use a website I got without a developer?",

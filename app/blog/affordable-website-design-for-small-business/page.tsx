@@ -51,7 +51,7 @@ export default function Post() {
             ))}
           </ul>
           <p>
-            At AffordaWeb Solutions, a complete, custom-designed small business website starts at <strong style={{ color: "#111111" }}>$49</strong>. That is not a template you customise yourself — it is a{" "}
+            At AffordaWeb Solutions, a complete, custom-designed small business website starts at <strong style={{ color: "#111111" }}>$29</strong>. That is not a template you customise yourself — it is a{" "}
             <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
               hand-coded website
             </Link>{" "}
@@ -105,7 +105,7 @@ export default function Post() {
 
           <div style={{ marginTop: "1rem", padding: "2rem", background: "var(--surface)", borderRadius: "1rem", border: "1.5px solid var(--border)", textAlign: "center" }}>
             <p style={{ fontWeight: 800, fontSize: "1.1rem", color: "#111111", marginBottom: "0.85rem" }}>Ready to get your affordable website?</p>
-            <Link href="/generate" className="btn-primary">Order Your Website — from $49 →</Link>
+            <Link href="/generate" className="btn-primary">Order Your Website — from $29 →</Link>
           </div>
         </div>
       </article>

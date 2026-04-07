@@ -131,7 +131,7 @@ const STEPS = ["Your Business", "Site Pages", "Design", "Features", "Preview & C
 function getEstimate(pages: string[], features: string[]): { price: string; label: string } {
   if (features.includes("E-commerce (up to 10 products)")) return { price: "$129", label: "Premium tier" };
   if (pages.length > 3) return { price: "$79", label: "Standard tier (4–6 pages)" };
-  return { price: "$49", label: "Starter tier (1–3 pages)" };
+  return { price: "$29", label: "Starter tier (1–3 pages)" };
 }
 
 export default function GeneratePage() {
@@ -338,7 +338,7 @@ export default function GeneratePage() {
               </div>
               <div style={{ padding: "0.9rem 1.1rem", borderRadius: "0.65rem", background: "var(--surface-2)", border: "1.5px solid var(--border)", fontSize: "0.83rem" }}>
                 <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
-                  <span style={{ color: "var(--text-muted)" }}>📄 <strong style={{ color: "var(--text)" }}>1–3 pages</strong> → $49</span>
+                  <span style={{ color: "var(--text-muted)" }}>📄 <strong style={{ color: "var(--text)" }}>1–3 pages</strong> → $29</span>
                   <span style={{ color: "var(--text-muted)" }}>📄 <strong style={{ color: "var(--text)" }}>4–6 pages</strong> → $79</span>
                   <span style={{ color: "var(--text-muted)" }}>📄 <strong style={{ color: "var(--text)" }}>7–8 pages</strong> → $129</span>
                 </div>

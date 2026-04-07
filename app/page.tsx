@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "DIY Website Templates for Small Business — Starting at $49 | AffordaWeb Solutions",
+  title: "DIY Website Templates for Small Business — Starting at $29 | AffordaWeb Solutions",
   description:
-    "Build your own website with a custom-designed template. Tell us your pages, style, and features — we design it, you own it forever. DIY website templates starting at $49. No coding, no subscriptions.",
+    "Build your own website with a custom-designed template. Tell us your pages, style, and features — we design it, you own it forever. DIY website templates starting at $29. No coding, no subscriptions.",
   alternates: { canonical: "/" },
 };
 
@@ -39,7 +39,7 @@ const TRUST_ITEMS = [
   "Instant Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
-  "Starting at $49",
+  "Starting at $29",
   "DIY Website Templates",
   "Build Your Own Website",
   "No Subscriptions",
@@ -47,13 +47,13 @@ const TRUST_ITEMS = [
   "Instant Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
-  "Starting at $49",
+  "Starting at $29",
 ];
 
 const PACKAGES = [
   {
     name: "Starter",
-    price: "$49",
+    price: "$29",
     pageRange: "1–3 pages",
     desc: "Perfect for a simple, professional online presence.",
     features: ["1–3 pages", "Mobile-responsive", "SEO meta tags", "Contact form", "ZIP download"],
@@ -96,7 +96,7 @@ const PACKAGES = [
 const WHY_US = [
   {
     title: "Cheaper than any builder subscription",
-    desc: "Wix, Squarespace, and Shopify cost $16–$40/month. Pay once with us — $49 flat, forever.",
+    desc: "Wix, Squarespace, and Shopify cost $16–$40/month. Pay once with us — $29 flat, forever.",
   },
   {
     title: "Professional quality, not a generic theme",
@@ -149,7 +149,7 @@ export default function Home() {
         >
           {/* Left: text + buttons */}
           <div className="anim-fade-up">
-            <span className="badge">DIY Website Templates · Starting at $49 · You Own It Forever</span>
+            <span className="badge">DIY Website Templates · Starting at $29 · You Own It Forever</span>
 
             <h1
               className="heading-hero anim-fade-up anim-delay-1"
@@ -189,7 +189,7 @@ export default function Home() {
 
             <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
               {[
-                { label: "Starting at", value: "$49" },
+                { label: "Starting at", value: "$29" },
                 { label: "Delivered in", value: "Instant" },
                 { label: "No monthly", value: "Fees. Ever." },
               ].map((s) => (
@@ -304,7 +304,7 @@ export default function Home() {
                 <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="3s" repeatCount="indefinite" />
                 <rect x="310" y="46" width="110" height="40" rx="12" fill="#ffffff" filter="url(#shadow)" />
                 <circle cx="330" cy="66" r="10" fill="#111111" />
-                <text x="330" y="70" textAnchor="middle" fontSize="9" fontWeight="900" fill="#ffffff">$49</text>
+                <text x="330" y="70" textAnchor="middle" fontSize="9" fontWeight="900" fill="#ffffff">$29</text>
                 <rect x="347" y="59" width="58" height="5" rx="2.5" fill="#111111" />
                 <rect x="347" y="68" width="43" height="4" rx="2" fill="#9ca3af" />
               </g>
@@ -507,10 +507,10 @@ export default function Home() {
             Ready to build your website?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 500, marginInline: "auto" }}>
-            Fill out our 4-minute design form and get a professional, custom website template delivered to your inbox — starting at just $49.
+            Fill out our 4-minute design form and get a professional, custom website template delivered to your inbox — starting at just $29.
           </p>
           <Link href="/generate" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FFFFFF", color: "#111111", fontWeight: 700, fontSize: "1.1rem", padding: "1rem 2.5rem", borderRadius: "999px", textDecoration: "none" }}>
-            Build My Website — Starting at $49 →
+            Build My Website — Starting at $29 →
           </Link>
         </div>
       </section>

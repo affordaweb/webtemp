@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
+    default: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
     template: "%s | AffordaWeb Solutions",
   },
   description:
-    "Build your own website with a custom-designed template. Answer a short form, we design it, you own the files forever. DIY website templates starting at $49. No subscriptions, no coding needed.",
+    "Build your own website with a custom-designed template. Answer a short form, we design it, you own the files forever. DIY website templates starting at $29. No subscriptions, no coding needed.",
   keywords: [
     // Primary — DIY website
     "DIY website",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     "website that is mine to keep",
     "no subscription website design",
     "website design flat fee",
-    "website design $49",
+    "website design $29",
     "website design $79",
-    "small business website 49 dollars",
+    "small business website 29 dollars",
     // Service types
     "mobile-friendly website design",
     "SEO-friendly web design",
@@ -93,9 +93,9 @@ export const metadata: Metadata = {
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
+    title: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
     description:
-      "Build your own website with a custom template designed for your brand. $49 flat, no subscriptions, you own the files forever.",
+      "Build your own website with a custom template designed for your brand. $29 flat, no subscriptions, you own the files forever.",
     url: "/",
     siteName: "AffordaWeb Solutions",
     locale: "en_US",
@@ -105,15 +105,15 @@ export const metadata: Metadata = {
         url: "/og-default.png",
         width: 1200,
         height: 628,
-        alt: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
+        alt: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
+    title: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
     description:
-      "Custom website templates starting at $49. Fill out a form, we design it, you own the code. No subscriptions.",
+      "Custom website templates starting at $29. Fill out a form, we design it, you own the code. No subscriptions.",
     images: ["/og-default.png"],
   },
 };
