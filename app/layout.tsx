@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     "hire Filipino web designer",
     "top rated web designer Upwork",
   ],
-  metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://affordawebsolutions.com").trim()),
+  metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim()),
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://affordawebsolutions.com").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -114,6 +114,7 @@ const organizationSchema = {
     availableLanguage: "English",
   },
   sameAs: [
+    "https://www.affordawebsolutions.net",
     "https://affordawebsolutions.com",
   ],
 };
