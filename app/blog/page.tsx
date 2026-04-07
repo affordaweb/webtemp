@@ -44,7 +44,7 @@ export default function BlogPage() {
       <section
         style={{
           background: "var(--hero-gradient)",
-          padding: "5rem 0 4rem",
+          padding: "75px 0 50px",
           borderBottom: "1.5px solid var(--border)",
           textAlign: "center",
           position: "relative",

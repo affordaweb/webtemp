@@ -84,7 +84,7 @@ export default function PortfolioPage() {
       <section
         style={{
           background: "var(--hero-gradient)",
-          padding: "5rem 0 4rem",
+          padding: "75px 0 50px",
           textAlign: "center",
           borderBottom: "1.5px solid var(--border)",
           position: "relative",
