@@ -42,7 +42,7 @@ const PACKAGES = [
       "Google Maps embed",
       "Testimonials section",
       "2 revision rounds",
-      "Instant delivery",
+      "Delivery under 1 hour",
     ],
     href: "/generate",
     cta: "Build Standard →",
@@ -59,7 +59,7 @@ const PACKAGES = [
       "Gallery or blog layout",
       "Testimonials section",
       "Advanced SEO structure",
-      "Priority delivery (instant)",
+      "Priority delivery (under 1 hour)",
       "3 revision rounds",
     ],
     href: "/generate",
@@ -90,7 +90,7 @@ const INCLUDED = [
   { icon: "✦", title: "Mobile-First Always", desc: "Every template is tested on mobile, tablet, and desktop before delivery." },
   { icon: "✦", title: "SEO-Optimised Structure", desc: "Semantic HTML, meta tags, fast load times, and clean markup built into every template." },
   { icon: "✦", title: "You Own the Files", desc: "No licensing, no subscriptions. The HTML, CSS, and assets are yours to host anywhere." },
-  { icon: "✦", title: "Fast Instant Delivery", desc: "Most projects are delivered instantly after payment of payment confirmation." },
+  { icon: "✦", title: "Fast Delivery — Under 1 Hour", desc: "Most templates are delivered within 1 hour of payment confirmation. No waiting, no delays." },
   { icon: "✦", title: "Rebuild Until You Love It", desc: "Not happy? Use our chat-style feedback to request changes — or rebuild from scratch free." },
 ];
 

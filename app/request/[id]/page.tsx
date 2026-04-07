@@ -27,7 +27,7 @@ export default async function RequestStatusPage({
 
   const statusInfo = {
     pending: { label: "Pending Review", chip: "status-pending", icon: "⏳", desc: "We have received your request and will send a PayPal invoice within 1 business day." },
-    paid: { label: "Payment Confirmed", chip: "status-paid", icon: "✅", desc: "Payment received! We are now building your template. Delivery within 2–4 business days." },
+    paid: { label: "Payment Confirmed", chip: "status-paid", icon: "✅", desc: "Payment received! We are now building your template. Delivery within 1 hour." },
     delivered: { label: "Template Delivered", chip: "status-delivered", icon: "📦", desc: "Your template has been delivered. Check your inbox for the download link." },
   }[req.status];
 

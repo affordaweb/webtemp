@@ -311,7 +311,7 @@ export default function WebsiteDesignWithoutDeveloperPage() {
                 ["Website Builder (Wix)", "$17–$49/mo", "Hours", "❌ No", "❌ Generic"],
                 ["WordPress DIY", "$10–$30/mo + time", "Days–Weeks", "✅ Yes", "🟡 Depends"],
                 ["Freelance Marketplace", "$300–$1,200+", "1–4 weeks", "✅ Yes", "✅ Yes"],
-                ["Done-for-You Template", "$29 one-time", "24–48 hrs", "✅ Own files", "✅ Yes"],
+                ["Done-for-You Template", "$29 one-time", "< 1 hr", "✅ Own files", "✅ Yes"],
               ].map(([method, cost, time, own, unique], i) => (
                 <tr
                   key={i}

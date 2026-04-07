@@ -112,7 +112,7 @@ export default function OGImage() {
             position: "relative",
           }}
         >
-          {["No Monthly Fees", "You Own the Code", "< 48 hr Delivery"].map(
+          {["No Monthly Fees", "You Own the Code", "< 1 hr Delivery"].map(
             (label) => (
               <div
                 key={label}

@@ -77,7 +77,7 @@ export default function TermsPage() {
           <section>
             <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.15rem", marginBottom: "0.6rem" }}>6. Delivery</h2>
             <p>
-              Designs are typically delivered within 48 hours of receiving your completed order form and payment confirmation. Delivery time may extend during high-demand periods. We are not liable for delays caused by incomplete or unclear order form submissions.
+              Designs are typically delivered within 1 hour of receiving your completed order form and payment confirmation. Delivery time may extend during high-demand periods. We are not liable for delays caused by incomplete or unclear order form submissions.
             </p>
           </section>
 

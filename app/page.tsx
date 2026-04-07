@@ -111,7 +111,7 @@ const TRUST_ITEMS = [
   "Build Your Own Website",
   "No Subscriptions",
   "You Own the Code",
-  "Instant Delivery",
+  "< 1 Hour Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
   "Starting at $29",
@@ -119,7 +119,7 @@ const TRUST_ITEMS = [
   "Build Your Own Website",
   "No Subscriptions",
   "You Own the Code",
-  "Instant Delivery",
+  "< 1 Hour Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
   "Starting at $29",
@@ -182,8 +182,8 @@ const WHY_US = [
     desc: "No lock-in, no licensing, no monthly platform fees. Host wherever you like — we hand you the keys.",
   },
   {
-    title: "Instant Delivery",
-    desc: "Templates are delivered instantly after payment is confirmed. No waiting, no delays.",
+    title: "Delivered in Under 1 Hour",
+    desc: "Templates are delivered within 1 hour of payment confirmation. No waiting, no delays.",
   },
   {
     title: "Rebuild until you love it",
@@ -270,7 +270,7 @@ export default function Home() {
             <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
               {[
                 { label: "Starting price", value: "$29" },
-                { label: "Avg. delivery", value: "< 48 hrs" },
+                { label: "Avg. delivery", value: "< 1 hr" },
                 { label: "Monthly fees", value: "$0" },
               ].map((s) => (
                 <div key={s.label}>

@@ -138,7 +138,7 @@ export default function AboutPage() {
               { value: "Top Rated", label: "on Upwork" },
               { value: "100+", label: "Websites Delivered" },
               { value: "$29", label: "Starting Price" },
-              { value: "2–4 days", label: "Average Delivery" },
+              { value: "< 1 hr", label: "Avg. Delivery" },
             ].map((s) => (
               <div key={s.label} style={{ background: "var(--bg)", padding: "1.75rem 1.25rem", textAlign: "center" }}>
                 <div style={{ fontSize: "1.6rem", fontWeight: 900, letterSpacing: "-0.03em", color: "#111111", marginBottom: "0.25rem" }}>{s.value}</div>
