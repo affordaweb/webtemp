@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BlogSidebar from "@/components/BlogSidebar";
 
 export const metadata: Metadata = {
   title: "Blog — Affordable Website Design Tips & Guides",
@@ -74,23 +75,29 @@ export default function BlogPage() {
 
       <section style={{ padding: "5rem 0 6rem" }}>
         <div className="container-tight">
-          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-            {POSTS.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
-                <article
-                  className="card"
-                  style={{ display: "flex", flexDirection: "column", gap: "0.65rem", transition: "border-color 0.2s" }}
-                >
-                  <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
-                    <span className="badge" style={{ fontSize: "0.72rem" }}>{post.category}</span>
-                    <span style={{ color: "var(--text-muted)", fontSize: "0.82rem" }}>{post.date} · {post.readTime}</span>
-                  </div>
-                  <h2 style={{ fontSize: "1.2rem", fontWeight: 800, lineHeight: 1.4, color: "#111111" }}>{post.title}</h2>
-                  <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>{post.excerpt}</p>
-                  <span style={{ fontSize: "0.9rem", fontWeight: 700, color: "#111111" }}>Read article →</span>
-                </article>
-              </Link>
-            ))}
+          <div className="blog-layout" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "2.5rem", alignItems: "start" }}>
+            {/* Posts */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+              {POSTS.map((post) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+                  <article
+                    className="card"
+                    style={{ display: "flex", flexDirection: "column", gap: "0.65rem", transition: "border-color 0.2s" }}
+                  >
+                    <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
+                      <span className="badge" style={{ fontSize: "0.72rem" }}>{post.category}</span>
+                      <span style={{ color: "var(--text-muted)", fontSize: "0.82rem" }}>{post.date} · {post.readTime}</span>
+                    </div>
+                    <h2 style={{ fontSize: "1.2rem", fontWeight: 800, lineHeight: 1.4, color: "#111111" }}>{post.title}</h2>
+                    <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>{post.excerpt}</p>
+                    <span style={{ fontSize: "0.9rem", fontWeight: 700, color: "#111111" }}>Read article →</span>
+                  </article>
+                </Link>
+              ))}
+            </div>
+
+            {/* Sidebar */}
+            <BlogSidebar />
           </div>
         </div>
       </section>

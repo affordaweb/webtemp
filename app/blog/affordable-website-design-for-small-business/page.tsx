@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BlogSidebar from "@/components/BlogSidebar";
 
 export const metadata: Metadata = {
   title: "Affordable Website Design for Small Business: The Complete Guide",
@@ -10,8 +11,11 @@ export const metadata: Metadata = {
 
 export default function Post() {
   return (
-    <article style={{ padding: "5rem 0 6rem" }}>
-      <div className="container-tight" style={{ maxWidth: 740, marginInline: "auto" }}>
+    <div style={{ padding: "5rem 0 6rem" }}>
+      <div className="container-tight">
+        <div className="blog-layout" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "2.5rem", alignItems: "start" }}>
+          {/* Article */}
+          <article>
         <Link href="/blog" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.9rem", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "0.35rem", marginBottom: "2rem" }}>
           ← Back to Blog
         </Link>
@@ -89,7 +93,12 @@ export default function Post() {
             <Link href="/generate" className="btn-primary">Order Your Website — from $49 →</Link>
           </div>
         </div>
+      </article>
+
+          {/* Sidebar */}
+          <BlogSidebar currentSlug="affordable-website-design-for-small-business" />
+        </div>
       </div>
-    </article>
+    </div>
   );
 }
