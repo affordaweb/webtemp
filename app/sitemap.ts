@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://webtemp-iota.vercel.app").trim();
+const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://affordawebsolutions.com").trim();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

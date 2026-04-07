@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     "hire Filipino web designer",
     "top rated web designer Upwork",
   ],
-  metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://webtemp-iota.vercel.app").trim()),
+  metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://affordawebsolutions.com").trim()),
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://webtemp-iota.vercel.app").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://affordawebsolutions.com").trim();
 
 const organizationSchema = {
   "@context": "https://schema.org",
