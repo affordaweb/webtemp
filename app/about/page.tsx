@@ -99,13 +99,25 @@ export default function AboutPage() {
               Filipino Web Designers, Globally Trusted
             </h2>
             <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-              AffordaWeb Solutions was founded by a team of Filipino web designers who saw a real problem: small businesses were being priced out of professional web design. Agency quotes often start at $2,000 or more — and still leave business owners locked into subscriptions, page builders they can&apos;t customise, or code they don&apos;t own.
+              AffordaWeb Solutions was founded by a team of{" "}
+              <Link href="/blog/why-hire-a-filipino-web-designer" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+                Filipino web designers
+              </Link>{" "}
+              who saw a real problem: small businesses were being priced out of{" "}
+              <Link href="/blog/affordable-website-design-for-small-business" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+                affordable web design
+              </Link>
+              . Agency quotes often start at $2,000 or more — and still leave business owners locked into subscriptions, page builders they can&apos;t customise, or code they don&apos;t own.
             </p>
             <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8, marginBottom: "1.25rem" }}>
               We are proud Filipinos with a deep tradition of craftsmanship and dedication to client satisfaction. The Philippines has long been recognised as one of the top sources of world-class digital talent, and we bring that reputation to every project.
             </p>
             <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8 }}>
-              On Upwork, we have earned <strong style={{ color: "#111111" }}>Top Rated</strong> status — a distinction awarded to the top freelancers on the platform based on job success scores, client reviews, and consistent quality. That means when you work with us, you are working with professionals who have been independently verified.
+              On{" "}
+              <a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", fontWeight: 600, textDecoration: "underline" }}>
+                Upwork
+              </a>
+              , we have earned <strong style={{ color: "#111111" }}>Top Rated</strong> status — a distinction awarded to the top freelancers on the platform based on job success scores, client reviews, and consistent quality. That means when you work with us, you are working with professionals who have been independently verified.
             </p>
           </div>
 
@@ -188,8 +200,18 @@ export default function AboutPage() {
               </li>
             ))}
           </ul>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8 }}>
+          <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.8, marginBottom: "1.25rem" }}>
             We are proud of where we come from. Filipino web designers are known worldwide for strong English communication skills, a collaborative work style, and an eye for detail. We bring all of that to every project — at a price that respects your budget.
+          </p>
+          <p style={{ color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.8 }}>
+            Want to understand what makes our sites different from AI builders or WordPress?{" "}
+            <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "#111111", fontWeight: 600 }}>
+              Learn what a hand-coded website is →
+            </Link>{" "}
+            Or read our guide on{" "}
+            <Link href="/blog/why-hire-a-filipino-web-designer" style={{ color: "#111111", fontWeight: 600 }}>
+              why Filipino web designers deliver outstanding value →
+            </Link>
           </p>
         </div>
       </section>

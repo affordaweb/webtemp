@@ -55,7 +55,7 @@ export default function Post() {
                   },
                   {
                     title: "4. Done-For-You Website Templates",
-                    body: "The smartest option for most small business owners: a professional designer builds a custom template based on your answers, and you receive the finished files. No subscriptions. No platform lock-in. You own everything. At AffordaWeb Solutions, this starts at $29 — less than two months of any website builder plan.",
+                    body: "The smartest option for most small business owners: a professional designer builds a custom template based on your answers, and you receive the finished files. No subscriptions. No platform lock-in. You own everything. At AffordaWeb Solutions, this starts at $49 — less than two months of any website builder plan.",
                   },
                 ].map((item) => (
                   <div key={item.title} style={{ padding: "1.25rem 1.5rem", background: "var(--surface)", borderRadius: "0.75rem", border: "1.5px solid var(--border)" }}>
@@ -118,7 +118,7 @@ export default function Post() {
                 {[
                   { profile: "You have time, enjoy learning, and want control", recommendation: "WordPress + Elementor (free tier available)" },
                   { profile: "You want something today with no tech fuss", recommendation: "Wix or Squarespace (expect monthly fees)" },
-                  { profile: "You want a professional result, zero monthly fees, files you own", recommendation: "AffordaWeb Solutions done-for-you template from $29" },
+                  { profile: "You want a professional result, zero monthly fees, files you own", recommendation: "AffordaWeb Solutions done-for-you template from $49" },
                   { profile: "You are a designer who wants pixel control", recommendation: "Webflow or Framer (monthly hosting required)" },
                 ].map((row) => (
                   <div key={row.profile} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem", padding: "0.85rem 1rem", background: "var(--surface)", borderRadius: "0.65rem", border: "1.5px solid var(--border)", fontSize: "0.92rem" }}>
@@ -145,8 +145,8 @@ export default function Post() {
 
               <div style={{ marginTop: "1rem", padding: "2rem", background: "var(--surface)", borderRadius: "1rem", border: "1.5px solid var(--border)", textAlign: "center" }}>
                 <p style={{ fontWeight: 800, fontSize: "1.1rem", color: "#111111", marginBottom: "0.5rem" }}>Skip the learning curve — get a pro-built website</p>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", marginBottom: "1.25rem" }}>Fill out our 3-minute form and receive a custom website template from $29. No coding. No subscriptions. Files you own forever.</p>
-                <Link href="/generate" className="btn-primary">Build My Website — from $29 →</Link>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", marginBottom: "1.25rem" }}>Fill out our 3-minute form and receive a custom website template from $49. No coding. No subscriptions. Files you own forever.</p>
+                <Link href="/generate" className="btn-primary">Build My Website — from $49 →</Link>
               </div>
             </div>
           </article>

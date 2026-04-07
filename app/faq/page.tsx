@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Affordable Website Design FAQ — Pricing, Ownership & Process",
   description:
-    "Got questions about affordable website design? Find answers on pricing, process, ownership, SEO, turnaround time, hosting, and more. Packages from $29.",
+    "Got questions about affordable website design? Find answers on pricing, process, ownership, SEO, turnaround time, hosting, and more. Packages from $49.",
   alternates: { canonical: "/faq" },
 };
 
@@ -83,6 +84,14 @@ const FAQ_SECTIONS = [
         q: "Can I use a website builder or WordPress instead?",
         a: "You can, but our hand-coded sites are significantly lighter, faster, and cheaper to maintain long-term. There are no monthly platform fees, no plugin updates, and no security vulnerabilities from third-party themes.",
       },
+      {
+        q: "Is this better than an AI website builder?",
+        a: "Significantly. AI website generators like Wix ADI and Framer AI create generic-looking sites on subscription platforms — you never truly own the result. Every AffordaWeb template is designed by a human professional, hand-coded for your specific brand, and delivered as files you own forever.",
+      },
+      {
+        q: "Can AI really create a good website for my business?",
+        a: "AI tools can generate something quickly, but the output is typically generic, SEO-weak, and platform-locked. For a real business that needs distinct brand identity and long-term SEO performance, a hand-coded, human-designed website consistently outperforms AI-generated results.",
+      },
     ],
   },
 ];
@@ -99,6 +108,48 @@ const faqSchema = {
         text: item.a,
       },
     }))
+  ),
+};
+
+const FAQ_ENHANCED: Record<string, ReactNode> = {
+  "How much does an affordable website cost?": (
+    <>
+      Our packages start at $49 (Starter, 1–3 pages), $79 (Standard, 4–6 pages), and $129 (Premium, up to 8 pages).{" "}
+      No hidden fees.{" "}
+      <Link href="/blog/how-much-does-a-website-cost" style={{ color: "#111111", fontWeight: 600 }}>
+        Read our full honest website cost breakdown →
+      </Link>
+    </>
+  ),
+  "Where can I host my website?": (
+    <>
+      Anywhere you like —{" "}
+      <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>Netlify</a>{" "}
+      (free tier),{" "}
+      <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>GitHub Pages</a>{" "}
+      (free),{" "}
+      <a href="https://www.namecheap.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>Namecheap</a>
+      , GoDaddy, and more. We include full deployment instructions in your setup guide.
+    </>
+  ),
+  "Can I use a website builder or WordPress instead?": (
+    <>
+      You can, but our{" "}
+      <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "#111111", fontWeight: 600 }}>hand-coded sites</Link>{" "}
+      are significantly lighter, faster, and cheaper to maintain long-term. No monthly fees, no plugin updates, no security vulnerabilities.{" "}
+      <Link href="/blog/website-design-without-a-developer" style={{ color: "#111111", fontWeight: 600 }}>Compare all your website options →</Link>
+    </>
+  ),
+  "Is this better than an AI website builder?": (
+    <>
+      Significantly. AI tools like{" "}
+      <a href="https://www.wix.com/website/templates" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>Wix ADI</a>{" "}
+      and{" "}
+      <a href="https://www.framer.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>Framer AI</a>{" "}
+      generate generic sites on subscription platforms — you never truly own the result. Every AffordaWeb template is{" "}
+      <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "#111111", fontWeight: 600 }}>hand-coded by a human professional</Link>{" "}
+      for your specific brand, delivered as files you own forever.
+    </>
   ),
 };
 
@@ -179,13 +230,52 @@ export default function FAQPage() {
                       {item.q}
                     </h3>
                     <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.7, margin: 0 }}>
-                      {item.a}
+                      {FAQ_ENHANCED[item.q] ?? item.a}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── Related Reading ── */}
+      <section style={{ padding: "2.5rem 0", borderTop: "1.5px solid var(--border)" }}>
+        <div className="container-tight">
+          <p style={{ fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)", marginBottom: "1rem" }}>
+            Related Guides
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.65rem" }}>
+            {[
+              { href: "/blog/how-much-does-a-website-cost", label: "How Much Does a Website Cost?" },
+              { href: "/blog/what-is-a-hand-coded-website", label: "What Is a Hand-Coded Website?" },
+              { href: "/blog/website-design-without-a-developer", label: "Website Design Without a Developer" },
+              { href: "/blog/affordable-website-design-for-small-business", label: "Affordable Website Design Guide" },
+              { href: "/blog/why-hire-a-filipino-web-designer", label: "Why Hire a Filipino Web Designer?" },
+              { href: "/blog/how-to-build-your-own-website-without-coding", label: "Build a Website Without Coding" },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.35rem",
+                  padding: "0.45rem 1rem",
+                  background: "var(--surface)",
+                  border: "1.5px solid var(--border)",
+                  borderRadius: "999px",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  color: "#111111",
+                  textDecoration: "none",
+                }}
+              >
+                → {label}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "DIY Website Templates for Small Business — Starting at $29 | AffordaWeb Solutions",
+  title: "DIY Website Templates for Small Business — Starting at $49 | AffordaWeb Solutions",
   description:
-    "Build your own website with a custom-designed template. Tell us your pages, style, and features — we design it, you own it forever. DIY website templates starting at $29. No coding, no subscriptions.",
+    "Build your own website with a custom-designed template. Tell us your pages, style, and features — we design it, you own it forever. DIY website templates starting at $49. No coding, no subscriptions.",
   alternates: { canonical: "/" },
 };
 
@@ -39,7 +39,7 @@ const TRUST_ITEMS = [
   "Instant Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
-  "Starting at $29",
+  "Starting at $49",
   "DIY Website Templates",
   "Build Your Own Website",
   "No Subscriptions",
@@ -47,37 +47,37 @@ const TRUST_ITEMS = [
   "Instant Delivery",
   "Mobile-First Design",
   "SEO-Ready Markup",
-  "Starting at $29",
+  "Starting at $49",
 ];
 
 const PACKAGES = [
   {
     name: "Starter",
-    price: "$29",
-    pageRange: "Up to 5 pages",
+    price: "$49",
+    pageRange: "1–3 pages",
     desc: "Perfect for a simple, professional online presence.",
-    features: ["Up to 5 pages", "Mobile-responsive", "SEO meta tags", "Contact form", "ZIP download"],
+    features: ["1–3 pages", "Mobile-responsive", "SEO meta tags", "Contact form", "ZIP download"],
     cta: "Build Starter →",
     popular: false,
     href: "/generate",
   },
   {
-    name: "Growth",
-    price: "$99",
-    pageRange: "6–10 pages",
+    name: "Standard",
+    price: "$79",
+    pageRange: "4–6 pages",
     desc: "Ideal for service businesses and content-rich sites.",
-    features: ["6–10 pages", "Everything in Starter", "Gallery or blog layout", "Social media links", "Google Maps", "2 revision rounds"],
-    cta: "Build Growth →",
+    features: ["4–6 pages", "Everything in Starter", "Gallery or blog layout", "Social media links", "Google Maps", "2 revision rounds"],
+    cta: "Build Standard →",
     popular: true,
     href: "/generate",
   },
   {
-    name: "Ecommerce",
-    price: "$149",
-    pageRange: "Up to 10 products",
-    desc: "Sell products with a clean, conversion-ready store.",
-    features: ["Product pages (up to 10)", "Shopping cart layout", "Checkout page", "Everything in Growth", "Priority delivery"],
-    cta: "Build My Store →",
+    name: "Premium",
+    price: "$129",
+    pageRange: "Up to 8 pages",
+    desc: "Ideal for larger sites with more pages and content.",
+    features: ["Up to 8 pages", "Everything in Standard", "Gallery or blog layout", "Testimonials section", "Priority delivery"],
+    cta: "Build Premium →",
     popular: false,
     href: "/generate",
   },
@@ -96,7 +96,7 @@ const PACKAGES = [
 const WHY_US = [
   {
     title: "Cheaper than any builder subscription",
-    desc: "Wix, Squarespace, and Shopify cost $16–$40/month. Pay once with us — $29 flat, forever.",
+    desc: "Wix, Squarespace, and Shopify cost $16–$40/month. Pay once with us — $49 flat, forever.",
   },
   {
     title: "Professional quality, not a generic theme",
@@ -149,7 +149,7 @@ export default function Home() {
         >
           {/* Left: text + buttons */}
           <div className="anim-fade-up">
-            <span className="badge">DIY Website Templates · Starting at $29 · You Own It Forever</span>
+            <span className="badge">DIY Website Templates · Starting at $49 · You Own It Forever</span>
 
             <h1
               className="heading-hero anim-fade-up anim-delay-1"
@@ -169,7 +169,13 @@ export default function Home() {
                 maxWidth: 520,
               }}
             >
-              Tell us your pages, style, colours, and features. We design a clean, professional website template — custom to your brand. Download the files, host anywhere, own it forever.
+              Tell us your pages, style, colours, and features. We design a clean,{" "}
+              <Link href="/services" style={{ color: "#111111", fontWeight: 600 }}>
+                professional website template
+              </Link>{" "}
+              — custom to your brand. Download the files, host anywhere on platforms like{" "}
+              <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer" style={{ color: "#111111", textDecoration: "underline" }}>Netlify</a>
+              , own it forever.
             </p>
 
             <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.25rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
@@ -183,7 +189,7 @@ export default function Home() {
 
             <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
               {[
-                { label: "Starting at", value: "$29" },
+                { label: "Starting at", value: "$49" },
                 { label: "Delivered in", value: "Instant" },
                 { label: "No monthly", value: "Fees. Ever." },
               ].map((s) => (
@@ -298,7 +304,7 @@ export default function Home() {
                 <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="3s" repeatCount="indefinite" />
                 <rect x="310" y="46" width="110" height="40" rx="12" fill="#ffffff" filter="url(#shadow)" />
                 <circle cx="330" cy="66" r="10" fill="#111111" />
-                <text x="330" y="70" textAnchor="middle" fontSize="9" fontWeight="900" fill="#ffffff">$29</text>
+                <text x="330" y="70" textAnchor="middle" fontSize="9" fontWeight="900" fill="#ffffff">$49</text>
                 <rect x="347" y="59" width="58" height="5" rx="2.5" fill="#111111" />
                 <rect x="347" y="68" width="43" height="4" rx="2" fill="#9ca3af" />
               </g>
@@ -332,7 +338,10 @@ export default function Home() {
               How DIY Website Building Works
             </h2>
             <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 520, marginInline: "auto" }}>
-              You fill out the form. We handle the design. You walk away with a professional website you own.
+              You fill out the form. We handle the design. You walk away with a professional website you own.{" "}
+              <Link href="/blog/how-to-build-your-own-website-without-coding" style={{ color: "#111111", fontWeight: 600 }}>
+                See the step-by-step guide →
+              </Link>
             </p>
           </div>
 
@@ -361,7 +370,10 @@ export default function Home() {
               Simple Pricing. No Surprises.
             </h2>
             <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 520, marginInline: "auto" }}>
-              One flat payment. No monthly fees, no renewals, no hidden costs. Pick your tier and get your custom template.
+              One flat payment. No monthly fees, no renewals, no hidden costs. Pick your tier and get your custom template.{" "}
+              <Link href="/blog/how-much-does-a-website-cost" style={{ color: "#111111", fontWeight: 600 }}>
+                Full website cost breakdown →
+              </Link>
             </p>
           </div>
 
@@ -435,7 +447,10 @@ export default function Home() {
               The smarter way to build your website
             </h2>
             <p style={{ color: "var(--text-muted)", marginTop: "0.75rem", fontSize: "1.05rem", maxWidth: 520, marginInline: "auto" }}>
-              Skip overpriced subscriptions and generic templates. Get a custom website you actually own.
+              Skip overpriced subscriptions and generic templates. Get a custom website you actually own.{" "}
+              <Link href="/blog/website-design-without-a-developer" style={{ color: "#111111", fontWeight: 600 }}>
+                Compare all your options →
+              </Link>
             </p>
           </div>
 
@@ -466,9 +481,9 @@ export default function Home() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
             {[
-              { slug: "diy-website-builder-vs-custom-template", title: "DIY Website Builder vs Custom Template: Which is Better in 2026?", date: "April 2026" },
-              { slug: "how-to-build-your-own-website-without-coding", title: "How to Build Your Own Website Without Coding (Step-by-Step Guide)", date: "April 2026" },
-              { slug: "cheap-website-templates-for-small-business", title: "Best Cheap Website Templates for Small Businesses — $29 Flat", date: "April 2026" },
+              { slug: "what-is-a-hand-coded-website", title: "What Is a Hand-Coded Website? Why It Outperforms Any Website Builder", date: "April 2026" },
+              { slug: "how-to-build-your-own-website-without-coding", title: "How to Build Your Own Website Without Coding (2026 Guide)", date: "April 2026" },
+              { slug: "best-website-templates-for-small-business", title: "Best Website Templates for Small Business in 2026", date: "April 2026" },
             ].map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="card" style={{ height: "100%", transition: "border-color 0.2s" }}>
@@ -492,10 +507,10 @@ export default function Home() {
             Ready to build your website?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 500, marginInline: "auto" }}>
-            Fill out our 4-minute design form and get a professional, custom website template delivered to your inbox — starting at just $29.
+            Fill out our 4-minute design form and get a professional, custom website template delivered to your inbox — starting at just $49.
           </p>
           <Link href="/generate" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FFFFFF", color: "#111111", fontWeight: 700, fontSize: "1.1rem", padding: "1rem 2.5rem", borderRadius: "999px", textDecoration: "none" }}>
-            Build My Website — Starting at $29 →
+            Build My Website — Starting at $49 →
           </Link>
         </div>
       </section>

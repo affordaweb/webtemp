@@ -113,7 +113,7 @@ export default function Post() {
               </p>
               <p>
                 No monthly fees. No platform lock-in. You own every file. Starting at{" "}
-                <Link href="/services" style={{ color: "#111111", fontWeight: 700, textDecoration: "underline" }}>$29 for up to 5 pages</Link>.
+                <Link href="/services" style={{ color: "#111111", fontWeight: 700, textDecoration: "underline" }}>$49 for 1–3 pages</Link>.
               </p>
 
               <h2 style={{ color: "#111111", fontWeight: 800, fontSize: "1.35rem", marginTop: "0.5rem" }}>Website Templates by Industry</h2>
@@ -161,7 +161,7 @@ export default function Post() {
 
               <div style={{ marginTop: "1rem", padding: "2rem", background: "var(--surface)", borderRadius: "1rem", border: "1.5px solid var(--border)", textAlign: "center" }}>
                 <p style={{ fontWeight: 800, fontSize: "1.1rem", color: "#111111", marginBottom: "0.5rem" }}>Get a custom template built for your business</p>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", marginBottom: "1.25rem" }}>Industry-specific, mobile-responsive, SEO-optimised. Delivered as files you own — from $29.</p>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", marginBottom: "1.25rem" }}>Industry-specific, mobile-responsive, SEO-optimised. Delivered as files you own — from $49.</p>
                 <Link href="/generate" className="btn-primary">Start My Website →</Link>
               </div>
             </div>

@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
+    default: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
     template: "%s | AffordaWeb Solutions",
   },
   description:
-    "Build your own website with a custom-designed template. Answer a short form, we design it, you own the files forever. DIY website templates starting at $29. No subscriptions, no coding needed.",
+    "Build your own website with a custom-designed template. Answer a short form, we design it, you own the files forever. DIY website templates starting at $49. No subscriptions, no coding needed.",
   keywords: [
     // Primary — DIY website
     "DIY website",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     "website that is mine to keep",
     "no subscription website design",
     "website design flat fee",
-    "website design $29",
-    "website design $99",
-    "small business website 29 dollars",
+    "website design $49",
+    "website design $79",
+    "small business website 49 dollars",
     // Service types
     "mobile-friendly website design",
     "SEO-friendly web design",
@@ -68,6 +68,24 @@ export const metadata: Metadata = {
     "Filipino web designer",
     "hire Filipino web designer",
     "top rated web designer Upwork",
+    // AI website keyword cluster
+    "AI created website",
+    "AI generated website",
+    "AI website builder",
+    "AI web design",
+    "AI website generator",
+    "website created by AI",
+    "AI website maker",
+    "create website with AI",
+    "AI designed website",
+    "AI website 2026",
+    "AI website builder vs human designer",
+    "better than AI website builder",
+    "human web designer vs AI",
+    "why hire a web designer instead of AI",
+    "Wix ADI alternative",
+    "Framer AI alternative",
+    "Durable AI alternative",
   ],
   metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim()),
   icons: {
@@ -75,9 +93,9 @@ export const metadata: Metadata = {
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
+    title: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
     description:
-      "Build your own website with a custom template designed for your brand. $29 flat, no subscriptions, you own the files forever.",
+      "Build your own website with a custom template designed for your brand. $49 flat, no subscriptions, you own the files forever.",
     url: "/",
     siteName: "AffordaWeb Solutions",
     locale: "en_US",
@@ -87,15 +105,15 @@ export const metadata: Metadata = {
         url: "/og-default.png",
         width: 1200,
         height: 628,
-        alt: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
+        alt: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
+    title: "AffordaWeb Solutions — DIY Website Templates Starting at $49",
     description:
-      "Custom website templates starting at $29. Fill out a form, we design it, you own the code. No subscriptions.",
+      "Custom website templates starting at $49. Fill out a form, we design it, you own the code. No subscriptions.",
     images: ["/og-default.png"],
   },
 };

@@ -4,19 +4,19 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "DIY Website Template Services & Pricing | AffordaWeb Solutions",
   description:
-    "Flat-rate DIY website templates for small businesses. Starter $29 (up to 5 pages), Growth $99 (6-10 pages), Ecommerce $149 (10 products), Custom projects welcome. No subscriptions.",
+    "Flat-rate DIY website templates for small businesses. Starter $49 (1-3 pages), Standard $79 (4-6 pages), Premium $129 (up to 8 pages), Custom projects welcome. No subscriptions.",
   alternates: { canonical: "/services" },
 };
 
 const PACKAGES = [
   {
     name: "Starter",
-    price: "$29",
-    pageRange: "Up to 5 pages",
+    price: "$49",
+    pageRange: "1–3 pages",
     tagline: "Launch your professional presence fast",
     popular: false,
     features: [
-      "Up to 5 custom pages",
+      "1–3 custom pages",
       "Hand-coded HTML & CSS",
       "Mobile-responsive layout",
       "SEO meta tags & structure",
@@ -29,13 +29,13 @@ const PACKAGES = [
     cta: "Build Starter →",
   },
   {
-    name: "Growth",
-    price: "$99",
-    pageRange: "6–10 pages",
+    name: "Standard",
+    price: "$79",
+    pageRange: "4–6 pages",
     tagline: "Most popular for service businesses",
     popular: true,
     features: [
-      "6–10 custom pages",
+      "4–6 custom pages",
       "Everything in Starter",
       "Gallery or blog layout",
       "Social media links",
@@ -45,25 +45,25 @@ const PACKAGES = [
       "Instant delivery",
     ],
     href: "/generate",
-    cta: "Build Growth →",
+    cta: "Build Standard →",
   },
   {
-    name: "Ecommerce",
-    price: "$149",
-    pageRange: "Up to 10 products",
-    tagline: "Sell products with a clean store layout",
+    name: "Premium",
+    price: "$129",
+    pageRange: "Up to 8 pages",
+    tagline: "For larger sites with more pages and content",
     popular: false,
     features: [
-      "Product pages (up to 10)",
-      "Shopping cart layout",
-      "Checkout + order form",
-      "Everything in Growth",
-      "Category / filter layout",
+      "Up to 8 custom pages",
+      "Everything in Standard",
+      "Gallery or blog layout",
+      "Testimonials section",
+      "Advanced SEO structure",
       "Priority delivery (instant)",
       "3 revision rounds",
     ],
     href: "/generate",
-    cta: "Build My Store →",
+    cta: "Build Premium →",
   },
   {
     name: "Custom",
@@ -148,7 +148,7 @@ export default function ServicesPage() {
               marginInline: "auto",
             }}
           >
-            Tell us what you need in 4 minutes. We design your template. You get clean, professional website files you own forever — starting at $29. No subscriptions, no coding required.
+            Tell us what you need in 4 minutes. We design your template. You get clean, professional website files you own forever — starting at $49. No subscriptions, no coding required.
           </p>
           <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/generate" className="btn-primary">Build My Website →</Link>
@@ -166,7 +166,10 @@ export default function ServicesPage() {
               Flat-Rate Packages. No Hidden Fees.
             </h2>
             <p style={{ color: "var(--text-muted)", fontSize: "1rem", maxWidth: 520, marginInline: "auto", marginTop: "0.75rem" }}>
-              One payment. No monthly fees. No renewals. Pick the package that fits your needs.
+              One payment. No monthly fees. No renewals. Pick the package that fits your needs.{" "}
+              <Link href="/blog/how-much-does-a-website-cost" style={{ color: "#111111", fontWeight: 600 }}>
+                See the full website cost breakdown →
+              </Link>
             </p>
           </div>
 
@@ -244,7 +247,10 @@ export default function ServicesPage() {
               What You Get With Every DIY Template
             </h2>
             <p style={{ color: "var(--text-muted)", fontSize: "1rem", maxWidth: 480, marginInline: "auto", marginTop: "0.75rem" }}>
-              Every package comes with the same core quality — no cutting corners on the basics.
+              Every package comes with the same core quality — no cutting corners on the basics.{" "}
+              <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "#111111", fontWeight: 600 }}>
+                What does hand-coded mean? →
+              </Link>
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
@@ -302,11 +308,16 @@ export default function ServicesPage() {
             Ready to build your custom website?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: 480, marginInline: "auto" }}>
-            Fill out our 4-minute form and get a clean, professional website template starting at $29. No subscriptions, no coding.
+            Fill out our 4-minute form and get a clean, professional website template starting at $49. No subscriptions, no coding.
           </p>
           <Link href="/generate" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FFFFFF", color: "#111111", fontWeight: 700, fontSize: "1.1rem", padding: "1rem 2.5rem", borderRadius: "999px", textDecoration: "none" }}>
-            Build My Website — Starting at $29 →
+            Build My Website — Starting at $49 →
           </Link>
+          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.85rem", marginTop: "1.75rem" }}>
+            Not sure yet? Compare{" "}
+            <Link href="/blog/website-design-without-a-developer" style={{ color: "rgba(255,255,255,0.75)", textDecoration: "underline" }}>website design options</Link>
+            {" "}&mdash; builders, AI tools, freelancers, and templates side by side.
+          </p>
         </div>
       </section>
     </>
