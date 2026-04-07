@@ -83,7 +83,7 @@ const PACKAGES = [
   },
   {
     name: "Custom",
-    price: "Let'"'"'s Talk",
+    price: "Let\u2019s Talk",
     pageRange: "Unlimited scope",
     desc: "Complex projects, unique requirements, or bespoke builds.",
     features: ["Unlimited pages", "Custom integrations", "Dedicated designer", "Priority support", "Full handoff"],
