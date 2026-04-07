@@ -141,51 +141,6 @@ export default function GeneratePage() {
   const [form, setForm] = useState<FormData>(INITIAL);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [aiLoading, setAiLoading] = useState(false);
-  const [aiError, setAiError] = useState("");
-  const [aiApplied, setAiApplied] = useState(false);
-
-  async function handleGenerateCopy() {
-    if (!form.businessName || !form.industry) return;
-    setAiLoading(true);
-    setAiError("");
-    setAiApplied(false);
-    try {
-      const res = await fetch("/api/generate-copy", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          businessName: form.businessName,
-          industry: form.industry,
-          targetCity: form.targetCity,
-          focusKeyword: form.focusKeyword,
-          targetAudience: form.targetAudience,
-        }),
-      });
-      if (!res.ok) throw new Error("AI generation failed");
-      const data = await res.json();
-      setForm((prev) => ({
-        ...prev,
-        tagline: data.tagline ?? prev.tagline,
-        targetAudience: data.targetAudience ?? prev.targetAudience,
-        notes: [
-          data.heroHeadline ? `Hero headline: ${data.heroHeadline}` : "",
-          data.heroSubline ? `Hero subline: ${data.heroSubline}` : "",
-          data.aboutBlurb ? `About: ${data.aboutBlurb}` : "",
-          data.service1 ? `Service 1: ${data.service1}` : "",
-          data.service2 ? `Service 2: ${data.service2}` : "",
-          data.service3 ? `Service 3: ${data.service3}` : "",
-          data.metaDescription ? `Meta description: ${data.metaDescription}` : "",
-          data.notes ? `Suggestions: ${data.notes}` : "",
-        ].filter(Boolean).join("\n"),
-      }));
-      setAiApplied(true);
-    } catch {
-      setAiError("AI generation failed. Please try again or fill in manually.");
-    } finally {
-      setAiLoading(false);
-    }
-  }
 
   function togglePage(page: string) {
     setForm((prev) => ({
@@ -302,58 +257,6 @@ export default function GeneratePage() {
                 </select>
               </div>
 
-              {/* AI Copy Generator */}
-              {form.businessName && form.industry && (
-                <div style={{ borderRadius: "0.75rem", border: "1.5px solid var(--border)", background: "var(--surface-2)", padding: "1.1rem 1.25rem" }}>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.75rem" }}>
-                    <div>
-                      <p style={{ fontSize: "0.9rem", fontWeight: 800, color: "#111111", margin: 0 }}>
-                        ✦ Generate copy with AI
-                      </p>
-                      <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: "0.25rem 0 0" }}>
-                        Auto-fills tagline, audience, services &amp; more based on your business
-                      </p>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={handleGenerateCopy}
-                      disabled={aiLoading}
-                      style={{
-                        background: "#111111",
-                        color: "#fff",
-                        border: "none",
-                        borderRadius: "999px",
-                        padding: "0.6rem 1.4rem",
-                        fontSize: "0.88rem",
-                        fontWeight: 700,
-                        cursor: aiLoading ? "not-allowed" : "pointer",
-                        opacity: aiLoading ? 0.6 : 1,
-                        whiteSpace: "nowrap",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.4rem",
-                      }}
-                    >
-                      {aiLoading ? (
-                        <>
-                          <span style={{ display: "inline-block", width: 12, height: 12, border: "2px solid #fff", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
-                          Generating…
-                        </>
-                      ) : aiApplied ? "✓ Applied — Regenerate" : "Generate My Copy →"}
-                    </button>
-                  </div>
-                  {aiApplied && (
-                    <p style={{ fontSize: "0.8rem", color: "#16a34a", fontWeight: 600, margin: "0.75rem 0 0" }}>
-                      ✓ AI copy applied — review the fields below and edit anything you like.
-                    </p>
-                  )}
-                  {aiError && (
-                    <p style={{ fontSize: "0.8rem", color: "#dc2626", fontWeight: 600, margin: "0.75rem 0 0" }}>
-                      {aiError}
-                    </p>
-                  )}
-                </div>
-              )}
               <div>
                 <label className="form-label">Tagline or Slogan <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
                 <input className="form-input" placeholder='e.g. "Where great food meets great company"' value={form.tagline} onChange={(e) => setForm({ ...form, tagline: e.target.value })} />
