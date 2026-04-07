@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | AffordaWeb Solutions",
+  title: "Affordable Website Design FAQ — Pricing, Ownership & Process",
   description:
-    "Got questions about affordable website design? Find answers to the most common questions about pricing, process, ownership, SEO, turnaround time, and more.",
+    "Got questions about affordable website design? Find answers on pricing, process, ownership, SEO, turnaround time, hosting, and more. Packages from $29.",
   alternates: { canonical: "/faq" },
 };
 
@@ -87,9 +87,28 @@ const FAQ_SECTIONS = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_SECTIONS.flatMap((section) =>
+    section.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    }))
+  ),
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── Hero ── */}
       <section
         style={{

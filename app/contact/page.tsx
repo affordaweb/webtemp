@@ -3,9 +3,9 @@ import Link from "next/link";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | AffordaWeb Solutions",
+  title: "Contact AffordaWeb Solutions — Get a Website Quote Today",
   description:
-    "Get in touch with AffordaWeb Solutions. Reach our team of affordable website designers for questions, quotes, and support. We typically respond within 24 hours.",
+    "Have a question or ready to order? Contact AffordaWeb Solutions for affordable website design quotes and support. We typically respond within 24 hours.",
   alternates: { canonical: "/contact" },
 };
 

@@ -80,12 +80,55 @@ export const metadata: Metadata = {
     siteName: "AffordaWeb Solutions",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 628,
+        alt: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
     description:
       "Custom website templates starting at $29. Fill out a form, we design it, you own the code. No subscriptions.",
+    images: ["/og-default.png"],
+  },
+};
+
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://webtemp-iota.vercel.app").trim();
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "AffordaWeb Solutions",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.svg`,
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    email: "support@affordawebsolutions.net",
+    availableLanguage: "English",
+  },
+  sameAs: [
+    "https://affordawebsolutions.com",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "AffordaWeb Solutions",
+  url: SITE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/blog?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -96,6 +139,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.className} h-full`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[var(--bg)] text-[var(--text)]">
         <Navbar />
         <main className="flex-1">{children}</main>

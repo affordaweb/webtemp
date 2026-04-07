@@ -27,6 +27,12 @@ export interface TemplateRequest {
   // Notes & feedback
   notes?: string
   designFeedback?: string
+  // SEO
+  focusKeyword?: string
+  targetCity?: string
+  businessPhone?: string
+  businessAddress?: string
+  metaDescription?: string
   // Legacy
   colors?: string
   // Delivery

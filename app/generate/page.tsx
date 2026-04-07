@@ -82,6 +82,11 @@ type FormData = {
   industry: string;
   tagline: string;
   targetAudience: string;
+  // SEO fields
+  focusKeyword: string;
+  targetCity: string;
+  businessPhone: string;
+  businessAddress: string;
   pages: string[];
   primaryColor: string;
   style: string;
@@ -103,6 +108,10 @@ const INITIAL: FormData = {
   industry: "",
   tagline: "",
   targetAudience: "",
+  focusKeyword: "",
+  targetCity: "",
+  businessPhone: "",
+  businessAddress: "",
   pages: ["Home", "About", "Services", "Contact"],
   primaryColor: "black",
   style: "modern",
@@ -253,6 +262,35 @@ export default function GeneratePage() {
               <div>
                 <label className="form-label">Who is your ideal customer? <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
                 <input className="form-input" placeholder='e.g. "Local homeowners aged 35–55 looking for reliable trades"' value={form.targetAudience} onChange={(e) => setForm({ ...form, targetAudience: e.target.value })} />
+              </div>
+
+              {/* SEO block */}
+              <div style={{ borderTop: "1.5px solid var(--border)", paddingTop: "1.25rem" }}>
+                <p style={{ fontWeight: 700, fontSize: "0.88rem", color: "var(--text)", marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                  <span>🔍</span> SEO Information <span style={{ fontWeight: 400, color: "var(--text-muted)", fontSize: "0.82rem" }}>— helps us optimise your site for Google</span>
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                    <div>
+                      <label className="form-label">Main Service Keyword <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
+                      <input className="form-input" placeholder='e.g. "plumber in Dallas"' value={form.focusKeyword} onChange={(e) => setForm({ ...form, focusKeyword: e.target.value })} />
+                    </div>
+                    <div>
+                      <label className="form-label">Target City / Region <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
+                      <input className="form-input" placeholder='e.g. "Tampa, FL"' value={form.targetCity} onChange={(e) => setForm({ ...form, targetCity: e.target.value })} />
+                    </div>
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                    <div>
+                      <label className="form-label">Business Phone <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
+                      <input className="form-input" type="tel" placeholder='e.g. "(813) 555-0100"' value={form.businessPhone} onChange={(e) => setForm({ ...form, businessPhone: e.target.value })} />
+                    </div>
+                    <div>
+                      <label className="form-label">Business Address <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(optional)</span></label>
+                      <input className="form-input" placeholder='e.g. "123 Main St, Tampa FL 33601"' value={form.businessAddress} onChange={(e) => setForm({ ...form, businessAddress: e.target.value })} />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}

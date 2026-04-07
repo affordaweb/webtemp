@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const { name, email, businessName, industry, tagline, targetAudience, pages, primaryColor, style, fontStyle, features, inspirationUrl, socialFacebook, socialInstagram, socialOther, notes, designFeedback, requestedLiveSetup } = body;
+    const { name, email, businessName, industry, tagline, targetAudience, pages, primaryColor, style, fontStyle, features, inspirationUrl, socialFacebook, socialInstagram, socialOther, notes, designFeedback, requestedLiveSetup, focusKeyword, targetCity, businessPhone, businessAddress } = body;
 
     // Basic validation
     if (!name || !email || !businessName || !industry || !Array.isArray(pages) || pages.length === 0) {
@@ -40,6 +40,10 @@ export async function POST(req: NextRequest) {
       socialOther: socialOther ? String(socialOther).slice(0, 300) : undefined,
       notes: String(notes ?? "").slice(0, 1000),
       designFeedback: designFeedback ? String(designFeedback).slice(0, 1000) : undefined,
+      focusKeyword: focusKeyword ? String(focusKeyword).slice(0, 200) : undefined,
+      targetCity: targetCity ? String(targetCity).slice(0, 100) : undefined,
+      businessPhone: businessPhone ? String(businessPhone).slice(0, 30) : undefined,
+      businessAddress: businessAddress ? String(businessAddress).slice(0, 300) : undefined,
       requestedLiveSetup: Boolean(requestedLiveSetup),
       status: "pending",
       createdAt: new Date().toISOString(),

@@ -35,6 +35,10 @@ export async function sendAdminNotification(req: TemplateRequest): Promise<void>
           <tr><td style="padding:8px 0;color:#6b7280;font-size:14px">Style</td><td style="padding:8px 0;font-weight:600">${req.style}</td></tr>
           <tr><td style="padding:8px 0;color:#6b7280;font-size:14px">Color</td><td style="padding:8px 0;font-weight:600">${req.primaryColor ?? req.colors}</td></tr>
           ${req.phone ? `<tr><td style="padding:8px 0;color:#6b7280;font-size:14px">Phone</td><td style="padding:8px 0;font-weight:600">${req.phone}</td></tr>` : ''}
+          ${req.focusKeyword ? `<tr><td style="padding:8px 0;color:#6b7280;font-size:14px">Focus Keyword</td><td style="padding:8px 0;font-weight:600">${req.focusKeyword}</td></tr>` : ''}
+          ${req.targetCity ? `<tr><td style="padding:8px 0;color:#6b7280;font-size:14px">Target City</td><td style="padding:8px 0;font-weight:600">${req.targetCity}</td></tr>` : ''}
+          ${req.businessPhone ? `<tr><td style="padding:8px 0;color:#6b7280;font-size:14px">Business Phone</td><td style="padding:8px 0;font-weight:600">${req.businessPhone}</td></tr>` : ''}
+          ${req.businessAddress ? `<tr><td style="padding:8px 0;color:#6b7280;font-size:14px">Business Address</td><td style="padding:8px 0;font-weight:600">${req.businessAddress}</td></tr>` : ''}
         </table>
         <a href="${siteUrl}/admin" style="display:inline-block;margin-top:24px;background:#111111;color:#fff;padding:12px 28px;border-radius:999px;font-weight:700;text-decoration:none">View in Admin</a>
       </div>
