@@ -79,6 +79,8 @@ export default function Footer() {
               <li><FooterLink href="/blog">Blog</FooterLink></li>
               <li><FooterLink href="/faq">FAQ</FooterLink></li>
               <li><FooterLink href="/contact">Contact</FooterLink></li>
+              <li><FooterLink href="/privacy">Privacy Policy</FooterLink></li>
+              <li><FooterLink href="/terms">Terms of Service</FooterLink></li>
             </ul>
           </div>
         </div>
@@ -97,9 +99,11 @@ export default function Footer() {
           <p style={{ color: "var(--text-muted)", fontSize: "0.83rem", margin: 0 }}>
             © {year} AffordaWeb Solutions. All rights reserved.
           </p>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.83rem", margin: 0 }}>
-            DIY website templates · Starting at $29 · You own the files
-          </p>
+          <div style={{ display: "flex", gap: "1.25rem", alignItems: "center", flexWrap: "wrap" }}>
+            <Link href="/privacy" style={{ color: "var(--text-muted)", fontSize: "0.83rem", textDecoration: "none" }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ color: "var(--text-muted)", fontSize: "0.83rem", textDecoration: "none" }}>Terms of Service</Link>
+            <span style={{ color: "var(--text-muted)", fontSize: "0.83rem" }}>DIY website templates · Starting at $29 · You own the files</span>
+          </div>
         </div>
       </div>
     </footer>

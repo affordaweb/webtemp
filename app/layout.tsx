@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-default.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 628,
         alt: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
     title: "AffordaWeb Solutions — DIY Website Templates Starting at $29",
     description:
       "Custom website templates starting at $29. Fill out a form, we design it, you own the code. No subscriptions.",
-    images: ["/og-default.png"],
+    images: ["/opengraph-image"],
   },
 };
 
