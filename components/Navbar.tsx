@@ -76,8 +76,11 @@ export default function Navbar() {
           <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/blog">Blog</NavLink>
-          <Link href="/generate" className="btn-primary" style={{ fontSize: "0.88rem", padding: "0.6rem 1.4rem" }}>
-            Build My Website →
+          <Link href="/generate" className="btn-primary btn-nav-shimmer" style={{ fontSize: "0.88rem", padding: "0.6rem 1.4rem", display: "inline-flex", alignItems: "center", gap: "0.45rem" }}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
+              <path d="M12 2l2.09 6.26L21 10l-5.45 4.74L17.18 22 12 18.77 6.82 22l1.63-7.26L3 10l6.91-1.74L12 2z" />
+            </svg>
+            Build My Website
           </Link>
         </nav>
 
@@ -108,8 +111,11 @@ export default function Navbar() {
             <NavLink href="/faq" onClick={() => setOpen(false)}>FAQ</NavLink>
             <NavLink href="/about" onClick={() => setOpen(false)}>About</NavLink>
             <NavLink href="/blog" onClick={() => setOpen(false)}>Blog</NavLink>
-            <Link href="/generate" className="btn-primary" style={{ textAlign: "center", fontSize: "0.9rem" }} onClick={() => setOpen(false)}>
-              Build My Website →
+            <Link href="/generate" className="btn-primary btn-nav-shimmer" style={{ textAlign: "center", fontSize: "0.9rem", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.45rem" }} onClick={() => setOpen(false)}>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
+                <path d="M12 2l2.09 6.26L21 10l-5.45 4.74L17.18 22 12 18.77 6.82 22l1.63-7.26L3 10l6.91-1.74L12 2z" />
+              </svg>
+              Build My Website
             </Link>
           </div>
         </div>

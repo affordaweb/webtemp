@@ -101,6 +101,38 @@ body {
   box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
+/* ── Shimmer nav button (Redis-style) ── */
+@keyframes btn-shimmer {
+  0%   { transform: translateX(-120%) skewX(-18deg); }
+  100% { transform: translateX(300%)  skewX(-18deg); }
+}
+
+.btn-nav-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.22);
+}
+.btn-nav-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(
+    105deg,
+    transparent 15%,
+    rgba(255,255,255,0.22) 50%,
+    transparent 85%
+  );
+  transform: translateX(-120%) skewX(-18deg);
+  animation: btn-shimmer 2.8s ease-in-out infinite;
+}
+.btn-nav-shimmer:hover {
+  background: linear-gradient(135deg, #222222 0%, #3a3a3a 100%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.32);
+  transform: scale(1.04);
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
