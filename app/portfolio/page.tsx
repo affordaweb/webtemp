@@ -166,7 +166,7 @@ export default function PortfolioPage() {
                   <span className="badge" style={{ marginBottom: "0.65rem", display: "inline-block" }}>{project.industry}</span>
                   <h3 style={{ fontSize: "1.05rem", fontWeight: 800, marginBottom: "0.5rem", color: "#111111" }}>{project.name}</h3>
                   <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.6, marginBottom: "1rem" }}>{project.desc}</p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginBottom: "1rem" }}>
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -184,6 +184,9 @@ export default function PortfolioPage() {
                       </span>
                     ))}
                   </div>
+                  <Link href="/generate" style={{ fontSize: "0.88rem", fontWeight: 700, color: "#111111", textDecoration: "none" }}>
+                    Get a similar website →
+                  </Link>
                 </div>
               </div>
             ))}
@@ -192,6 +195,28 @@ export default function PortfolioPage() {
       </section>
 
       <hr className="section-divider" />
+
+      {/* ── Related Reading ── */}
+      <section style={{ padding: "2.5rem 0", borderBottom: "1.5px solid var(--border)" }}>
+        <div className="container-tight">
+          <p style={{ fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)", marginBottom: "1rem" }}>
+            Related Guides
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.65rem" }}>
+            {[
+              { href: "/blog/affordable-website-design-for-small-business", label: "Affordable Website Design Guide" },
+              { href: "/blog/how-much-does-a-website-cost", label: "How Much Does a Website Cost?" },
+              { href: "/blog/what-is-a-hand-coded-website", label: "What Is a Hand-Coded Website?" },
+              { href: "/blog/website-design-without-a-developer", label: "Website Design Without a Developer" },
+              { href: "/blog/best-website-templates-for-small-business", label: "Best Website Templates 2026" },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", padding: "0.45rem 1rem", background: "var(--surface)", border: "1.5px solid var(--border)", borderRadius: "999px", fontSize: "0.85rem", fontWeight: 600, color: "#111111", textDecoration: "none" }}>
+                → {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── Process ── */}
       <section style={{ padding: "5rem 0", background: "var(--surface)" }}>
@@ -238,7 +263,9 @@ export default function PortfolioPage() {
             Want a website like these?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.05rem", marginBottom: "2rem", maxWidth: 440, marginInline: "auto" }}>
-            Get your own professionally designed, hand-coded website starting from just $49.
+            Get your own professionally designed,{" "}
+            <Link href="/blog/what-is-a-hand-coded-website" style={{ color: "rgba(255,255,255,0.85)", textDecoration: "underline" }}>hand-coded website</Link>{" "}
+            starting from just $49.
           </p>
           <Link
             href="/generate"
