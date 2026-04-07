@@ -127,8 +127,7 @@ export default function Home() {
       <section
         style={{
           background: "var(--hero-gradient)",
-          padding: "6rem 0 5rem",
-          textAlign: "center",
+          padding: "5rem 0 4.5rem",
           position: "relative",
           overflow: "hidden",
           borderBottom: "1.5px solid var(--border)",
@@ -144,53 +143,121 @@ export default function Home() {
             pointerEvents: "none",
           }}
         />
-        <div className="container-tight" style={{ position: "relative" }}>
-          <span className="badge anim-fade-up">DIY Website Templates · Starting at $29 · You Own It Forever</span>
+        <div
+          className="container-tight hero-two-col"
+          style={{ position: "relative" }}
+        >
+          {/* Left: text + buttons */}
+          <div className="anim-fade-up">
+            <span className="badge">DIY Website Templates · Starting at $29 · You Own It Forever</span>
 
-          <h1
-            className="heading-hero anim-fade-up anim-delay-1"
-            style={{ marginTop: "1.5rem", color: "#111111", maxWidth: 840, marginInline: "auto" }}
-          >
-            Build Your Website —{" "}
-            <span style={{ color: "#555555", fontStyle: "italic" }}>without the subscription.</span>
-          </h1>
+            <h1
+              className="heading-hero anim-fade-up anim-delay-1"
+              style={{ marginTop: "1.5rem", color: "#111111" }}
+            >
+              Build Your Website —{" "}
+              <span style={{ color: "#555555", fontStyle: "italic" }}>without the subscription.</span>
+            </h1>
 
-          <p
-            className="anim-fade-up anim-delay-2"
-            style={{
-              marginTop: "1.25rem",
-              fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
-              color: "var(--text-muted)",
-              maxWidth: 620,
-              marginInline: "auto",
-              lineHeight: 1.7,
-            }}
-          >
-            Tell us your pages, style, colours, and features. We design a clean, professional website template — custom to your brand. Download the files, host anywhere, own it forever.
-          </p>
+            <p
+              className="anim-fade-up anim-delay-2"
+              style={{
+                marginTop: "1.25rem",
+                fontSize: "clamp(1rem, 2vw, 1.15rem)",
+                color: "var(--text-muted)",
+                lineHeight: 1.7,
+                maxWidth: 520,
+              }}
+            >
+              Tell us your pages, style, colours, and features. We design a clean, professional website template — custom to your brand. Download the files, host anywhere, own it forever.
+            </p>
 
-          <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.25rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/generate" className="btn-primary" style={{ fontSize: "1.05rem", padding: "0.95rem 2.25rem" }}>
-              Build My Website →
-            </Link>
-            <Link href="#pricing" className="btn-outline">
-              See Pricing
-            </Link>
+            <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.25rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <Link href="/generate" className="btn-primary" style={{ fontSize: "1.05rem", padding: "0.95rem 2.25rem" }}>
+                Build My Website →
+              </Link>
+              <Link href="#pricing" className="btn-outline">
+                See Pricing
+              </Link>
+            </div>
+
+            <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
+              {[
+                { label: "Starting at", value: "$29" },
+                { label: "Delivered in", value: "48 hours" },
+                { label: "No monthly", value: "Fees. Ever." },
+              ].map((s) => (
+                <div key={s.label}>
+                  <div style={{ fontSize: "1.5rem", fontWeight: 900, letterSpacing: "-0.03em", color: "#111111" }}>{s.value}</div>
+                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap" }}>
-            {[
-              { label: "Starting at", value: "$29" },
-              { label: "Delivered in", value: "48 hours" },
-              { label: "No monthly", value: "Fees. Ever." },
-            ].map((s) => (
-              <div key={s.label} style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "1.5rem", fontWeight: 900, letterSpacing: "-0.03em", color: "#111111" }}>{s.value}</div>
-                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.label}</div>
-              </div>
-            ))}
+          {/* Right: animated SVG illustration */}
+          <div className="hero-svg-col anim-fade-up anim-delay-2" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg
+              width="100%"
+              viewBox="0 0 600 400"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ maxWidth: 520, background: "transparent" }}
+              aria-hidden="true"
+            >
+              {/* Affordable ($29) - coin */}
+              <circle cx="100" cy="100" r="40" fill="#111111">
+                <animate attributeName="r" values="40;45;40" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="100" cy="100" r="30" fill="white"/>
+              <circle cx="100" cy="100" r="20" fill="#e5e7eb"/>
+              <text x="100" y="106" textAnchor="middle" fontSize="11" fontWeight="900" fill="#111111">$29</text>
+              <text x="100" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">Flat Price</text>
+
+              {/* Fast Turnaround - arrow */}
+              <polygon points="250,90 250,110 300,100" fill="#111111">
+                <animateTransform attributeName="transform" type="translate" values="0,0;20,0;0,0" dur="1.5s" repeatCount="indefinite"/>
+              </polygon>
+              <text x="275" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">48-hr Delivery</text>
+
+              {/* Ownership - file icon */}
+              <rect x="400" y="60" width="60" height="80" rx="4" fill="#111111"/>
+              <rect x="405" y="65" width="50" height="70" rx="3" fill="white"/>
+              <rect x="413" y="80" width="34" height="3" rx="1" fill="#e5e7eb"/>
+              <rect x="413" y="88" width="28" height="3" rx="1" fill="#e5e7eb"/>
+              <rect x="413" y="96" width="32" height="3" rx="1" fill="#e5e7eb"/>
+              <rect x="405" y="65" width="50" height="70" rx="3" fill="#111111" opacity="0">
+                <animate attributeName="opacity" values="0;0.08;0" dur="2s" repeatCount="indefinite"/>
+              </rect>
+              <text x="430" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">You Own It</text>
+
+              {/* Top-Rated - star */}
+              <g transform="translate(100,250)">
+                <polygon
+                  points="0,-35 9.5,-13 35,-13 13,5 22,30 0,15 -22,30 -13,5 -35,-13 -9.5,-13"
+                  fill="#111111"
+                >
+                  <animateTransform attributeName="transform" type="scale" values="1;1.15;1" dur="2s" repeatCount="indefinite" additive="sum"/>
+                </polygon>
+                <text y="55" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">Top-Rated</text>
+              </g>
+
+              {/* Mobile-First - phone */}
+              <rect x="255" y="225" width="50" height="90" rx="8" fill="#111111"/>
+              <rect x="260" y="231" width="40" height="78" rx="5" fill="white"/>
+              <circle cx="280" cy="311" r="4" fill="#e5e7eb"/>
+              <rect x="265" y="237" width="30" height="2" rx="1" fill="#e5e7eb"/>
+              <text x="280" y="330" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">Mobile-First</text>
+
+              {/* SEO-Ready - magnifying glass */}
+              <circle cx="420" cy="265" r="25" stroke="#111111" strokeWidth="4" fill="none"/>
+              <line x1="439" y1="284" x2="458" y2="303" stroke="#111111" strokeWidth="4" strokeLinecap="round">
+                <animateTransform attributeName="transform" type="rotate" values="0 439 284;15 439 284;0 439 284" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <text x="420" y="330" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">SEO-Ready</text>
+            </svg>
           </div>
         </div>
+
       </section>
 
       {/* Trust marquee */}
