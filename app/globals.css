@@ -101,36 +101,53 @@ body {
   box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
-/* ── Shimmer nav button (Redis-style) ── */
-@keyframes btn-shimmer {
-  0%   { transform: translateX(-120%) skewX(-18deg); }
-  100% { transform: translateX(300%)  skewX(-18deg); }
+/* ── Redis-style nav button: rotating border arc + pulsing icon ── */
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-spin {
+  to { --border-angle: 360deg; }
+}
+
+@keyframes icon-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.75; }
 }
 
 .btn-nav-shimmer {
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.22);
+  background: #1a1a1a;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
-.btn-nav-shimmer::after {
+.btn-nav-shimmer::before {
   content: "";
   position: absolute;
-  inset: 0;
-  width: 35%;
-  background: linear-gradient(
-    105deg,
-    transparent 15%,
-    rgba(255,255,255,0.22) 50%,
-    transparent 85%
+  inset: -2px;
+  border-radius: 999px;
+  background: conic-gradient(
+    from var(--border-angle),
+    #cc1f00 0%,
+    #ff4422 10%,
+    #ff6644 18%,
+    transparent 28%,
+    transparent 72%,
+    #cc1f00 100%
   );
-  transform: translateX(-120%) skewX(-18deg);
-  animation: btn-shimmer 2.8s ease-in-out infinite;
+  animation: border-spin 2.4s linear infinite;
+  z-index: -1;
 }
 .btn-nav-shimmer:hover {
-  background: linear-gradient(135deg, #222222 0%, #3a3a3a 100%);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.32);
+  background: #2a2a2a;
+  box-shadow: 0 4px 18px rgba(200,40,0,0.3);
   transform: scale(1.04);
+}
+.btn-nav-shimmer .nav-icon {
+  animation: icon-pulse 1.8s ease-in-out infinite;
 }
 
 .btn-outline {
@@ -275,5 +292,8 @@ body {
 @media (max-width: 900px) {
   .blog-layout {
     grid-template-columns: 1fr !important;
+  }
+  .blog-layout aside {
+    position: static !important;
   }
 }

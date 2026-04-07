@@ -55,7 +55,7 @@ const CATEGORIES = [
 
 export default function BlogSidebar({ currentSlug }: { currentSlug?: string }) {
   return (
-    <aside style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+    <aside style={{ display: "flex", flexDirection: "column", gap: "1.5rem", position: "sticky", top: "5rem", alignSelf: "start" }}>
 
       {/* CTA Widget */}
       <div

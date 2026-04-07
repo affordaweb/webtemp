@@ -189,9 +189,9 @@ export default function Home() {
 
             <div className="anim-fade-up anim-delay-3" style={{ marginTop: "2.5rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
               {[
-                { label: "Starting at", value: "$29" },
-                { label: "Delivered in", value: "Instant" },
-                { label: "No monthly", value: "Fees. Ever." },
+                { label: "Starting price", value: "$29" },
+                { label: "Avg. delivery", value: "< 48 hrs" },
+                { label: "Monthly fees", value: "$0" },
               ].map((s) => (
                 <div key={s.label}>
                   <div style={{ fontSize: "1.5rem", fontWeight: 900, letterSpacing: "-0.03em", color: "#111111" }}>{s.value}</div>

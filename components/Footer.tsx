@@ -24,9 +24,29 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="32" height="32" rx="8" fill="#111111"/>
-                <text x="16" y="22" textAnchor="middle" fontFamily="system-ui, -apple-system, sans-serif" fontSize="13" fontWeight="900" fill="#FFFFFF" letterSpacing="-1">AW</text>
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#0f0f0f" />
+                    <stop offset="100%" stopColor="#2e2e2e" />
+                  </linearGradient>
+                  <linearGradient id="fAccentBar" x1="0" y1="0" x2="16" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0.5" />
+                  </linearGradient>
+                </defs>
+                <rect width="40" height="40" rx="10" fill="url(#fLogoGrad)" />
+                <rect x="0" y="0" width="40" height="13" rx="10" fill="rgba(255,255,255,0.05)" />
+                <rect x="0" y="10" width="40" height="3" fill="rgba(255,255,255,0.05)" />
+                <circle cx="10.5" cy="6.5" r="2" fill="#FF5F57" />
+                <circle cx="17" cy="6.5" r="2" fill="#FEBC2E" />
+                <circle cx="23.5" cy="6.5" r="2" fill="#27C93F" />
+                <rect x="7" y="13" width="26" height="1" rx="0.5" fill="rgba(255,255,255,0.1)" />
+                <rect x="7" y="16" width="8" height="17" rx="2" fill="rgba(255,255,255,0.1)" />
+                <rect x="17.5" y="16" width="15" height="4" rx="1.5" fill="url(#fAccentBar)" />
+                <rect x="17.5" y="22.5" width="11" height="2.5" rx="1" fill="rgba(255,255,255,0.25)" />
+                <rect x="17.5" y="27" width="8" height="2.5" rx="1" fill="rgba(255,255,255,0.15)" />
+                <rect x="0" y="36" width="40" height="4" rx="4" fill="rgba(255,255,255,0.06)" />
               </svg>
               <span style={{ fontSize: "1rem", fontWeight: 900, letterSpacing: "-0.03em", color: "#111111" }}>AffordaWeb Solutions</span>
             </Link>
