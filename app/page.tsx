@@ -195,65 +195,113 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right: animated SVG illustration */}
+          {/* Right: hero illustration */}
           <div className="hero-svg-col anim-fade-up anim-delay-2" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <svg
               width="100%"
-              viewBox="0 0 600 400"
+              viewBox="0 0 480 360"
               xmlns="http://www.w3.org/2000/svg"
-              style={{ maxWidth: 520, background: "transparent" }}
+              style={{ maxWidth: 460 }}
               aria-hidden="true"
             >
-              {/* Affordable ($29) - coin */}
-              <circle cx="100" cy="100" r="40" fill="#111111">
-                <animate attributeName="r" values="40;45;40" dur="2s" repeatCount="indefinite"/>
-              </circle>
-              <circle cx="100" cy="100" r="30" fill="white"/>
-              <circle cx="100" cy="100" r="20" fill="#e5e7eb"/>
-              <text x="100" y="106" textAnchor="middle" fontSize="11" fontWeight="900" fill="#111111">$29</text>
-              <text x="100" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">Flat Price</text>
+              <defs>
+                <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#141414" />
+                  <stop offset="100%" stopColor="#1e1e1e" />
+                </linearGradient>
+                <linearGradient id="heroBarGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#f5f5f5" />
+                  <stop offset="100%" stopColor="#d4d4d4" />
+                </linearGradient>
+                <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#3d3d3d" />
+                  <stop offset="100%" stopColor="#2a2a2a" />
+                </linearGradient>
+                <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="18" floodColor="#000000" floodOpacity="0.22" />
+                </filter>
+                <clipPath id="browserClip">
+                  <rect x="40" y="30" width="400" height="300" rx="16" />
+                </clipPath>
+              </defs>
 
-              {/* Fast Turnaround - arrow */}
-              <polygon points="250,90 250,110 300,100" fill="#111111">
-                <animateTransform attributeName="transform" type="translate" values="0,0;20,0;0,0" dur="1.5s" repeatCount="indefinite"/>
-              </polygon>
-              <text x="275" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">instant Delivery</text>
+              {/* Browser shell */}
+              <rect x="40" y="30" width="400" height="300" rx="16" fill="url(#bgGrad)" filter="url(#shadow)" />
 
-              {/* Ownership - file icon */}
-              <rect x="400" y="60" width="60" height="80" rx="4" fill="#111111"/>
-              <rect x="405" y="65" width="50" height="70" rx="3" fill="white"/>
-              <rect x="413" y="80" width="34" height="3" rx="1" fill="#e5e7eb"/>
-              <rect x="413" y="88" width="28" height="3" rx="1" fill="#e5e7eb"/>
-              <rect x="413" y="96" width="32" height="3" rx="1" fill="#e5e7eb"/>
-              <rect x="405" y="65" width="50" height="70" rx="3" fill="#111111" opacity="0">
-                <animate attributeName="opacity" values="0;0.08;0" dur="2s" repeatCount="indefinite"/>
+              {/* Title bar */}
+              <rect x="40" y="30" width="400" height="42" rx="16" fill="#1a1a1a" />
+              <rect x="40" y="56" width="400" height="16" fill="#1a1a1a" />
+
+              {/* Traffic lights */}
+              <circle cx="68" cy="51" r="5.5" fill="#FF5F57" />
+              <circle cx="84" cy="51" r="5.5" fill="#FEBC2E" />
+              <circle cx="100" cy="51" r="5.5" fill="#27C93F" />
+
+              {/* URL bar */}
+              <rect x="120" y="41" width="260" height="20" rx="6" fill="#2a2a2a" />
+              <rect x="130" y="47.5" width="12" height="7" rx="2" fill="#4a4a4a" />
+              <rect x="147" y="50.5" width="80" height="3" rx="1.5" fill="#555555" />
+
+              {/* Page background inside browser */}
+              <rect x="40" y="72" width="400" height="258" fill="#ffffff" clipPath="url(#browserClip)" />
+
+              {/* Nav bar inside page */}
+              <rect x="40" y="72" width="400" height="32" fill="#f9f9f9" />
+              <rect x="56" y="82" width="32" height="10" rx="3" fill="#cccccc" />
+              <rect x="98" y="85" width="22" height="4" rx="2" fill="#d1d5db" />
+              <rect x="128" y="85" width="22" height="4" rx="2" fill="#d1d5db" />
+              <rect x="158" y="85" width="22" height="4" rx="2" fill="#d1d5db" />
+              <rect x="358" y="81" width="68" height="14" rx="7" fill="#111111" />
+              <rect x="368" y="86.5" width="48" height="3" rx="1.5" fill="#ffffff" opacity="0.7" />
+
+              {/* Hero section inside page */}
+              <rect x="40" y="104" width="400" height="100" fill="#111111" />
+              {/* hero headline bar — animated width */}
+              <rect x="80" y="122" width="200" height="12" rx="4" fill="url(#heroBarGrad)">
+                <animate attributeName="width" values="200;210;200" dur="3s" repeatCount="indefinite" />
               </rect>
-              <text x="430" y="158" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">You Own It</text>
+              <rect x="80" y="140" width="155" height="7" rx="3" fill="#9ca3af" />
+              <rect x="80" y="153" width="120" height="7" rx="3" fill="#6b7280" />
+              {/* CTA button */}
+              <rect x="80" y="168" width="90" height="22" rx="11" fill="#ffffff" />
+              <rect x="91" y="174.5" width="68" height="3" rx="1.5" fill="#111111" />
+              <rect x="178" y="168" width="72" height="22" rx="11" fill="url(#btnGrad)" />
+              <rect x="186" y="174.5" width="56" height="3" rx="1.5" fill="#9ca3af" />
 
-              {/* Top-Rated - star */}
-              <g transform="translate(100,250)">
-                <polygon
-                  points="0,-35 9.5,-13 35,-13 13,5 22,30 0,15 -22,30 -13,5 -35,-13 -9.5,-13"
-                  fill="#111111"
-                >
-                  <animateTransform attributeName="transform" type="scale" values="1;1.15;1" dur="2s" repeatCount="indefinite" additive="sum"/>
-                </polygon>
-                <text y="55" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">Top-Rated</text>
+              {/* Three feature cards row */}
+              <rect x="56" y="220" width="112" height="80" rx="10" fill="#f8f8f8" stroke="#e5e7eb" strokeWidth="1.5" />
+              <rect x="184" y="220" width="112" height="80" rx="10" fill="#f8f8f8" stroke="#e5e7eb" strokeWidth="1.5">
+                <animate attributeName="y" values="220;215;220" dur="2.4s" repeatCount="indefinite" />
+              </rect>
+              <rect x="312" y="220" width="112" height="80" rx="10" fill="#f8f8f8" stroke="#e5e7eb" strokeWidth="1.5" />
+
+              {/* Card content — col 1 */}
+              <circle cx="88" cy="244" r="10" fill="#e5e7eb" />
+              <rect x="68" y="260" width="68" height="5" rx="2.5" fill="#d1d5db" />
+              <rect x="68" y="271" width="52" height="4" rx="2" fill="#e5e7eb" />
+              <rect x="68" y="281" width="40" height="12" rx="6" fill="#111111" />
+
+              {/* Card content — col 2 */}
+              <circle cx="216" cy="244" r="10" fill="#e5e7eb" />
+              <rect x="196" y="260" width="68" height="5" rx="2.5" fill="#d1d5db" />
+              <rect x="196" y="271" width="52" height="4" rx="2" fill="#e5e7eb" />
+              <rect x="196" y="281" width="40" height="12" rx="6" fill="#111111" />
+
+              {/* Card content — col 3 */}
+              <circle cx="344" cy="244" r="10" fill="#e5e7eb" />
+              <rect x="324" y="260" width="68" height="5" rx="2.5" fill="#d1d5db" />
+              <rect x="324" y="271" width="52" height="4" rx="2" fill="#e5e7eb" />
+              <rect x="324" y="281" width="40" height="12" rx="6" fill="#111111" />
+
+              {/* Floating badge — animated */}
+              <g>
+                <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="3s" repeatCount="indefinite" />
+                <rect x="310" y="46" width="110" height="40" rx="12" fill="#ffffff" filter="url(#shadow)" />
+                <circle cx="330" cy="66" r="10" fill="#111111" />
+                <text x="330" y="70" textAnchor="middle" fontSize="9" fontWeight="900" fill="#ffffff">$29</text>
+                <rect x="347" y="59" width="58" height="5" rx="2.5" fill="#111111" />
+                <rect x="347" y="68" width="43" height="4" rx="2" fill="#9ca3af" />
               </g>
-
-              {/* Mobile-First - phone */}
-              <rect x="255" y="225" width="50" height="90" rx="8" fill="#111111"/>
-              <rect x="260" y="231" width="40" height="78" rx="5" fill="white"/>
-              <circle cx="280" cy="311" r="4" fill="#e5e7eb"/>
-              <rect x="265" y="237" width="30" height="2" rx="1" fill="#e5e7eb"/>
-              <text x="280" y="330" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">Mobile-First</text>
-
-              {/* SEO-Ready - magnifying glass */}
-              <circle cx="420" cy="265" r="25" stroke="#111111" strokeWidth="4" fill="none"/>
-              <line x1="439" y1="284" x2="458" y2="303" stroke="#111111" strokeWidth="4" strokeLinecap="round">
-                <animateTransform attributeName="transform" type="rotate" values="0 439 284;15 439 284;0 439 284" dur="3s" repeatCount="indefinite"/>
-              </line>
-              <text x="420" y="330" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b7280">SEO-Ready</text>
             </svg>
           </div>
         </div>
