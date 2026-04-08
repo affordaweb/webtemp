@@ -156,8 +156,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid email address." }, { status: 422 });
   }
 
-  const toEmail = process.env.TO_EMAIL ?? "support@affordawebsolutions.com";
-  const from = process.env.FROM_EMAIL ?? "AffordaWeb Solutions <support@affordawebsolutions.com>";
+  const toEmail = process.env.TO_EMAIL ?? "support@affordawebsolutions.net";
+  const from = process.env.FROM_EMAIL ?? "AffordaWeb Solutions <support@affordawebsolutions.net>";
 
   const resend = new Resend(process.env.RESEND_API_KEY);
 

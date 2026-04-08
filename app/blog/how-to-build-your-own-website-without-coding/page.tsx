@@ -2,23 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Article",
   headline: "How to Build Your Own Website Without Coding (2026 Guide)",
   datePublished: "2026-04-06",
   dateModified: "2026-04-06",
-  image: `${SITE_URL}/opengraph-image`,
-  author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "AffordaWeb Solutions", url: SITE_URL },
-  publisher: {
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: "AffordaWeb Solutions",
-    url: SITE_URL,
-    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 200, height: 60 },
-  },
-  mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/how-to-build-your-own-website-without-coding` },
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
   url: `${SITE_URL}/blog/how-to-build-your-own-website-without-coding`,
 };
 const breadcrumbSchema = {
@@ -32,7 +24,7 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "How to Build Your Own Website Without Coding",
+  title: "How to Build Your Own Website Without Coding (2026 Guide)",
   description:
     "Learn exactly how to build your own website without any coding knowledge in 2026. Compare your options — DIY builders, templates, and no-code tools — and find the best fit for your budget.",
   alternates: { canonical: "/blog/how-to-build-your-own-website-without-coding" },

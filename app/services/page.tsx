@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Website Template Services & Pricing",
+  title: "DIY Website Template Services & Pricing | AffordaWeb Solutions",
   description:
     "Flat-rate DIY website templates for small businesses. Starter $29 (1-3 pages), Standard $79 (4-6 pages), Premium $129 (up to 8 pages), Custom projects welcome. No subscriptions.",
   alternates: { canonical: "/services" },

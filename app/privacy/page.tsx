@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Privacy Policy | AffordaWeb Solutions" },
+  title: "Privacy Policy | AffordaWeb Solutions",
   description: "Privacy Policy for AffordaWeb Solutions — how we collect, use, and protect your information.",
   alternates: { canonical: "/privacy" },
 };
 
 const LAST_UPDATED = "April 6, 2026";
-const CONTACT_EMAIL = "support@affordawebsolutions.com";
-const SITE_URL = "https://www.affordawebsolutions.com";
+const CONTACT_EMAIL = "support@affordawebsolutions.net";
+const SITE_URL = "https://www.affordawebsolutions.net";
 
 export default function PrivacyPage() {
   return (

@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     "Framer AI alternative",
     "Durable AI alternative",
   ],
-  metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim()),
+  metadataBase: new URL((process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim()),
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -119,40 +119,37 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": `${SITE_URL}/#organization`,
   name: "AffordaWeb Solutions",
   url: SITE_URL,
-  logo: {
-    "@type": "ImageObject",
-    url: `${SITE_URL}/logo.svg`,
-    width: 200,
-    height: 60,
-  },
+  logo: `${SITE_URL}/logo.svg`,
   contactPoint: {
     "@type": "ContactPoint",
-    contactType: "customer service",
-    email: "support@affordawebsolutions.com",
+    contactType: "customer support",
+    email: "support@affordawebsolutions.net",
     availableLanguage: "English",
   },
   sameAs: [
-    "https://www.affordawebsolutions.com",
+    "https://www.affordawebsolutions.net",
+    "https://affordawebsolutions.com",
   ],
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": `${SITE_URL}/#website`,
   name: "AffordaWeb Solutions",
   url: SITE_URL,
   potentialAction: {
     "@type": "SearchAction",
-    target: `${SITE_URL}/blog?q={search_term_string}`,
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/blog?q={search_term_string}`,
+    },
     "query-input": "required name=search_term_string",
   },
 };

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Affordable Website Design FAQ",
+  title: "Affordable Website Design FAQ — Pricing, Ownership & Process",
   description:
     "Got questions about affordable website design? Find answers on pricing, process, ownership, SEO, turnaround time, hosting, and more. Packages from $29.",
   alternates: { canonical: "/faq" },

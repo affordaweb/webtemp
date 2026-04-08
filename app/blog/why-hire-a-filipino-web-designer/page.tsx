@@ -2,23 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Article",
   headline: "Why Hire a Filipino Web Designer? Top Reasons in 2026",
   datePublished: "2026-04-06",
   dateModified: "2026-04-06",
-  image: `${SITE_URL}/opengraph-image`,
-  author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "AffordaWeb Solutions", url: SITE_URL },
-  publisher: {
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: "AffordaWeb Solutions",
-    url: SITE_URL,
-    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 200, height: 60 },
-  },
-  mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/why-hire-a-filipino-web-designer` },
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
   url: `${SITE_URL}/blog/why-hire-a-filipino-web-designer`,
 };
 const breadcrumbSchema = {
@@ -32,7 +24,7 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Why Hire a Filipino Web Designer?",
+  title: "Why Hire a Filipino Web Designer? Top Reasons in 2026",
   description:
     "Filipino web designers are rated as some of the best on Upwork. Discover why businesses worldwide choose Filipino web design professionals for quality, communication, and value.",
   alternates: { canonical: "/blog/why-hire-a-filipino-web-designer" },

@@ -2,50 +2,41 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": `${SITE_URL}/#service`,
   name: "Custom Website Template Design",
-  url: SITE_URL,
   description:
     "Custom-designed website templates starting at $29. Fill out a form, we design it, you own the code forever. No subscriptions.",
   provider: {
     "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
     name: "AffordaWeb Solutions",
     url: SITE_URL,
   },
   offers: [
     {
       "@type": "Offer",
-      "@id": `${SITE_URL}/#offer-starter`,
       name: "Starter",
       price: "29",
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
       description: "1–3 pages, mobile-responsive, SEO meta tags, contact form, ZIP download, 1 revision round",
       url: `${SITE_URL}/generate`,
     },
     {
       "@type": "Offer",
-      "@id": `${SITE_URL}/#offer-standard`,
       name: "Standard",
       price: "79",
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
       description: "4–6 pages, everything in Starter, gallery or blog layout, social media links, Google Maps, 2 revision rounds",
       url: `${SITE_URL}/generate`,
     },
     {
       "@type": "Offer",
-      "@id": `${SITE_URL}/#offer-premium`,
       name: "Premium",
       price: "129",
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
       description: "Up to 8 pages, everything in Standard, testimonials section, priority delivery, 3 revision rounds",
       url: `${SITE_URL}/generate`,
     },
@@ -86,7 +77,7 @@ const TESTIMONIALS = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "DIY Website Templates for Small Business | AffordaWeb Solutions" },
+  title: "DIY Website Templates for Small Business — Starting at $29 | AffordaWeb Solutions",
   description:
     "Build your own website with a custom-designed template. Tell us your pages, style, and features — we design it, you own it forever. DIY website templates starting at $29. No coding, no subscriptions.",
   alternates: { canonical: "/" },
@@ -603,12 +594,9 @@ export default function Home() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
             {[
-              { slug: "what-is-a-hand-coded-website", title: "What Is a Hand-Coded Website? Why It Outperforms Any Builder", date: "April 2026" },
+              { slug: "what-is-a-hand-coded-website", title: "What Is a Hand-Coded Website? Why It Outperforms Any Website Builder", date: "April 2026" },
               { slug: "how-to-build-your-own-website-without-coding", title: "How to Build Your Own Website Without Coding (2026 Guide)", date: "April 2026" },
               { slug: "best-website-templates-for-small-business", title: "Best Website Templates for Small Business in 2026", date: "April 2026" },
-              { slug: "affordable-website-design-for-small-business", title: "Affordable Website Design for Small Business: The Complete Guide", date: "April 2026" },
-              { slug: "how-much-does-a-website-cost", title: "How Much Does a Website Cost? (Honest Breakdown for 2026)", date: "April 2026" },
-              { slug: "website-design-without-a-developer", title: "Website Design Without a Developer: Your 2026 Options Compared", date: "April 2026" },
             ].map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="card" style={{ height: "100%", transition: "border-color 0.2s" }}>

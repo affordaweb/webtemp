@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Terms of Service | AffordaWeb Solutions" },
+  title: "Terms of Service | AffordaWeb Solutions",
   description: "Terms of Service for AffordaWeb Solutions — what you agree to when using our website design services.",
   alternates: { canonical: "/terms" },
 };
 
 const LAST_UPDATED = "April 6, 2026";
-const CONTACT_EMAIL = "support@affordawebsolutions.com";
+const CONTACT_EMAIL = "support@affordawebsolutions.net";
 
 export default function TermsPage() {
   return (

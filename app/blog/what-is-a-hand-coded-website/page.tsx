@@ -2,23 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Article",
   headline: "What Is a Hand-Coded Website? (And Why It Matters for Your Business)",
   datePublished: "2026-04-06",
   dateModified: "2026-04-06",
-  image: `${SITE_URL}/opengraph-image`,
-  author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "AffordaWeb Solutions", url: SITE_URL },
-  publisher: {
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: "AffordaWeb Solutions",
-    url: SITE_URL,
-    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 200, height: 60 },
-  },
-  mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/what-is-a-hand-coded-website` },
+  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
   url: `${SITE_URL}/blog/what-is-a-hand-coded-website`,
 };
 const breadcrumbSchema = {
@@ -32,7 +24,7 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "What Is a Hand-Coded Website?",
+  title: "What Is a Hand-Coded Website? (And Why It Matters for Your Business)",
   description:
     "A hand-coded website is built from scratch using HTML and CSS — no page builders, no drag-and-drop. Learn why hand-coded sites are faster, cleaner, and better for SEO.",
   keywords: [
@@ -48,7 +40,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/blog/what-is-a-hand-coded-website" },
   openGraph: {
-    title: "What Is a Hand-Coded Website?",
+    title: "What Is a Hand-Coded Website? (And Why It Matters for Your Business)",
     description:
       "Built from scratch with HTML and CSS — no bloat, no builder lock-in. Understand what a hand-coded website is and why it outperforms website builders.",
     url: "/blog/what-is-a-hand-coded-website",

@@ -14,9 +14,9 @@ function getResend(): Resend {
 export async function sendAdminNotification(req: TemplateRequest): Promise<void> {
   const adminEmail = process.env.ADMIN_EMAIL
   if (!adminEmail) return
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.affordawebsolutions.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.affordawebsolutions.net'
 
-  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <support@affordawebsolutions.com>'
+  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <support@affordawebsolutions.net>'
   await getResend().emails.send({
     from,
     to: adminEmail,
@@ -48,10 +48,10 @@ export async function sendAdminNotification(req: TemplateRequest): Promise<void>
 
 export async function sendDownloadReady(req: TemplateRequest): Promise<void> {
   if (!req.downloadToken) return
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.affordawebsolutions.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.affordawebsolutions.net'
   const downloadUrl = `${siteUrl}/download/${req.downloadToken}`
 
-  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <support@affordawebsolutions.com>'
+  const from = process.env.FROM_EMAIL ?? 'AffordaWeb Solutions <support@affordawebsolutions.net>'
   await getResend().emails.send({
     from,
     to: req.email,
