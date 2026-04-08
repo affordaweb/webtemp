@@ -2,15 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim();
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   headline: "Best Website Templates for Small Business in 2026 (Free & Paid)",
   datePublished: "2026-04-06",
   dateModified: "2026-04-06",
-  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
-  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  image: `${SITE_URL}/opengraph-image`,
+  author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "AffordaWeb Solutions",
+    url: SITE_URL,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 200, height: 60 },
+  },
+  mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/best-website-templates-for-small-business` },
   url: `${SITE_URL}/blog/best-website-templates-for-small-business`,
 };
 const breadcrumbSchema = {
@@ -24,7 +32,7 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Best Website Templates for Small Business in 2026 (Free & Paid)",
+  title: "Best Website Templates for Small Business",
   description:
     "Looking for the best website templates for small business? We compare free HTML templates, paid options, and done-for-you custom templates — so you can launch faster without overspending.",
   alternates: { canonical: "/blog/best-website-templates-for-small-business" },

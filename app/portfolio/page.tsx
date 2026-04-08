@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Web Design Portfolio | AffordaWeb Solutions",
+  title: "Web Design Portfolio",
   description:
     "Browse our portfolio of affordable website designs for small businesses. See real examples of hand-coded, mobile-responsive, SEO-optimised websites we've built.",
   alternates: { canonical: "/portfolio" },

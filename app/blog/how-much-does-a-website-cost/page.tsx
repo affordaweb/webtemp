@@ -2,15 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogSidebar from "@/components/BlogSidebar";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.net").trim();
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.affordawebsolutions.com").trim();
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   headline: "How Much Does a Website Cost? (Honest Breakdown for 2026)",
   datePublished: "2026-04-06",
   dateModified: "2026-04-06",
-  author: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
-  publisher: { "@type": "Organization", name: "AffordaWeb Solutions", url: SITE_URL },
+  image: `${SITE_URL}/opengraph-image`,
+  author: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "AffordaWeb Solutions", url: SITE_URL },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "AffordaWeb Solutions",
+    url: SITE_URL,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg`, width: 200, height: 60 },
+  },
+  mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/how-much-does-a-website-cost` },
   url: `${SITE_URL}/blog/how-much-does-a-website-cost`,
 };
 const breadcrumbSchema = {
@@ -24,7 +32,7 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "How Much Does a Website Cost? (Honest Breakdown for 2026)",
+  title: "How Much Does a Website Cost in 2026?",
   description:
     "A transparent, no-nonsense breakdown of website costs in 2026 — from $29 templates to $50,000 agency projects. Find out what you actually need and what you can skip.",
   alternates: { canonical: "/blog/how-much-does-a-website-cost" },

@@ -143,7 +143,7 @@ export default function OGImage() {
             fontWeight: 600,
           }}
         >
-          affordawebsolutions.net
+          affordawebsolutions.com
         </div>
       </div>
     ),

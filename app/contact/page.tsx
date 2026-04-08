@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact AffordaWeb Solutions — Get a Website Quote Today",
+  title: "Contact Us — Get a Free Website Quote",
   description:
     "Have a question or ready to order? Contact AffordaWeb Solutions for affordable website design quotes and support. We typically respond within 24 hours.",
   alternates: { canonical: "/contact" },
@@ -13,8 +13,8 @@ const CONTACT_INFO = [
   {
     icon: "✉",
     title: "Email Us",
-    value: "support@affordawebsolutions.net",
-    href: "mailto:support@affordawebsolutions.net",
+    value: "support@affordawebsolutions.com",
+    href: "mailto:support@affordawebsolutions.com",
   },
   {
     icon: "⏱",

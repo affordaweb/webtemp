@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Top-Rated Filipino Web Designers — About AffordaWeb Solutions",
+  title: "Top-Rated Filipino Web Designers",
   description:
     "Meet the team behind AffordaWeb Solutions — top-rated Filipino web designers on Upwork. Affordable, professional websites for small businesses worldwide.",
   alternates: { canonical: "/about" },
